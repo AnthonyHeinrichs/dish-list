@@ -10,10 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_28_153857) do
+ActiveRecord::Schema.define(version: 2022_02_28_160632) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "dish_restaurants", force: :cascade do |t|
+    t.bigint "restaurant_id", null: false
+    t.bigint "dish_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["dish_id"], name: "index_dish_restaurants_on_dish_id"
+    t.index ["restaurant_id"], name: "index_dish_restaurants_on_restaurant_id"
+  end
+
+  create_table "dishes", force: :cascade do |t|
+    t.string "name"
+    t.string "country"
+    t.string "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "restaurants", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.bigint "dish_restaurant_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["dish_restaurant_id"], name: "index_reviews_on_dish_restaurant_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +60,8 @@ ActiveRecord::Schema.define(version: 2022_02_28_153857) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "dish_restaurants", "dishes"
+  add_foreign_key "dish_restaurants", "restaurants"
+  add_foreign_key "reviews", "dish_restaurants"
+  add_foreign_key "reviews", "users"
 end
