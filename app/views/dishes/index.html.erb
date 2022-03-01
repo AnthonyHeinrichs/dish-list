@@ -1,0 +1,11 @@
+<h1>Hi, this is our dishes index!</h1>
+
+<ul>
+<% @dishes.each do |dish| %>
+<div class='mt-5'>
+<li><%= dish.name %></li>
+<li><%= dish.country %></li>
+<li><%= dish.description %></li>
+</div>
+<% end %>
+</ul>
