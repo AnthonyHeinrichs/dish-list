@@ -1,0 +1,14 @@
+<div data-search-dishes-target="list">
+ <p class="h3">
+    <% if params[:query].blank? %>
+      <%= pluralize dishes.count, 'dish' %> available
+    <% else %>
+      <%= pluralize dishes.count, 'result' %> for <code><%= params[:query] %></code>
+    <% end %>
+  </p>
+  <div class="dishes">
+    <% dishes.each do |dish| %>
+      <%= render 'dish_infos', dish: dish %>
+    <% end %>
+  </div>
+</div>

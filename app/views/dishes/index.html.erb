@@ -1,30 +1,22 @@
 <h1>Hi, this is our dishes index!</h1>
 
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 offset-sm-2">
+      <h2 class="mt-4">Dishes</h2>
 
-<div data-controller="search-dishes">
-  <%= form_with url: dishes_path, method: :get, html: { class:
-    'mb-4 mt-4', data: { search_dishes_target: 'form' } } do |f| %>
+      <%= @countries %>
 
-<%= f.text_field :query, class: "form-control", placeholder:
-                     'Type a country', value: params[:query],
-                     data: {
-                        search_movies_target: 'input',
-                        action: 'keyup->search-dishes#update'
-                      } %>
+      <div data-controller="search-dishes">
+        <%= form_with url: root_path, method: :get, html: { class:
+          'mb-4 mt-4', data: { search_dishes_target: 'form' } } do |f| %>
 
-<div data-controller='dish-card'>
-  <i class="caret-down" data-action="click->dish-card#revealContent"></i>
-  <p class='d-none' data-dish-card-target='content'>
-    <ul>
-      <% @dishes.each do |dish| %>
-      <div class='mt-5'>
-      <li><%= dish.name %></li>
-      <li><%= dish.country %></li>
-      <li><%= dish.description %></li>
-      </div>
+      <%= f.text_field :query, class: "form-control", placeholder:
+                          'Type a country', value: params[:query],
+                          data: {
+                              search_dishes_target: 'input',
+                              action: 'submit->search-dishes#update'
+                            } %>
       <% end %>
-    </ul>
-  </p>
-</div>
 
-<% end %>
+      <%= render 'list', dishes: @dishes %>

@@ -1,0 +1,10 @@
+<div class="dish-card" data-controller="edit-dish" data-edit-dish-target="card">
+
+  <div class="dish-infos mt-4 <%= 'd-none' if dish.errors.any? %>" data-edit-dish-target="infos">
+    <h2 title="<%= dish.name %> (<%= dish.country %>)">
+      <%= dish.name %><small> (<%= dish.country %>)</small>
+    </h2>
+    <p> <%= dish.country %></p>
+    <p> <%= dish.description %></p>
+  </div>
+</div>
