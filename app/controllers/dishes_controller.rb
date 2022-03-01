@@ -3,6 +3,10 @@ class DishesController < ApplicationController
 
   def index
     @dishes = Dish.all
-  end
 
+    respond_to do |format|
+      format.html # Follow regular flow of Rails
+      format.text { render partial: 'dishes/list', locals: { dishes: @dishes }, formats: [:html] }
+    end
+  end
 end
