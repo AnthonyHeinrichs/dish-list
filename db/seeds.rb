@@ -51,42 +51,20 @@ puts '5 dishes created :)'
 
 puts 'Removing dated restaurants'
 Restaurant.delete_all
-puts 'Creating Restaurants'
+puts 'Creating Restaurants...'
 
-restaurant = Restaurant.new(
-  name: 'Restaurant Alpha',
-  address: 'Berlin',
-)
-restaurant.save!
 
-restaurant = Restaurant.new(
-  name: 'Restaurant Beta',
-  address: 'Hamburg',
-)
-restaurant.save!
+restaurant_1 = { name: 'Restaurant Alpha', address: 'Berlin', }
+restaurant_2 = { name: 'Restaurant Beta', address: 'Hamburg', }
+restaurant_3 = { name: 'Restaurant Charly', address: 'Munich', }
+restaurant_4 = { name: 'Restaurant Delta', address: 'Koln', }
+restaurant_5 = { name: 'Restaurant Epsylon', address: 'Berlin', }
+restaurant_6 = { name: 'Restaurant Foxy', address: 'Munich', }
+restaurant_7 = { name: 'Restaurant Gina', address: 'Berlin', }
 
-restaurant = Restaurant.new(
-  name: 'Restaurant Charly',
-  address: 'Madrid',
-)
-restaurant.save!
+[ restaurant_1, restaurant_2, restaurant_3, restaurant_4, restaurant_5, restaurant_6, restaurant_7 ].each do |infusion|
+  restaurant = Restaurant.create(infusion)
+  puts "Sweat and tears build #{restaurant.name}."
+end
 
-restaurant = Restaurant.new(
-  name: 'Restaurant Delta',
-  address: 'Rom',
-)
-restaurant.save!
-
-restaurant = Restaurant.new(
-  name: 'Restaurant Epsylon',
-  address: 'Berlin',
-)
-restaurant.save!
-
-restaurant = Restaurant.new(
-  name: 'Restaurant Foxy',
-  address: 'Berlin',
-)
-restaurant.save!
-
-puts 'restaurants created'
+puts 'Thank you for taking my seed. May it be germinating inside of you.'
