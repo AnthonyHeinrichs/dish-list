@@ -12,7 +12,7 @@ export default class extends Controller {
   update(event) {
     event.preventDefault()
     console.log(this.inputTarget.value)
-    const url = `${this.formTarget.action}?query=${this.inputTarget.value}&commit=Save+`
+    const url = `${this.formTarget.action}?query=${this.inputTarget.value}`
     fetch(url, { headers: { "Accept": "text/plain" } })
     .then(response => response.text())
     .then((data) => {
