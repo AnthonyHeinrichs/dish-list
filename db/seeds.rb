@@ -7,9 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts 'Removing old dish data'
-
 Dish.delete_all
-
 puts 'Creating 5 dishes'
 
 dish = Dish.new(
@@ -48,3 +46,47 @@ dish = Dish.new(
 dish.save!
 
 puts '5 dishes created :)'
+
+# -------------------------------------------------------------------------------
+
+puts 'Removing dated restaurants'
+Restaurant.delete_all
+puts 'Creating Restaurants'
+
+restaurant = Restaurant.new(
+  name: 'Restaurant Alpha',
+  address: 'Berlin',
+)
+restaurant.save!
+
+restaurant = Restaurant.new(
+  name: 'Restaurant Beta',
+  address: 'Hamburg',
+)
+restaurant.save!
+
+restaurant = Restaurant.new(
+  name: 'Restaurant Charly',
+  address: 'Madrid',
+)
+restaurant.save!
+
+restaurant = Restaurant.new(
+  name: 'Restaurant Delta',
+  address: 'Rom',
+)
+restaurant.save!
+
+restaurant = Restaurant.new(
+  name: 'Restaurant Epsylon',
+  address: 'Berlin',
+)
+restaurant.save!
+
+restaurant = Restaurant.new(
+  name: 'Restaurant Foxy',
+  address: 'Berlin',
+)
+restaurant.save!
+
+puts 'restaurants created'
