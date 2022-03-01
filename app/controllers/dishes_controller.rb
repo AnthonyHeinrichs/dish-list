@@ -4,15 +4,16 @@ class DishesController < ApplicationController
   def index
     @dishes = Dish.all
 
-    @countries = Dish.pluck(:country)
+    if params[:query].present?
+      @dishes = Dish.all.where(country: params[:query])
+    end
 
     respond_to do |format|
-      format.html # Follow regular flow of Rails
+      format.html
       format.text { render partial: 'dishes/list', locals: { dishes: @dishes }, formats: [:html] }
     end
 
-    if params[:city]
-      @city = params[:city]
-    end
+    @countries = Dish.pluck(:country)
+
   end
 end

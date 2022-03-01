@@ -2,21 +2,17 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-8 offset-sm-2">
-      <h2 class="mt-4">Dishes</h2>
+    <div class="col">
+      <div class="col-xs-12 col-sm-8 offset-sm-2">
+        <h2 class="my-3 d-flex justify-content-center"> Dishes</h2>
 
-      <%= @countries %>
+        <div data-controller="search-dishes">
+          <%= form_with url: root_path, method: :get, html: { data: {search_dishes_target: 'form', action: 'submit->search-dishes#update' } }  do |f| %>
+              <%= f.text_field :query, placeholder: 'type a country', value: params[:query], data: { search_dishes_target: 'input' } %>
+          <% end %>
 
-      <div data-controller="search-dishes">
-        <%= form_with url: root_path, method: :get, html: { class:
-          'mb-4 mt-4', data: { search_dishes_target: 'form' } } do |f| %>
-
-      <%= f.text_field :query, class: "form-control", placeholder:
-                          'Type a country', value: params[:query],
-                          data: {
-                              search_dishes_target: 'input',
-                              action: 'submit->search-dishes#update'
-                            } %>
-      <% end %>
-
-      <%= render 'list', dishes: @dishes %>
+          <%= render 'list', dishes: @dishes %>
+      </div>
+    </div>
+  </div>
+</div>
