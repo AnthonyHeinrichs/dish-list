@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: 'dishes#index'
 
   resources :dishes, only: [:index]
+  resources :restaurants, only: [:index]
 end
