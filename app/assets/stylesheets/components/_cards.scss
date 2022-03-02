@@ -1,0 +1,17 @@
+.cards-for-dishes {
+  border-radius: 20px;
+  padding: 5px;
+  background-color: rgb(254, 220, 189);
+  cursor: pointer;
+}
+
+.image-for-card {
+  border-radius: 20px;
+  height: 110px;
+  width: 150px;
+  object-fit: cover;
+}
+
+.dish-card {
+  width: 340px;
+}
