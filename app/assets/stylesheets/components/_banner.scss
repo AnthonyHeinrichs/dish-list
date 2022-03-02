@@ -3,53 +3,67 @@
     display: block;
     width: 100vw;
     height: 300px;
-    background-color: #E36414;
-    border-radius: 0 0 60% 60% / 0 0 40% 40%;
+    background-color: $orange;
+    border-radius: 0 0 60% 60% / 0 0 80% 80%;
+    padding-top: 30px;
 }
+
+/* HEADLINE with the two text inputs */
 .banner-head {
     margin: 0 auto;
 	width: max-content;
 }
 #banner-dish {
     border: none;
-    color: #031037;
-    background-color: #E36414;
+    color: $purple;
+    background-color: $orange;
     outline: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
-    line-height: 85px;
+    line-height: 55px;
     text-align: right;
+    border-bottom: 2px solid $purple;
 }
 #banner-country {
     border: none;
-    color: #FDFBFD;
-    background-color: #E36414;
+    color: $white;
+    background-color: $orange;
     outline: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
-    line-height: 85px;
+    line-height: 55px;
+    border-bottom: 2px solid $purple;
 }
+
+/* SUB-HEADLINE the text below the entry fields */
 .banner-text {
-    margin: 30 auto;
+    color: $white;
+    margin: auto;
+    width: 50%;
+    padding-top: 20px;
+    font-family: 'Red Hat Display', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
 }
+
+/* PICTURE centred, floating */
 .banner-picture {
     position: absolute;
 	width: 150px;
 	height: 150px;
-	background: red;
+	
 	left: 50%;
-	bottom: 0%;
+	bottom: 7%;
 	transform: translate(-50%, 50%);
     border-radius: 90% 90% 90% 90%;
 }
-
-.banner {
-    background-image: url('app/assets/images/nav-vector.png');
-    width: 100%;
-    background-color: #E36414;
-  }
-  
+.banner-picture-img {
+    border-radius: 50%;
+}
