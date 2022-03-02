@@ -1,14 +1,46 @@
+<!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <%= link_to "/", class: "banner-logo" do %>
+                <%= image_tag "Logo.png" %>
+            <% end %>
+            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <% if user_signed_in? %>
+                            <li><%= link_to "Home", "#", class: "dropdown-item" %></li>
+                            <li><%= link_to "Messages", "#", class: "dropdown-item" %></li>
+                            <li><%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %></li>
+                            <% else %>
+                            <li><%= link_to "Login", new_user_session_path, class: "dropdown-item" %></li>
+                            <% end %>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
 <div class="banner-container">
-    
+
+    <!--  HEADLINE with the two text inputs -->
     <div class="banner-head">
         <form>
             <input type="text" id="banner-dish" value="Dish">
             <input type="text" id="banner-country" value="Country">
         </form>
     </div>
+
+    <!-- SUB-HEADLINE the text below the entry fields -->
     <div class="banner-text">
         Did you know, that in most citys, there might be someone who makes your favourit dish, just the way you love it?
     </div>
+
+    <!-- PICTURE centred, floating -->
     <div class="banner-picture">
         <%= link_to "/", class: "banner-picture-img" do %>
             <%= image_tag "ramen_200.png" %>
