@@ -5,7 +5,8 @@ class DishesController < ApplicationController
     @dishes = Dish.all
 
     if params[:query].present?
-      @dishes = Dish.all.where(country: params[:query])
+      input = params[:query].downcase.capitalize
+      @dishes = Dish.all.where(country: input)
     end
 
     respond_to do |format|
