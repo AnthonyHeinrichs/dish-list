@@ -1,20 +1,18 @@
 <!-- Modal -->
 
 <div class="modal animate__animated animate__fadeIn animate__faster" id="dishModal<%= index %>" tabindex="-1" aria-labelledby="dishModalLabel" aria-hidden="true">
-  <div class="modal-dialog border border-0 border-rounded-3">
+  <div class="modal-dialog border border-0 border-rounded-3" style="transform: translate(-25%);">
     <div class="modal-content modalfordish">
       <div class="modal-header">
       <div class="modal-title">
         <h2 class="font-weight-bold mx-4" id="dishModalLabel"><%= dish.name %></h2>
         <p><%= dish.country %></p>
       </div>
-
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <ul>
-          <li class='list-unstyled'> <%= dish.description %> </li>
-        </ul>
+        <img src="https://www.gutekueche.at/storage/media/recipe/27367/conv/spagetti-bolognese-default.jpg" alt=<%= dish.name %>>
+        <p> <%= dish.description %> </p>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-link">Search for restaurants</button>
