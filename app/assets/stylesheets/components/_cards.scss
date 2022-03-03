@@ -1,12 +1,12 @@
 .cards-for-dishes {
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 5px;
   background-color: #FB8B244D;
   cursor: pointer;
 }
 
 .image-for-card {
-  border-radius: 20px;
+  border-radius: 5px;
   height: 110px;
   width: 150px;
   object-fit: cover;
@@ -14,6 +14,7 @@
 
 .dish-card {
   width: 400px;
+
 }
 
 .dishes {
@@ -21,11 +22,15 @@
 }
 
 .cards-for-restaurants {
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 5px;
   background-color: rgb(254, 220, 189);
 }
 
 .restaurant-card {
   width: 400px;
+}
+
+.d-flex {
+  margin-top: 70px;
 }
