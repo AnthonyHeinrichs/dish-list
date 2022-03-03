@@ -7,7 +7,7 @@
         <p class="banner-dish">Dish</p>
 
         <%= form_with url: root_path, method: :get, html: { class: 'sebis', data: {search_dishes_target: 'form' } }  do |f| %>
-          <%= f.text_field :query, placeholder: 'type a country', value: params[:query], class: 'banner-country', data: { search_dishes_target: 'input', action: 'submit->search-dishes#update' } %>
+          <%= f.text_field :query, placeholder: 'type a country', value: params[:query], class: 'banner-country', data: { search_dishes_target: 'input', action: 'keyup->search-dishes#update' } %>
         <% end %>
 
     </div>
