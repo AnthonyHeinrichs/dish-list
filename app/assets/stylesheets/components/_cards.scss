@@ -13,5 +13,10 @@
 }
 
 .dish-card {
-  width: 340px;
+  max-width: 500px;
+  min-width: 400px;
+}
+
+.dishes {
+  max-width: 1500px;
 }
