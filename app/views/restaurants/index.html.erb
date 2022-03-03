@@ -1,10 +1,1 @@
 <h1>Restaurants Index</h1>
-
-<%= simple_form_for :city, url: root_path, method: :get, html: { class: 'form-inline' } do |f| %>
-  <% if @city.nil? %>
-    <%= f.input :city, include_blank: true, required: false, input_html: {value: ""} %>
-  <% else %>
-    <%= f.input :city, include_blank: true, required: false, input_html: {value: @city[:city]} %>
-  <% end %>
-  <span class=''><%= f.submit %></span>
-<% end %>
