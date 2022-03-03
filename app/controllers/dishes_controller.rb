@@ -14,6 +14,9 @@ class DishesController < ApplicationController
     end
 
     @countries = Dish.pluck(:country)
-
+    
+    @dish = Dish.find_by_id(1)
+    @tags = DishRestaurant.all
+    @tag = DishRestaurant.where(dish_id: 1)
   end
 end
