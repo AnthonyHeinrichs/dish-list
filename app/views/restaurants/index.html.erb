@@ -21,24 +21,10 @@
     </div>
 </div>
 
-
-<!-- EXPERIMENT
-<%= simple_form_for(@restaurants) do |f| %>
-  <%= f.input :name %>
-  <%= f.button :submit %>
-<% end %>
-
-<%= @restaurants[0].name %>
-<%= @restaurants[0].address %>
--->
-
-
-<%= simple_form_for :city, url: root_path, method: :get, html: { class: 'form-inline' } do |f| %>
-  <% if @city.nil? %>
-    <%= f.input :city, include_blank: true, required: false, input_html: {value: ""} %>
-  <% else %>
-    <%= f.input :city, include_blank: true, required: false, input_html: {value: @city[:city]} %>
+<div class='container'>
+  <% @restaurants.each_with_index do |restaurant, index| %>
+  <a data-bs-toggle="modal" data-bs-target="#restaurantModal<%= index %>">
+    <%= render 'restaurant_card', restaurant: restaurant, index: index %>
+  </a>
   <% end %>
-  <span class=''><%= f.submit %></span>
-<% end %>
-
+</div>
