@@ -3,13 +3,13 @@
       <!-- DISHES -->
       <!--  HEADLINE with the two text inputs -->
     <div class="banner-head d-flex">
-      
+
         <p class="banner-dish">Dish</p>
-      
+
         <%= form_with url: root_path, method: :get, html: { class: 'sebis', data: {search_dishes_target: 'form' } }  do |f| %>
           <%= f.text_field :query, placeholder: 'type a country', value: params[:query], class: 'banner-country', data: { search_dishes_target: 'input', action: 'submit->search-dishes#update' } %>
         <% end %>
-      
+
     </div>
 
       <!-- SUB-HEADLINE the text below the entry fields -->
@@ -29,13 +29,11 @@
     <div class="row">
       <div class="col">
         <div class="col-xs-12 col-sm-8 offset-sm-2">
-          <h2 class="my-3 d-flex justify-content-center"> Dishes</h2>
-        
+
           <%= render 'list', dishes: @dishes %>
-        </div> 
+        </div>
       </div>
     </div>
   </div>
 
 </div>
- 
