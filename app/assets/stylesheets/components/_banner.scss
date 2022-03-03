@@ -28,6 +28,10 @@
 .banner-head {
     margin: 0 auto;
 	width: max-content;
+    justify-content: flex-end;
+}
+.sebis {
+    width: 50%;
 }
 .banner-dish {
     border: none;
@@ -37,7 +41,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 28px;
+    font-size: 32px;
     line-height: 35px;
     text-align: right;
     margin-right: 5px;
@@ -50,7 +54,7 @@
     font-family: 'Red Hat Display', sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 28px;
+    font-size: 32px;
     line-height: 35px;
     margin-left: 5px;
 }
@@ -81,6 +85,7 @@
 }
 .banner-picture-img img {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
+    /* border-style: solid; */
 }

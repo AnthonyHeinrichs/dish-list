@@ -1,42 +1,42 @@
-<div class="banner-container">
-    <!-- DISHES -->
-    <!--  HEADLINE with the two text inputs -->
-    <div class="banner-head">
-        <form>
-            <input type="text" class="banner-dish" value="Dish">
-            <input type="text" class="banner-country" value="Country">
-        </form>
-    </div>
-
-    <!-- SUB-HEADLINE the text below the entry fields -->
-    <div class="banner-text">
-        Did you know, that in most citys, there might be someone who makes your favourit dish, just the way you love it?
-    </div>
-
-    <!-- PICTURE centred, floating -->
-    <div class="banner-picture">
-        <%= link_to "/", class: "banner-picture-img" do %>
-            <%= image_tag "ramen_200.png" %>
+<div data-controller="search-dishes">
+  <div class="banner-container">
+      <!-- DISHES -->
+      <!--  HEADLINE with the two text inputs -->
+    <div class="banner-head d-flex">
+      
+        <p class="banner-dish">Dish</p>
+      
+        <%= form_with url: root_path, method: :get, html: { class: 'sebis', data: {search_dishes_target: 'form' } }  do |f| %>
+          <%= f.text_field :query, placeholder: 'type a country', value: params[:query], class: 'banner-country', data: { search_dishes_target: 'input', action: 'submit->search-dishes#update' } %>
         <% end %>
+      
     </div>
-</div>
+
+      <!-- SUB-HEADLINE the text below the entry fields -->
+    <div class="banner-text">
+      Did you know, that in most citys, there might be someone who makes your favourit dish, just the way you love it?
+    </div>
+
+      <!-- PICTURE centred, floating -->
+    <div class="banner-picture">
+      <%= link_to "/", class: "banner-picture-img" do %>
+        <%= image_tag "ramen_200.png" %>
+      <% end %>
+    </div>
+  </div>
 
 
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <div class="col-xs-12 col-sm-8 offset-sm-2">
-        <h2 class="my-3 d-flex justify-content-center"> Dishes</h2>
-
-        <div data-controller="search-dishes">
-          <div class="my-3 d-flex justify-content-center">
-            <%= form_with url: root_path, method: :get, html: { data: {search_dishes_target: 'form', action: 'submit->search-dishes#update' } }  do |f| %>
-                <%= f.text_field :query, placeholder: 'type a country', value: params[:query], data: { search_dishes_target: 'input' } %>
-            <% end %>
-          </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="col-xs-12 col-sm-8 offset-sm-2">
+          <h2 class="my-3 d-flex justify-content-center"> Dishes</h2>
+        
           <%= render 'list', dishes: @dishes %>
+        </div> 
       </div>
     </div>
   </div>
+
 </div>
  
