@@ -2,7 +2,7 @@
 
 .modalfordish {
   background-color: $pop-background;
-  border-radius: 20px;
+  border-radius: 5px;
   border-style: none;
   color: $text-color;
   box-shadow: $shadow;
@@ -48,9 +48,10 @@
     margin-bottom: 15px;
     object-fit: cover;
     min-width: 720px;
+    border-radius: 5px;
   }
-  p {
-    min-width: 720px;
+  .description {
+    max-width: 720px;
   }
 
 }
