@@ -13,37 +13,35 @@ puts 'Creating 5 dishes'
 dish = Dish.new(
   name: 'Pad Thai',
   country: 'Thailand',
-  description: 'Pad Thai is a dish typically made with rice noodles, shrimp, peanuts, a scrambled egg, and bean sprouts, among other vegetables.'
+  description: 'Pad Thai is a dish typically made with rice noodles, shrimp, peanuts, a scrambled egg, and bean sprouts, among other vegetables.',
+  image_url: 'https://images.unsplash.com/photo-1559314809-0d155014e29e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
 )
 dish.save!
 
 dish = Dish.new(
-  name: 'Spaghetti alla puttanesca',
+  name: 'Spaghetti Bolognese',
   country: 'Italy',
-  description: 'Spaghetti alla puttanesca is a pasta dish invented in Naples in the mid-20th century and made typically with tomatoes, olive oil, olives, chili peppers, capers, and garlic—with vermicelli or spaghetti pasta.'
+  description: 'Bolognese sauce is a meat-based sauce in Italian cuisine, typical of the city of Bologna. It is customarily used to dress tagliatelle al ragù and to prepare lasagne alla bolognese.',
+  image_url: 'https://images.unsplash.com/photo-1622973536968-3ead9e780960?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
 )
 dish.save!
 
 dish = Dish.new(
   name: 'Poutine',
   country: 'Canada',
-  description: 'Poutine is a dish of french fries and cheese curds topped with a brown gravy.'
+  description: 'Poutine is a dish of french fries and cheese curds topped with a brown gravy.',
+  image_url: 'https://images.unsplash.com/photo-1586805608485-add336722759?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
 )
 dish.save!
 
 dish = Dish.new(
-  name: 'Roulade',
-  country: 'Germany',
-  description: 'Roulade is a dish of filled rolled meat or pastry. Roulade can be savory or sweet.'
+  name: 'Schnitzel',
+  country: 'Austria',
+  description: 'A schnitzel is a thin slice of meat. The meat is usually thinned by pounding with a meat tenderizer. Most commonly, the meat is breaded before frying. Breaded schnitzel is popular in many countries and is made using veal, pork, chicken, mutton, beef, or turkey.',
+  image_url: 'https://images.unsplash.com/photo-1599921841143-819065a55cc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80'
 )
 dish.save!
 
-dish = Dish.new(
-  name: 'Chicken Kiev',
-  country: 'Ukraine',
-  description: 'Chicken Kiev is a dish made of chicken fillet pounded and rolled around cold butter, then coated with egg and bread crumbs, and either fried or baked.'
-)
-dish.save!
 
 puts '5 dishes created :)'
 
