@@ -1,5 +1,54 @@
+
+
 .modalfordish {
-  background-color: rgba(255,255,255, 0.85);
+  background-color: $pop-background;
   border-radius: 20px;
   border-style: none;
+  color: $text-color;
+  box-shadow: $shadow;
+  border: none;
+  min-width: 800px;
+}
+.modal-backdrop
+{
+  opacity:0.15 !important;
+}
+
+.modal-footer {
+  border: none !important;
+}
+
+.modal-header {
+  border: none !important;
+  padding: 5px;
+}
+
+.modal-title {
+  margin: 5px;
+
+  h2 {
+    margin-top: 5px;
+    margin-bottom: 3px;
+  }
+
+  p {
+    margin-left: 25px;
+    margin-bottom: 5px;
+  }
+
+}
+
+.modal-body {
+  margin-left: 25px;
+  text-decoration: none;
+  padding: 5px !important;
+
+  img {
+    max-height: 300px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    min-width: 720px;
+  }
+
+
 }
