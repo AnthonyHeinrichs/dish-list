@@ -1,1 +1,7 @@
-<h1>Restaurants Index</h1>
+<div class='container'>
+  <% @restaurants.each_with_index do |restaurant, index| %>
+  <a data-bs-toggle="modal" data-bs-target="#restaurantModal<%= index %>">
+    <%= render 'restaurant_card', restaurant: restaurant, index: index %>
+  </a>
+  <% end %>
+</div>
