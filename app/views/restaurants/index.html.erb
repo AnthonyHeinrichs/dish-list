@@ -1,4 +1,26 @@
-<h1>Restaurants Index</h1>
+<div class="banner-container">
+  <!-- RESTAURANT -->
+    <!--  HEADLINE with the two text inputs -->
+    <div class="banner-head">
+        <form>
+            <input type="text" class="banner-dish" value="Dish">
+            <input type="text" class="banner-country" value="Location">
+        </form>
+    </div>
+
+    <!-- SUB-HEADLINE the text below the entry fields -->
+    <div class="banner-text">
+        Did you know, that in most citys, there might be someone who makes your favourit dish, just the way you love it?
+    </div>
+
+    <!-- PICTURE centred, floating -->
+    <div class="banner-picture">
+        <%= link_to "/", class: "banner-picture-img" do %>
+            <%= image_tag "ramen_200.png" %>
+        <% end %>
+    </div>
+</div>
+
 
 <!-- EXPERIMENT
 <%= simple_form_for(@restaurants) do |f| %>
