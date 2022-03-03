@@ -1,14 +1,19 @@
-<div class="modal animate__animated animate__fadeIn animate__faster" id="restaurantModal<%= index %>" tabindex="-1" aria-labelledby="restaurantModalLabel" aria-hidden="true">
-  <div class="modal-dialog border border-0 border-rounded-3">
-    <div class="modal-content modalforrestaurant">
+<div class="modal fade" id="restaurantModal" tabindex="-1" role="dialog" aria-labelledby="restaurantModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal-title font-weight-bold mx-4" id="restaurantModalLabel"><%= restaurant.name %></h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
       <div class="modal-body">
-        <ul>
-          <strong>To add modal design</strong>
-        </ul>
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
     </div>
   </div>
 </div>
