@@ -2,7 +2,7 @@
     position: relative;
     display: block;
     width: 100vw;
-    height: 290px;
+    height: 150px;
     background-color: $orange;
     border-radius: 0 0 60% 60% / 0 0 80% 80%;
     padding-top: 0px;
@@ -28,8 +28,12 @@
 .banner-head {
     margin: 0 auto;
 	width: max-content;
+    justify-content: flex-end;
 }
-#banner-dish {
+.sebis {
+    width: 50%;
+}
+.banner-dish {
     border: none;
     color: $purple;
     background-color: $orange;
@@ -38,11 +42,11 @@
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
-    line-height: 55px;
+    line-height: 35px;
     text-align: right;
-    border-bottom: 2px solid $purple;
+    margin-right: 5px;
 }
-#banner-country {
+.banner-country {
     border: none;
     color: $white;
     background-color: $orange;
@@ -51,8 +55,8 @@
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
-    line-height: 55px;
-    border-bottom: 2px solid $purple;
+    line-height: 35px;
+    margin-left: 5px;
 }
 
 /* SUB-HEADLINE the text below the entry fields */
@@ -60,11 +64,11 @@
     color: $white;
     margin: auto;
     width: 50%;
-    padding-top: 20px;
+    padding-top: 5px;
     font-family: 'Red Hat Display', sans-serif;
     font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
+    font-weight: lighter;
+    font-size: 12px;
     line-height: 26px;
     text-align: center;
 }
@@ -72,14 +76,16 @@
 /* PICTURE centred, floating */
 .banner-picture {
     position: absolute;
-	width: 150px;
-	height: 150px;
+	
 	
 	left: 50%;
 	bottom: 7%;
 	transform: translate(-50%, 50%);
     border-radius: 90% 90% 90% 90%;
 }
-.banner-picture-img {
+.banner-picture-img img {
     border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    /* border-style: solid; */
 }
