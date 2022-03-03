@@ -1,16 +1,15 @@
-<h1>Hi, this is our dishes index!</h1>
-
 <div class="container">
   <div class="row">
     <div class="col">
       <div class="col-xs-12 col-sm-8 offset-sm-2">
-        <h2 class="my-3 d-flex justify-content-center"> Dishes</h2>
+        <h2 class="my-3 d-flex justify-content-center animate__animated animate__wobble animate__faster animate__infinite"> Dishes</h2>
 
         <div data-controller="search-dishes">
-          <%= form_with url: root_path, method: :get, html: { data: {search_dishes_target: 'form', action: 'submit->search-dishes#update' } }  do |f| %>
-              <%= f.text_field :query, placeholder: 'type a country', value: params[:query], data: { search_dishes_target: 'input' } %>
-          <% end %>
-
+          <div class="my-3 d-flex justify-content-center">
+            <%= form_with url: root_path, method: :get, html: { data: {search_dishes_target: 'form', action: 'submit->search-dishes#update' } }  do |f| %>
+                <%= f.text_field :query, placeholder: 'type a country', value: params[:query], data: { search_dishes_target: 'input' } %>
+            <% end %>
+          </div>
           <%= render 'list', dishes: @dishes %>
       </div>
     </div>
