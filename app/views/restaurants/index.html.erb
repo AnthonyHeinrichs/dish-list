@@ -4,6 +4,7 @@
       <!--  HEADLINE with the two text inputs -->
       <div class="banner-head d-flex">
               <input type="text" class="banner-dish sebis" id="tonys" value="<%=params[:dish]%>">
+
               <input type="text" class="banner-country sebis" value="Location">
       </div>
 
@@ -44,3 +45,12 @@
   </div>
   <% end %>
 </div>
+
+
+
+<form action="/restaurants">
+  <input name="location" type="text">
+  <%= hidden_field_tag :dish, params[:dish] %>
+  <%= hidden_field_tag :dish_picture, params[:dish_picture] %>
+  <button type="submit">Search</button>
+</form>
