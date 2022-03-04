@@ -8,8 +8,8 @@ export default class extends Controller {
     console.log(this.listTarget)
     console.log(this.formTarget)
     console.log(this.inputTarget)
-    
-    
+
+
   }
   update(event) {
     event.preventDefault()
@@ -19,17 +19,7 @@ export default class extends Controller {
     .then(response => response.text())
     .then((data) => {
       this.listTarget.outerHTML = data
-    })
-  }
-  update(event) {
-    event.preventDefault()
-    console.log(this.imgTarget.attributes.src.value)
 
-
-    const url = `${this.formTarget.action}?query=${this.inputTarget.value}`
-    fetch(url, { headers: { "Accept": "text/plain" } })
-    .then(response => response.text())
-    .then((data) => {
       console.log(this.inputTarget.value)
       if(this.inputTarget.value === 'pizza') {
         this.imgTarget.attributes.src.value = '/assets/pizza_400.png'
@@ -40,7 +30,6 @@ export default class extends Controller {
       } else if (this.inputTarget.value === 'ramen') {
         this.imgTarget.attributes.src.value = '/assets/ramen_200.png'
       }
-      
-    })  
+    })
   }
 }
