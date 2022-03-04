@@ -7,7 +7,7 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.all
 
     if params[:location].present?
-      @restaurants = Restaurant.all.near(params[:location], 50)
+      @restaurants = Restaurant.all.near(params[:location], 20)
     end
   end
 end
