@@ -3,7 +3,7 @@
     <!-- RESTAURANT -->
       <!--  HEADLINE with the two text inputs -->
       <div class="banner-head d-flex">
-              <input type="text" class="banner-dish sebis" id="tonys" value="Dish">
+              <input type="text" class="banner-dish sebis" id="tonys" value="<%=params[:dish]%>">
               <input type="text" class="banner-country sebis" value="Location">
       </div>
 
@@ -15,11 +15,17 @@
       <!-- PICTURE centred, floating -->
       <div class="banner-picture">
           <%= link_to "/", class: "banner-picture-img" do %>
-              <%= image_tag "ramen_200.png" %>
+              <%= image_tag "#{params[:dish_picture]}" %>
           <% end %>
       </div>
   </div>
 
+  <% if @restaurants.empty? %>
+  <div class='d-flex justify-content-around'>
+    <!-- We need to change the link to a new restaurant form once we create restaurant#new. -->
+    <%= link_to "There are no restaurants that make #{params[:dish]} nearby, want to add one?", dishes_path, class: "btn btn-link" %>
+  </div>
+  <% else %>
   <div class="container">
     <div class="row">
       <div class="col">
@@ -36,4 +42,5 @@
       </div>
     </div>
   </div>
+  <% end %>
 </div>
