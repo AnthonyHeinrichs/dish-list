@@ -131,12 +131,9 @@ restaurant_5 = { name: 'Restaurant Epsylon', address: 'Berlin', }
 restaurant_6 = { name: 'Restaurant Foxy', address: 'Munich', }
 restaurant_7 = { name: 'Restaurant Gina', address: 'Berlin', }
 
-<<<<<<< HEAD
-=======
+
 puts 'Removing dated DishRestaurants'
 DishRestaurant.delete_all
-
->>>>>>> e566e2e8283cd38abb610373c56c8b26593fc331
 
 [ restaurant_1, restaurant_2, restaurant_3, restaurant_4, restaurant_5, restaurant_6, restaurant_7 ].each do |infusion|
   restaurant = Restaurant.create(infusion)
