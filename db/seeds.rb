@@ -142,20 +142,3 @@ DishRestaurant.delete_all
 end
 
 puts 'Thank you for taking my seed. May it be germinating inside of you.'
-
-# -------------------------------------------------------------------------------
-
-# puts 'Removing dated DishRestaurants'
-# DishRestaurant.delete_all
-# puts 'Creating DishRestaurants...'
-
-# DishRestaurant.create(restaurant: restaurant_1, dish: dish_2) # many to many relation
-# DishRestaurant.create(restaurant: restaurant_2, dish: dish_2)
-# DishRestaurant.create(restaurant: restaurant_3, dish: dish_2)
-# DishRestaurant.create(restaurant: restaurant_4, dish: dish_2)
-# DishRestaurant.create(restaurant: restaurant_5, dish: dish_2)
-# DishRestaurant.create(restaurant: restaurant_1, dish: dish_1)
-# DishRestaurant.create(restaurant: restaurant_3, dish: dish_1)
-# DishRestaurant.create(restaurant: restaurant_3, dish: dish_3)
-# DishRestaurant.create(restaurant: restaurant_4, dish: dish_3)
-# DishRestaurant.create(restaurant: restaurant_5, dish: dish_3)
