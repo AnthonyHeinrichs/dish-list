@@ -9,5 +9,10 @@ class RestaurantsController < ApplicationController
       @restaurants = Restaurant.all.where(id: params[:dish])
     end
     # !! THIS LOGIC MUST BE CHANGED ONCE WE HAVE A LINKED RESTAURANTS_DISH FROM THE JOIN TABLE !!
+
+    # once we bring in location we can add addiitonal logic, don't know if this make sense, just brainstorming:
+    # if params[:dish].present? && params[:location].present?
+    # elsif params[:dish].present? && !params[:location].present?
+    # elsif params[:location].present? && !params[:dish].present?
   end
 end

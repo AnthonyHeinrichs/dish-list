@@ -22,6 +22,7 @@
 
   <% if @restaurants.empty? %>
   <div class='d-flex justify-content-around'>
+    <!-- We need to change the link to a new restaurant form once we create restaurant#new. -->
     <%= link_to "There are no restaurants that make #{params[:dish]} nearby, want to add one?", dishes_path, class: "btn btn-link" %>
   </div>
   <% else %>
