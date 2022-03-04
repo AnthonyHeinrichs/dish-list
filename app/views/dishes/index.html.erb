@@ -4,7 +4,7 @@
 
     <!--  HEADLINE with the two text inputs -->
     <div class="banner-head d-flex">
-        <p class="banner-dish">DishList</p>
+        <p class="banner-dish">Dish-List</p>
 
         <%= form_with url: root_path, method: :get, html: { class: 'sebis', data: {search_dishes_target: 'form' } }  do |f| %>
           <%= f.text_field :query, placeholder: 'type a country', value: params[:query], class: 'banner-country', data: { search_dishes_target: 'input', action: 'keyup->search-dishes#update' } %>
@@ -23,12 +23,11 @@
       <% end %>
     </div>
     <div class="banner-sub">
-      Our Picks
     </div>
   </div>
 
 
-  
+
   <!-- Rendered Dish-List -->
   <div class="container">
     <div class="row">

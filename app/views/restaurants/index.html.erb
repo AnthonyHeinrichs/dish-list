@@ -3,8 +3,8 @@
     <!-- RESTAURANT -->
       <!--  HEADLINE with the two text inputs -->
       <div class="banner-head d-flex">
-              <input type="text" class="banner-dish sebis" id="tonys" value="<%=params[:dish]%>">
-              <input type="text" class="banner-country sebis" value="Location">
+          <input type="text" class="banner-dish sebis" id="tonys" value="<%= params[:dish].present? ? "#{params[:dish]}" : 'Dish' %>">
+          <input type="text" class="banner-country sebis" value="Location">
       </div>
 
       <!-- SUB-HEADLINE the text below the entry fields -->
@@ -15,7 +15,11 @@
       <!-- PICTURE centred, floating -->
       <div class="banner-picture">
           <%= link_to "/", class: "banner-picture-img" do %>
+              <% if params[:dish_picture].present? %>
               <%= image_tag "#{params[:dish_picture]}" %>
+              <% else %>
+              <%= image_tag "ramen_200.png" %>
+              <% end %>
           <% end %>
       </div>
   </div>
