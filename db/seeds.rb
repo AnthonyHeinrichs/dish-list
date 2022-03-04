@@ -143,11 +143,11 @@ dish.save!
 puts '5 dishes created :)'
 
 # -------------------------------------------------------------------------------
+# RESTAURANTS
 
 puts 'Removing dated restaurants'
 Restaurant.delete_all
 puts 'Creating Restaurants...'
-
 
 restaurant_1 = { name: 'Restaurant Alpha', address: 'Berlin', }
 restaurant_2 = { name: 'Restaurant Beta', address: 'Hamburg', }
@@ -163,3 +163,19 @@ restaurant_7 = { name: 'Restaurant Gina', address: 'Berlin', }
 end
 
 puts 'Thank you for taking my seed. May it be germinating inside of you.'
+
+# -------------------------------------------------------------------------------
+# DISH_RESTAURANTS
+
+puts 'Removing dated Dish-Restaurant connections'
+DishRestaurant.delete_all
+puts 'Creating DishRestaurants...'
+
+dishres_1 = { restaurant_id: 1, dish_id: 2, }
+dishres_2 = { restaurant_id: 2, dish_id: 1, }
+dishres_3 = { restaurant_id: 3, dish_id: 2, }
+
+[ dishres_1, dishres_2, dishres_3 ].each do |infusion|
+  dishrestaurant = DishRestaurant.create(infusion)
+  puts "Connecting the food with the chef #{dishrestaurant.dish_id}."
+end
