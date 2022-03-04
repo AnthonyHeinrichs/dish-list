@@ -52,13 +52,13 @@ Restaurant.delete_all
 puts 'Creating Restaurants...'
 
 
-restaurant_1 = { name: 'Restaurant Alpha', address: 'Berlin', }
-restaurant_2 = { name: 'Restaurant Beta', address: 'Hamburg', }
-restaurant_3 = { name: 'Restaurant Charly', address: 'Munich', }
-restaurant_4 = { name: 'Restaurant Delta', address: 'Koln', }
-restaurant_5 = { name: 'Restaurant Epsylon', address: 'Berlin', }
-restaurant_6 = { name: 'Restaurant Foxy', address: 'Munich', }
-restaurant_7 = { name: 'Restaurant Gina', address: 'Berlin', }
+restaurant_1 = { name: 'Restaurant Alpha', address: 'Berlin' }
+restaurant_2 = { name: 'Restaurant Beta', address: 'Hamburg'}
+restaurant_3 = { name: 'Restaurant Charly', address: 'Munich' }
+restaurant_4 = { name: 'Restaurant Delta', address: 'Koln'}
+restaurant_5 = { name: 'Restaurant Epsylon', address: 'Berlin'}
+restaurant_6 = { name: 'Restaurant Foxy', address: 'Munich'}
+restaurant_7 = { name: 'Restaurant Gina', address: 'Berlin' }
 
 [ restaurant_1, restaurant_2, restaurant_3, restaurant_4, restaurant_5, restaurant_6, restaurant_7 ].each do |infusion|
   restaurant = Restaurant.create(infusion)
