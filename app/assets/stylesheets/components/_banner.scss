@@ -31,9 +31,15 @@
 	width: max-content;
     justify-content: flex-end;
 }
+
 .sebis {
     width: 50%;
 }
+
+#tonys {
+  margin-right: -50px;
+}
+
 .banner-dish {
     border: none;
     color: $purple;
@@ -88,4 +94,8 @@
     width: 120px;
     height: 120px;
     /* border-style: solid; */
+}
+
+.restaurants-banner {
+  max-width: 100%;
 }

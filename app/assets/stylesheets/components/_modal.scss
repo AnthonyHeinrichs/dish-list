@@ -1,5 +1,3 @@
-
-
 .modalfordish {
   background-color: $pop-background;
   border-radius: 5px;
@@ -9,6 +7,17 @@
   border: none;
   min-width: 800px;
 }
+
+.modalforrestaurant {
+  background-color: $pop-background;
+  border-radius: 5px;
+  border-style: none;
+  color: $text-color;
+  box-shadow: $shadow;
+  border: none;
+  min-width: 800px;
+}
+
 .modal-backdrop
 {
   opacity:0.15 !important;
