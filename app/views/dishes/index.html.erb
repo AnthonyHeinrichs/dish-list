@@ -1,30 +1,35 @@
 <div data-controller="search-dishes">
   <div class="banner-container">
-      <!-- DISHES -->
-      <!--  HEADLINE with the two text inputs -->
-    <div class="banner-head d-flex">
+    <!-- DISHES -->
 
+    <!--  HEADLINE with the two text inputs -->
+    <div class="banner-head d-flex">
         <p class="banner-dish">DishList</p>
 
         <%= form_with url: root_path, method: :get, html: { class: 'sebis', data: {search_dishes_target: 'form' } }  do |f| %>
           <%= f.text_field :query, placeholder: 'type a country', value: params[:query], class: 'banner-country', data: { search_dishes_target: 'input', action: 'keyup->search-dishes#update' } %>
         <% end %>
-
     </div>
 
-      <!-- SUB-HEADLINE the text below the entry fields -->
+    <!-- SUB-HEADLINE the text below the entry fields -->
     <div class="banner-text">
       Did you know, that in most citys, there might be someone who makes your favourite dish, just the way you love it?
     </div>
 
-      <!-- PICTURE centred, floating -->
+    <!-- PICTURE centred, floating -->
     <div class="banner-picture">
       <%= link_to "/", class: "banner-picture-img" do %>
-        <%= image_tag "ramen_200.png" %>
+        <%= image_tag "ramen_200.png", data: { search_dishes_target: 'img' } %>
       <% end %>
+    </div>
+    <div class="banner-sub">
+      Our Picks
     </div>
   </div>
 
+
+  
+  <!-- Rendered Dish-List -->
   <div class="container">
     <div class="row">
       <div class="col">
