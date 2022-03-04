@@ -1,5 +1,4 @@
 <!-- Modal -->
-
 <div class="modal animate__animated animate__fadeIn animate__faster" id="dishModal<%= index %>" tabindex="-1" aria-labelledby="dishModalLabel" aria-hidden="true">
   <div class="modal-dialog border border-0 border-rounded-3" style="transform: translate(-25%);">
     <div class="modal-content modalfordish">
@@ -11,11 +10,15 @@
       </div>
       <div class="modal-body">
         <img src=<%= dish.image_url %> alt=<%= dish.name %>>
-        <p> <%= dish.description %> </p>
+        <div class="description">
+          <p> <%= dish.description %> </p>
+        </div>
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-link">Search for restaurants</button>
+        <%= link_to "/restaurants", class: "btn btn-link" do %>
+          Find restaurants that make <%= dish.name %>
+        <% end %>
       </div>
     </div>
   </div>
