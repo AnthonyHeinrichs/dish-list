@@ -16,9 +16,7 @@
 
       </div>
       <div class="modal-footer">
-        <%= link_to "/restaurants", class: "btn btn-link" do %>
-          Find restaurants that make <%= dish.name %>
-        <% end %>
+        <%= link_to "Find restaurants that make #{dish.name}", restaurants_path(dish: dish.name), class: "btn btn-link" %>
       </div>
     </div>
   </div>
