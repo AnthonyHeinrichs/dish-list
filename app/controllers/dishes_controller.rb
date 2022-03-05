@@ -3,6 +3,7 @@ class DishesController < ApplicationController
 
   def index
     @dishes = Dish.all
+    @food = @dishes.find_by_id(87)
 
     if params[:query].present?
       @dishes = Dish.all.where(country: params[:query])
@@ -15,7 +16,7 @@ class DishesController < ApplicationController
 
     @countries = Dish.pluck(:country)
     
-    @tags = DishRestaurant.all
+    @dishrestaurants = DishRestaurant.all
     
   end
 end

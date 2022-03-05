@@ -6,7 +6,11 @@
       <div class="modal-title">
         <h2 class="font-weight-bold mx-4" id="dishModalLabel"><%= dish.name %></h2>
         <p><%= dish.country %></p>
-        <p><%= @tags %></p>
+        <%= @myid %>
+        <% dishid = @dishes.find_by_id(87) %> <!-- Doesnt take the myid as 87 -->
+        <%= dishid %>
+        <p><%= dishid.restaurants[0].name %></p>
+        <p><% @dishrestaurants %></p>
       </div>
       </div>
       <div class="modal-body">

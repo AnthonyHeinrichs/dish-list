@@ -3,7 +3,7 @@ class RestaurantsController < ApplicationController
 
   def index
     @restaurants = Restaurant.all
-    @dishrestaurant = DishRestaurant.all
+    @dishrestaurants = DishRestaurant.all
     # !! THIS LOGIC MUST BE CHANGED ONCE WE HAVE A LINKED RESTAURANTS_DISH FROM THE JOIN TABLE !!
     if params[:dish].present?
       @restaurants = Restaurant.all.where(id: params[:dish])
