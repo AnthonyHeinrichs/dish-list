@@ -1,3 +1,65 @@
+.dishlist-container {
+  width: 480px;
+  height: 195px;
+}
+.dishlist-card {
+  width: 480px;
+  height: 176px;
+  border-radius: 8% 8% 8% 8% / 22% 22% 22% 22%;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  background-color: #ebebebb6;
+  opacity: 0.9;
+}
+.dishlist-picture {
+  width: 160px;
+  height: 160px;
+  border-radius: 10%;
+}
+
+.dishlist-right {
+  padding-left: 2rem;
+}
+.dishlist-title {
+  font-family: 'Red Hat Display', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5em;
+  color: $text-color;
+}
+.dishlist-tags {
+  font-family: 'Red Hat Display', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1em;
+  color: $text-color;
+}
+
+/* Dashboard */
+.dishlist-dashboard-container {
+  font-family: 'Red Hat Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1em;
+  color: $text-color;
+  padding-top: 40px;
+}
+.dishlist-dashboard-title {
+  font-family: 'Red Hat Display', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.8em;
+  color: $text-color;
+}
+.dishlist-dashboard-content {
+
+}
+
+
+/* Was here before */
+.dish-card {
+  width: 400px;
+}
 .cards-for-dishes {
   border-radius: 5px;
   padding: 5px;
@@ -6,34 +68,21 @@
   border: none;
   box-shadow: $shadow;
 }
-
 .image-for-card {
   border-radius: 5px;
-  height: 110px;
-  width: 150px;
-  object-fit: cover;
 }
-
-.dish-card {
-  width: 400px;
-
-}
-
 .dishes {
   max-width: 1500px;
 }
-
 .cards-for-restaurants {
   border-radius: 5px;
   padding: 5px;
   cursor: pointer;
   background-color: $cards-background;
 }
-
 .restaurant-card {
   width: 400px;
 }
-
 .d-flex {
   margin-top: 80px;
 }

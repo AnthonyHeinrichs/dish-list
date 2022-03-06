@@ -1,10 +1,12 @@
-<div data-search-dishes-target="list">
-  <div class="d-flex flex-row flex-wrap justify-content-around">
+<div class="container" data-search-dishes-target="list">
+  <div class="row">
     <% dishes.each_with_index do |dish, index| %>
-        <% @myid = dish.id %>
-        <a data-bs-toggle="modal" data-bs-target="#dishModal<%= index %>">
-        <%= render 'dish_infos', dish: dish %>
-        </a>
+        <% @myid = dish.id %> <!-- trying to pass on id to use in modal. doesnt work -->
+        
+          <a data-bs-toggle="modal" data-bs-target="#dishModal<%= index %>">
+            <%= render 'dish_infos', dish: dish %>
+          </a>
+        
       <%= render 'dish_modal', dish: dish, index: index %>
     <% end %>
   </div>

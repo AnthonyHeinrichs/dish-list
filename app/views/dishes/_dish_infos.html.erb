@@ -1,16 +1,40 @@
-<div class="dish-card" data-controller="edit-dish" data-edit-dish-target="card">
-  <div class="row">
-    <div class="card mb-3 cards-for-dishes">
-      <div class="row no-gutters">
-        <div class="col-6">
-          <img class="image-for-card" src=<%= dish.image_url %> class="card-img" alt=<%= dish.name %>>
-        </div>
-        <div class="col-6">
-          <div class="card-body">
-            <p class="card-title"><%= dish.name %></p>
+
+
+ <div class="dishlist-container" data-controller="edit-dish" data-edit-dish-target="card">
+  
+    <div class="card dishlist-card" >
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-4">
+            <img class="dishlist-picture" src=<%= dish.image_url %> alt=<%= dish.name %>>
+          </div>
+          <div class="col-8 dishlist-right">
+            <div class="container-fluid">
+              <div class="row dishlist-title"><%= dish.name %></div>
+              <div class="row dishlist-tags">
+                tags, tags, tags
+                <% dish.restaurants.name %> <!-- Link to doesnt work -->
+              </div>
+              <div class="row">
+                <div class="container-fluid dishlist-dashboard-container">
+                  <div class="row">
+                    <div class="col">
+                      <div class="dishlist-dashboard-title">HOURS</div>
+                      <div class="dishlist-dashboard-content">Open</div>
+                    </div>
+                    <div class="col">
+                      <div class="dishlist-dashboard-title">RATING</div>
+                      <div class="dishlist-dashboard-content">4.5</div>
+                    </div>
+                    <div class="col">
+                      <div class="dishlist-dashboard-title">DISTANCE</div>
+                      <div class="dishlist-dashboard-content">2.5 km</div>
+                    </div>
+                  </div>
+                </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 </div>
