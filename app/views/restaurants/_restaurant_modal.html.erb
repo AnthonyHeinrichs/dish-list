@@ -36,7 +36,15 @@
                   <div class="row">
                     <div class="col">
                       <div class="restaurant-dashboard-title">HOURS</div>
-                      <div class="restaurant-dashboard-content">Open</div>
+
+                        <!-- Validating if a restaurant is open -->
+                        <% week = restaurant.openings %>
+                        <% if @timenow >= week[@daynow].start_hour && @timenow <= week[@daynow].end_hour %>
+                          <div class="restaurant-dashboard-content-open">Open</div>
+                        <% else %>
+                          <div class="restaurant-dashboard-content">closed</div>
+                        <% end %>
+                      
                     </div>
                     <div class="col">
                       <div class="restaurant-dashboard-title">RATING</div>
@@ -104,13 +112,8 @@
                         <div class="accordion  restaurant-hours" id="accordionExample">
                           <div class="accordion-item restaurant-hours">
                             <h2 class="accordion-header" id="headingOne">
-                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">                              
-                                <% if @timenow => restaurant.openings.first.start_hour && @timenow <= restaurant.openings.first.end_hour %>
-                                  open
-                                <% else %>
-                                  closed
-                                <% end %>
-                                <p>11:00 - 22:00 <%= restaurant.openings.first.start_hour %></p>
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <p>11:00 - 22:00 <%= @daynow %></p>
                               </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
