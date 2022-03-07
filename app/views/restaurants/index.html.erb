@@ -4,8 +4,8 @@
       <!--  HEADLINE with the two text inputs -->
       <div class="banner-head restaurant-banner-margin d-flex">
 
-          <input type="text" class="banner-dish sebis" id="tonys" value="<%= params[:dish].present? ? "#{params[:dish]}" : 'Dish' %>">
-          <form  action="/restaurants">
+          <input type="text" autocomplete="off" class="banner-dish sebis" id="tonys" value="<%= params[:dish].present? ? "#{params[:dish]}" : 'Dish' %>">
+          <form action="/restaurants" autocomplete="off">
             <input id="dan_input" name="location" type="text" value="<%= params[:location].present? ? "#{params[:location]}" : 'Location' %>">
             <%= hidden_field_tag :dish, params[:dish] %>
             <%= hidden_field_tag :dish_picture, params[:dish_picture] %>
@@ -37,7 +37,7 @@
     <%= link_to "There are no restaurants that make #{params[:dish]} nearby, want to add one?", dishes_path, class: "btn btn-link" %>
   </div>
   <% else %>
-  
+
   <div class="container">
     <div class="row">
       <div class="col">
