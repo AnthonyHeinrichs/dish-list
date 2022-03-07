@@ -1,9 +1,10 @@
 <h1>Add a Restaurant</h1>
-<div class="form">
+<div class="new_restaurant_form">
   <%= simple_form_for(@restaurant) do |f| %>
     <%= f.input :name %>
     <%= f.input :address %>
-    <%= f.input :rating %>
     <%= f.submit %>
   <% end %>
 </div>
+
+<%= link_to "Back", restaurants_path(@restaurant)%>
