@@ -1,0 +1,16 @@
+
+<% @review = Review.new(user_id: current_user.id) %>
+
+<%= form_for(@review) do |f| %>
+
+  <p>What dish are you reviewing?</p>
+  <%= f.select :dish_restaurant_id, label: "Dish" %>
+
+  <p>Select a rating for the dish. 0 (poor) - 5 (great).</p>
+  <%= f.number_field :rating, label: "Rating", min: 0, max: 5, size: 5, autofocus: true %>
+
+  <p>Add a comment.</p>
+  <%= f.text_area :description, label: "Comment", size: "30x10" %>
+
+  <%= f.submit %>
+<% end %>
