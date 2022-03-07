@@ -4,6 +4,10 @@ class RestaurantsController < ApplicationController
   def index
     @restaurants = Restaurant.all
     @dishrestaurants = DishRestaurant.all
+    @timenow = Time.now
+    @timenow = @timenow.hour
+    @daynow = Time.now
+    @daynow = @daynow.wday - 1
     # !! THIS LOGIC MUST BE CHANGED ONCE WE HAVE A LINKED RESTAURANTS_DISH FROM THE JOIN TABLE !!
 
     if params[:location].present?

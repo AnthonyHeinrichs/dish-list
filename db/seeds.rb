@@ -125,13 +125,13 @@ Restaurant.delete_all
 puts 'Creating Restaurants...'
 
 
-restaurant_1 = { name: 'Restaurant Alpha', address: 'Berlin', }
-restaurant_2 = { name: 'Restaurant Beta', address: 'Hamburg', }
-restaurant_3 = { name: 'Restaurant Charly', address: 'Munich', }
-restaurant_4 = { name: 'Restaurant Delta', address: 'Koln', }
-restaurant_5 = { name: 'Restaurant Epsylon', address: 'Berlin', }
-restaurant_6 = { name: 'Restaurant Foxy', address: 'Munich', }
-restaurant_7 = { name: 'Restaurant Gina', address: 'Berlin', }
+restaurant_1 = { name: 'Harrey Panjabi', address: 'Berlin', }
+restaurant_2 = { name: 'Burger Buster', address: 'Hamburg', }
+restaurant_3 = { name: 'Captain Pizza', address: 'Munich', }
+restaurant_4 = { name: 'Vegan and Meet', address: 'Koln', }
+restaurant_5 = { name: 'Sandras little Dougnut', address: 'Berlin', }
+restaurant_6 = { name: 'Tonys Karaokee', address: 'Munich', }
+restaurant_7 = { name: 'Gina Tavern', address: 'Berlin', }
 
 
 puts 'Removing dated DishRestaurants'
@@ -145,3 +145,70 @@ end
 
 puts 'Thank you for taking my seed. May it be germinating inside of you.'
 
+# -------------------------------------------------------------------------------
+
+puts 'Traveling through time'
+Opening.delete_all
+puts 'Injecting new time...'
+
+# weekday takes 1-7 where 1=Monday and 7=Sunday
+# 25 = CLOSED
+
+open_mon = { weekday: 1, start_hour: 9, end_hour: 17 }
+open_tue = { weekday: 2, start_hour: 9, end_hour: 17 }
+open_wed = { weekday: 3, start_hour: 9, end_hour: 17 }
+open_thu = { weekday: 4, start_hour: 9, end_hour: 17 }
+open_fri = { weekday: 5, start_hour: 9, end_hour: 19 }
+open_sat = { weekday: 6, start_hour: 11, end_hour: 19 }
+open_sun = { weekday: 7, start_hour: 25, end_hour: 25 }
+
+restaurants = Restaurant.all
+
+[ open_mon, open_tue, open_wed, open_thu, open_fri, open_sat, open_sun ].each do |infusion|
+  opening = Opening.new(infusion)
+  opening.restaurant = restaurants[0]
+  opening.save!
+  puts "Waaaaaap... Time #{opening.weekday}."
+end
+
+[ open_mon, open_tue, open_wed, open_thu, open_fri, open_sat, open_sun ].each do |infusion|
+  opening = Opening.new(infusion)
+  opening.restaurant = restaurants[1]
+  opening.save!
+  puts "Waaaaaap... Time #{opening.weekday}."
+end
+
+[ open_mon, open_tue, open_wed, open_thu, open_fri, open_sat, open_sun ].each do |infusion|
+  opening = Opening.new(infusion)
+  opening.restaurant = restaurants[2]
+  opening.save!
+  puts "Waaaaaap... Time #{opening.weekday}."
+end
+
+[ open_mon, open_tue, open_wed, open_thu, open_fri, open_sat, open_sun ].each do |infusion|
+  opening = Opening.new(infusion)
+  opening.restaurant = restaurants[3]
+  opening.save!
+  puts "Its #{opening.weekday} more minutes to go."
+end
+
+[ open_mon, open_tue, open_wed, open_thu, open_fri, open_sat, open_sun ].each do |infusion|
+  opening = Opening.new(infusion)
+  opening.restaurant = restaurants[4]
+  opening.save!
+  puts "Daddy loves me #{opening.weekday} times."
+end
+
+[ open_mon, open_tue, open_wed, open_thu, open_fri, open_sat, open_sun ].each do |infusion|
+  opening = Opening.new(infusion)
+  opening.restaurant = restaurants[5]
+  opening.save!
+  puts "I just ate #{opening.weekday} cooky."
+end
+
+[ open_mon, open_tue, open_wed, open_thu, open_fri, open_sat, open_sun ].each do |infusion|
+  opening = Opening.new(infusion)
+  opening.restaurant = restaurants[6]
+  opening.save!
+  puts "Mother told me this will happen #{opening.weekday} times."
+end

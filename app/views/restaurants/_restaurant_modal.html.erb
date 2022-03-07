@@ -33,7 +33,15 @@
                   <div class="row">
                     <div class="col">
                       <div class="restaurant-dashboard-title">HOURS</div>
-                      <div class="restaurant-dashboard-content">Open</div>
+
+                        <!-- Validating if a restaurant is open -->
+                        <% week = restaurant.openings %>
+                        <% if @timenow >= week[@daynow].start_hour && @timenow <= week[@daynow].end_hour %>
+                          <div class="restaurant-dashboard-content-open">Open</div>
+                        <% else %>
+                          <div class="restaurant-dashboard-content-closed">Closed</div>
+                        <% end %>
+                      
                     </div>
                     <div class="col">
                       <div class="restaurant-dashboard-title">RATING</div>
@@ -102,18 +110,34 @@
                           <div class="accordion-item restaurant-hours">
                             <h2 class="accordion-header" id="headingOne">
                               <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+
                                 <p>11:00 - 22:00</p>
                               </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                               <div class="accordion-body">
-                                <p>MON closed</p>
-                                <p>TUE 11:00 - 22:00</p>
-                                <p>WED 11:00 - 22:00</p>
-                                <p>THU 11:00 - 22:00</p>
-                                <p>FRI 11:00 - 24:00</p>
-                                <p>SAT 11:00 - 24:00</p>
-                                <p>SUN 14:00 - 22:00</p>
+                                <% restaurant.openings.each do |day| %>
+                                  <% case day.weekday %>
+                                    <% when 1 %>
+                                      <% weekname = "MON" %>
+                                    <% when 2 %>
+                                      <% weekname = "TUE" %>
+                                    <% when 3 %>
+                                      <% weekname = "WED" %>
+                                    <% when 4 %>
+                                      <% weekname = "THU" %>
+                                    <% when 5 %>
+                                      <% weekname = "FRI" %>
+                                    <% when 6 %>
+                                      <% weekname = "SAT" %>
+                                    <% when 7 %>
+                                      <% weekname = "SUN" %>
+                                    <% else %>
+                                      <% weekname = "ERROR" %>
+                                    <% end %>
+                                  <p><%= weekname %> <%= day.start_hour %>:00 - <%= day.end_hour %>:00</p>
+                                <% end %>
+                                
                               </div>
                             </div>
                           </div>

@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2022_03_07_151128) do
 
   # These are extensions that must be enabled in order to support this database
@@ -31,6 +32,16 @@ ActiveRecord::Schema.define(version: 2022_03_07_151128) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "image_url"
+  end
+
+  create_table "openings", force: :cascade do |t|
+    t.integer "weekday"
+    t.integer "start_hour"
+    t.integer "end_hour"
+    t.bigint "restaurant_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["restaurant_id"], name: "index_openings_on_restaurant_id"
   end
 
   create_table "restaurants", force: :cascade do |t|
@@ -69,6 +80,7 @@ ActiveRecord::Schema.define(version: 2022_03_07_151128) do
 
   add_foreign_key "dish_restaurants", "dishes"
   add_foreign_key "dish_restaurants", "restaurants"
+  add_foreign_key "openings", "restaurants"
   add_foreign_key "reviews", "restaurants"
   add_foreign_key "reviews", "users"
 end
