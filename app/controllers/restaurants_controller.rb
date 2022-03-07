@@ -5,6 +5,9 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.new
   end
 
+  def create
+    @restaurant=  Restaurant.new(params[:restaurant])
+
   def index
     @restaurants = Restaurant.all
 
