@@ -1,5 +1,6 @@
 class Restaurant < ApplicationRecord
   has_many :dish_restaurants
+  has_many :reviews
   has_many :dishes, through: :dish_restaurants
   geocoded_by :address
 
