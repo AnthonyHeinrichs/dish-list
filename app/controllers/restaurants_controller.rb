@@ -6,7 +6,7 @@ class RestaurantsController < ApplicationController
   end
 
   def create
-    @restaurant=  Restaurant.new(restaurant_strong)
+    @restaurant =  Restaurant.new(restaurant_strong)
     @restaurant.save
     redirect_to restaurant_path(@restaurant)
   end
@@ -15,7 +15,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(params[:id])
   end
 
-  def  update
+  def update
     @restaurant = Restaurant.find(params[:id])
     @restaurant.update(restaurant_path)
     redirect_to restaurant_path(@restaurnat)
