@@ -1,10 +1,10 @@
 class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
-    raise
-    # Need to add logic so the review saves for a specific restaurant's dish.
+    @review.user = current_user
+    @review.restaurant_id = params[:restaurant]
     @review.save
-    redirect_to restaurants_path
+    # Need to add logic so the review saves for a specific restaurant's dish.
   end
 
   def update
@@ -14,6 +14,6 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:description, :rating)
+    params.require(:review).permit(:description, :authenticity, :value, :dish, :restaurant_id)
   end
 end
