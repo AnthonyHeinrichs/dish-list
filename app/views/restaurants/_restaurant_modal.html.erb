@@ -23,6 +23,7 @@
               <div class="col">
                 <div class="container-fluid">
                   <div class="row">
+                    <!-- Renders dishes that are made in that restaurant -->
                     <% restaurant.dishes.each do |dish| %>
                       <div class="col restaurant-tags"><%= dish.name %></div>
                     <% end %>
