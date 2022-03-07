@@ -100,7 +100,8 @@ dish_15 = {
   description: "Currywurst is a fast food dish of German origin consisting of steamed, and fried sausage, usually pork (German: Bratwurst) typically cut into bite-sized chunks and seasoned with curry ketchup, a sauce based on spiced ketchup or tomato paste topped with curry powder, or a ready-made ketchup seasoned with curry and other spices. The dish is often served with fries.",
   image_url: 'https://upload.wikimedia.org/wikipedia/commons/6/61/Currywurst_%26_Pommes_frites.jpg'
 }
-dish_16 = {
+
+dish_16 = { 
   name: 'Rinderroulade',
   country: 'Germany',
   description: "Rinderroulade is a dish usually consisting of bacon, onions, mustard and pickles wrapped in thinly sliced beef which is then cooked. The dish is considered traditional also in the Upper Silesia region of Poland where it is known as rolada śląska (Silesian roulade) and in the Czech Republic where it is known as španělský ptáček (spanish bird).",
@@ -109,19 +110,20 @@ dish_16 = {
 
 dish_array = []
 
-[ dish_1, dish_2, dish_3, dish_4, dish_5, dish_6, dish_7, dish_8, dish_9, dish_10, dish_11, dish_12, dish_13, dish_14, dish_15, dish_16 ].each do |infusion|
+[ dish_1, dish_2, dish_3, dish_4, dish_5, dish_6, dish_7, dish_8, dish_9, dish_10, dish_11, dish_12, dish_13, dish_14, dish_15, dish_16, ].each do |infusion|
   dish = Dish.create(infusion)
   dish_array << dish
   puts "Cuting onions, frying garlic and stiring the broth... e voila #{dish.name} was created."
 end
+
 puts 'Tim Raue tasted each dish and is delighted to announce: They have all been created.'
 
 # -------------------------------------------------------------------------------
-# RESTAURANTS
 
 puts 'Removing dated restaurants'
 Restaurant.delete_all
 puts 'Creating Restaurants...'
+
 
 restaurant_1 = { name: 'Restaurant Alpha', address: 'Berlin', }
 restaurant_2 = { name: 'Restaurant Beta', address: 'Hamburg', }
@@ -130,6 +132,7 @@ restaurant_4 = { name: 'Restaurant Delta', address: 'Koln', }
 restaurant_5 = { name: 'Restaurant Epsylon', address: 'Berlin', }
 restaurant_6 = { name: 'Restaurant Foxy', address: 'Munich', }
 restaurant_7 = { name: 'Restaurant Gina', address: 'Berlin', }
+
 
 puts 'Removing dated DishRestaurants'
 DishRestaurant.delete_all
@@ -141,3 +144,4 @@ DishRestaurant.delete_all
 end
 
 puts 'Thank you for taking my seed. May it be germinating inside of you.'
+

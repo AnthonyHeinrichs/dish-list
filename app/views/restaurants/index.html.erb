@@ -2,9 +2,16 @@
   <div class="banner-container restaurants-banner">
     <!-- RESTAURANT -->
       <!--  HEADLINE with the two text inputs -->
-      <div class="banner-head d-flex">
+      <div class="banner-head restaurant-banner-margin d-flex">
+
           <input type="text" class="banner-dish sebis" id="tonys" value="<%= params[:dish].present? ? "#{params[:dish]}" : 'Dish' %>">
-          <input type="text" class="banner-country sebis" value="Location">
+          <form  action="/restaurants">
+            <input id="dan_input" name="location" type="text" value="<%= params[:location].present? ? "#{params[:location]}" : 'Location' %>">
+            <%= hidden_field_tag :dish, params[:dish] %>
+            <%= hidden_field_tag :dish_picture, params[:dish_picture] %>
+            <button hidden type="submit">Search</button>
+          </form>
+
       </div>
 
       <!-- SUB-HEADLINE the text below the entry fields -->
