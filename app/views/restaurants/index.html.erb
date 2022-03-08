@@ -44,19 +44,16 @@
  
   <div class="container">
     
-      
         <div class="col-xs-12 col-sm-8 offset-sm-1">
           <div class='d-flex flex-row flex-wrap justify-content-around'>
             <% @restaurants.each_with_index do | restaurant, index | %>
-                <a data-bs-toggle="modal" data-bs-target="#restaurantModal<%= index %>">
+              <a data-bs-toggle="modal" data-bs-target="#restaurantModal<%= index %>">
                 <%= render 'restaurant_card', restaurant: restaurant, index: index %>
-                </a>
+              </a>
               <%= render 'restaurant_modal', restaurant: restaurant, index: index %>
             <% end %>
           </div>
         </div>
-      
-    
   </div>
   <% end %>
 

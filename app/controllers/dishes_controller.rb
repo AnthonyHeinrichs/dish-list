@@ -3,7 +3,8 @@ class DishesController < ApplicationController
 
   def index
     @dishes = Dish.all
-    @food = @dishes.find_by_id(87)
+    @restaurants = Restaurant.all
+    @dishrestaurants = DishRestaurant.all
 
     if params[:query].present?
       @dishes = Dish.all.where(country: params[:query])
@@ -16,7 +17,7 @@ class DishesController < ApplicationController
 
     @countries = Dish.pluck(:country)
 
-    @dishrestaurants = DishRestaurant.all
+    
   end
 
   def favorite

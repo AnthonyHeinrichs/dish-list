@@ -65,10 +65,8 @@
             <div class="row">
               <div class="col-6">
                 <%= restaurant.address %>
-                <%= @gituser %>
-                Takumi Nine is the sister restaurant of a ramen shop in Düsseldorf, the German city that boasts the largest community of expat Japanese and hence also the largest number of Japanese restaurants. The man behind Takumi Nine Berlin goes by the name of Yusuke Minamiyama and is also the Ramenmeister behind the tiny cooking section at Takumi Nine. He took over the venue from former Okonomiyaki eatery Hanage who sadly decided to stop treating me with their divine fried chicken karaage.
-
-                Takumi Nine didn’t really change much of the Hanage venue except the equipment of the kitchen. This means around 20 seats in a tiny venue. The menu at Takumi Nine is pretty substantial and offers 16 different bowls of ramen along with a
+                
+                <%= restaurant.description %>
               </div >
 
               <div class="col-6 restaurant-map-container">
@@ -98,7 +96,9 @@
                             </div>
                             <div class="col">
                               <%= link_to restaurant_favorite_path(restaurant) do  %>
+                              <button class="btn restaurant-button" type="submit">
                                 <%= image_tag("icon_heart.png", class: "restaurant-button-icon") %>
+                              </button>
                               <% end %>
                               
                             </div>
@@ -270,94 +270,98 @@
             <% if restaurant.reviews.second.present? %>
               <div class="card restaurant-review-card" style="width: 24rem;">
                 <div class="card-body">
-                  <p class="card-text"><%= restaurant.reviews.second.description %></p>
+                  <div class="restaurant-review-title"><%= @dishes.find_by_id(restaurant.reviews.first.dish).name %></div>
+                  <div class="restaurant-review-text"><%= restaurant.reviews.first.description %></div>
                 </div>
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col-3">
-                      <%= image_tag("tony_400.jpg", class: "img-fluid restaurant-review-picture") %>
+                    <div class="col-2 no-padding">
+                      <%= image_tag("tony_400.jpg", class: "img-fluid restaurant-review-picture") %> <!-- TODO: make profile picture -->
                     </div>
-                    <div class="col-9">
-                      <div class="container-fluid">
+                    <div class="col-10">
+                    <!-- User Info -->
+                      <div class="container">
                         <div class="row">
-                          <p class='ml-3'>User ID: <%= restaurant.reviews.second.user_id %></p>
-                          <p>Dish: <%= restaurant.reviews.second.dish %></p>
+                          <div class="restaurant-review-name"><%= @users.find_by_id(restaurant.reviews.first.user_id).firstname %> <%= @users.find_by_id(restaurant.reviews.first.user_id).lastname %></div>                 
                         </div>
-                        <div class="row">
-                          <% if restaurant.reviews.second.authenticity == 5 %>
-                          <p>Authenticity</p>
-                          <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                          <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                          <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                          <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                          <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                          <% elsif restaurant.reviews.second.authenticity == 4 %>
-                          <p>Authenticity</p>
-                          <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                          <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                          <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                          <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                          <%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %>
-                          <% elsif restaurant.reviews.second.authenticity == 3 %>
-                          <p>Authenticity</p>
-                          <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                          <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                          <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                          <%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %>
-                          <%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %>
-                          <% elsif restaurant.reviews.second.authenticity == 2 %>
-                          <p>Authenticity</p>
-                          <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                          <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                          <%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %>
-                          <%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %>
-                          <%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %>
-                          <% elsif restaurant.reviews.second.authenticity == 1 %>
-                          <p>Authenticity</p>
-                          <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                          <%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %>
-                          <%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %>
-                          <%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %>
-                          <%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %>
+
+                        <div class="row no-paading">
+                          <% if restaurant.reviews.first.authenticity == 5 %>
+                            
+                            <div class="col"><%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %></div>
+                          <% elsif restaurant.reviews.first.authenticity == 4 %>
+                            
+                            <div class="col"><%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %></div>
+                          <% elsif restaurant.reviews.first.authenticity == 3 %>
+                            
+                            <div class="col"><%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %></div>
+                          <% elsif restaurant.reviews.first.authenticity == 2 %>
+                            
+                            <div class="col"><%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col no-paading"><%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col-4"></div>
+                          <% elsif restaurant.reviews.first.authenticity == 1 %>
+                            
+                            <div class="col"><%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %></div>
                           <% end %>
                         </div>
                           <div class="row">
-                            <% if restaurant.reviews.second.value == 5 %>
-                            <p>Value</p>
-                            <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                            <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                            <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                            <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                            <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                            <% elsif restaurant.reviews.second.value == 4 %>
-                            <p>Value</p>
-                            <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                            <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                            <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                            <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                            <%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %>
-                            <% elsif restaurant.reviews.second.value == 3 %>
-                            <p>Value</p>
-                            <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                            <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                            <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                            <%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %>
-                            <%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %>
-                            <% elsif restaurant.reviews.second.value == 2 %>
-                            <p>Value</p>
-                            <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                            <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                            <%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %>
-                            <%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %>
-                            <%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %>
-                            <% elsif restaurant.reviews.second.value == 1 %>
-                            <p>Value</p>
-                            <%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %>
-                            <%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %>
-                            <%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %>
-                            <%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %>
-                            <%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %>
-                            <% end %>
+                          <% if restaurant.reviews.first.value == 5 %>
+                            
+                            <div class="col"><%= image_tag("icon_dimond.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_dimond.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_dimond.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_dimond.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_dimond.png", class: "img-fluid restaurant-review-star") %></div>
+                          <% elsif restaurant.reviews.first.value == 4 %>
+                            
+                            <div class="col"><%= image_tag("icon_dimond.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_dimond.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_dimond.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_dimond.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_dimond_negative.png", class: "img-fluid restaurant-review-star") %></div>
+                          <% elsif restaurant.reviews.first.value == 3 %>
+                            
+                            <div class="col"><%= image_tag("icon_dimond.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_dimond.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_dimond.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_dimond_negative.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_dimond_negative.png", class: "img-fluid restaurant-review-star") %></div>
+                          <% elsif restaurant.reviews.first.value == 2 %>
+                            
+                            <div class="col"><%= image_tag("icon_dimond.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_dimond.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_dimond_negative.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_dimond_negative.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_dimond_negative.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col-4"></div>
+                          <% elsif restaurant.reviews.first.value == 1 %>
+                            
+                            <div class="col"><%= image_tag("icon_dimond.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_dimond_negative.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_dimond_negative.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_dimond_negative.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col"><%= image_tag("icon_dimond_negative.png", class: "img-fluid restaurant-review-star") %></div>
+                          <% end %>
                         </div>
                       </div>
                     </div>
@@ -366,8 +370,9 @@
               </div>
             </div>
             <% end %>
-          
-            <div class="accordion accordion-flush mt-3" id="accordionFlushExample">
+          </div>
+
+          <div class="accordion accordion-flush mt-3 restaurant-hours" id="accordionFlushExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
                   <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -381,12 +386,7 @@
                 </div>
               </div>
             </div>
-          </div>
         </div>
-      </div>
-
-      <div class="modal-footer">
-
       </div>
     </div>
   </div>

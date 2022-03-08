@@ -169,7 +169,7 @@
     display: inline-block;
 }
 .restaurant-review-picture {
-    width: 5em;
+    width: 100px;
     border-radius: 50%;
 }
 .restaurant-review-star {
@@ -178,4 +178,13 @@
 .no-padding {
     padding-left: 0;
     padding-right: 0;
+}
+
+
+.review-form {
+    font-family: 'Red Hat Display', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.9em;
+    color: $text-color;
 }

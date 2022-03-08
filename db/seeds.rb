@@ -14,98 +14,114 @@ dish_1 = {
   name: 'Pad Thai',
   country: 'Thailand',
   description: 'Pad Thai is a dish typically made with rice noodles, shrimp, peanuts, a scrambled egg, and bean sprouts, among other vegetables.',
-  image_url: 'https://images.unsplash.com/photo-1559314809-0d155014e29e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+  image_url: 'https://images.unsplash.com/photo-1559314809-0d155014e29e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+  spiciness: 4
 }
 dish_2 = {
   name: 'Spaghetti Bolognese',
   country: 'Italy',
   description: 'Bolognese sauce is a meat-based sauce in Italian cuisine, typical of the city of Bologna. It is customarily used to dress tagliatelle al ragù and to prepare lasagne alla bolognese.',
-  image_url: 'https://images.unsplash.com/photo-1622973536968-3ead9e780960?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+  image_url: 'https://images.unsplash.com/photo-1622973536968-3ead9e780960?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+  spiciness: 3
 }
 dish_3 = {
   name: 'Poutine',
   country: 'Canada',
   description: 'Poutine is a dish of french fries and cheese curds topped with a brown gravy.',
-  image_url: 'https://images.unsplash.com/photo-1586805608485-add336722759?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+  image_url: 'https://images.unsplash.com/photo-1586805608485-add336722759?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+  spiciness: 2
 }
 dish_4 = {
   name: 'Schnitzel',
   country: 'Austria',
   description: 'A schnitzel is a thin slice of meat. The meat is usually thinned by pounding with a meat tenderizer. Most commonly, the meat is breaded before frying. Breaded schnitzel is popular in many countries and is made using veal, pork, chicken, mutton, beef, or turkey.',
-  image_url: 'https://images.unsplash.com/photo-1599921841143-819065a55cc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80'
+  image_url: 'https://images.unsplash.com/photo-1599921841143-819065a55cc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80',
+  spiciness: 1
 }
 dish_5 = {
   name: 'Massaman Curry',
   country: 'Thailand',
   description: 'Massaman Curry is a rich, relatively mild Thai curry. Being a fusion dish, ingredients popular among Muslim traders from Persia, the Indian subcontinent, and the Malay Archipelago (e.g. cardamom, cinnamon, cloves, star anise, cumin, bay leaves, nutmeg, mace, and potato) were brought to Thailand and combined with ingredients more commonly used in native Thai cuisine (e.g. chili peppers, coriander, lemongrass, galangal, white pepper, shrimp paste, shallots, and garlic) to make massaman curry paste.',
-  image_url: 'https://upload.wikimedia.org/wikipedia/commons/b/b5/Kaeng_matsaman_kai.JPG'
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/b/b5/Kaeng_matsaman_kai.JPG',
+  spiciness: 5
 }
 dish_6 = {
   name: 'Phat kaphrao',
   country: 'Thailand',
   description: "Phat kaphrao consists of meat such as pork, chicken, beef, and seafood stir fried with Thai holy basil and garlic. It is served with rice and topped up (optional) with fried eggs or khai dao (Thai: ไข่ดาว). The main seasonings are soy sauce, Thai fish sauce, oyster sauce (optional), cane sugar, and bird's eye chili",
-  image_url: 'https://upload.wikimedia.org/wikipedia/commons/a/ae/Basil_fried_crispy_pork_with_rice_-_Chiang_Mai_-_2017-07-11_%28002%29.jpg'
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/a/ae/Basil_fried_crispy_pork_with_rice_-_Chiang_Mai_-_2017-07-11_%28002%29.jpg',
+  spiciness: 5
 }
 dish_7 = {
   name: 'Khao kha mu',
   country: 'Thailand',
   description: "Khao kha mu is an individual dish consisting of stewed pig's trotter in seasoning condensed hot pottage (some recipes are mixed with cocoa powder or boiled peanuts[2] [3]), then it will be cut into thin slices and topped on steamed rice. The dish is served with half spiced corned eggs, small pieces of pickled lettuce and occasionally blanched kale with fresh bird's eye chili peppers and cloves of garlic on the side. Sometimes it is eaten with clear broth soup. The accompanying dipping sauce is most often made of yellow chili peppers, garlics, granulated salt, limeade and vinegar.",
-  image_url: 'https://upload.wikimedia.org/wikipedia/commons/6/68/Khao_kha_mu_02.JPG'
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/6/68/Khao_kha_mu_02.JPG',
+  spiciness: 5
 }
 dish_8 = {
   name: 'Khao soi',
   country: 'Thailand',
   description: "The name means 'cut rice'. Traditionally, the dough for the rice noodles is spread out on a cloth stretched over boiling water. After steaming the large sheet noodle is then rolled and cut with scissors. Lao khao soi is traditionally made with hand sliced rice noodles in clear soup broth and topped with minced pork and tomato sauce.",
-  image_url: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Khao_Soi_Northern_Thai_food_%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%8B%E0%B8%AD%E0%B8%A2_%E0%B8%9C%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%AD%E0%B8%87.jpg'
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Khao_Soi_Northern_Thai_food_%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%8B%E0%B8%AD%E0%B8%A2_%E0%B8%9C%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%AD%E0%B8%87.jpg',
+  spiciness: 3
 }
 dish_9 = {
   name: 'Yam naem khao thot',
   country: 'Thailand',
   description: "Yam naem khao thot (also known as naem khluk) is a salad made from crushed, deep-fried ball-shaped croquettes made from sticky rice and curry paste as the main ingredient, tossed together with shredded fermented pork sausage, and mixed with peanuts, crushed dried chillies, lime juice, sliced shallots and fresh herbs, and served with a selection of fresh greens and additional herbs on the side.",
-  image_url: 'https://upload.wikimedia.org/wikipedia/commons/4/42/Yam_khamin_khao_kung.jpeg'
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/4/42/Yam_khamin_khao_kung.jpeg',
+  spiciness: 3
 }
 dish_10 = {
   name: 'Flädle',
   country: 'Germany',
   description: 'The Flädle are made as plain crepe-style pancakes (Palatschinken), then tightly rolled up and sliced into coils, and then usually served in a clear soup or beef broth as Flädlessuppe.',
-  image_url: 'https://upload.wikimedia.org/wikipedia/commons/a/a3/Frittatensuppe.jpg'
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/a/a3/Frittatensuppe.jpg',
+  spiciness: 1
 }
 dish_11 = {
   name: 'Spätzle',
   country: 'Germany',
   description: 'Spätzle is a type of small noodle or dumpling[1] made with eggs, typically serving as a side for meat dishes with gravy.',
-  image_url: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Sp%C3%A4tzle.jpg'
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Sp%C3%A4tzle.jpg',
+  spiciness: 1
 }
 dish_12 = {
   name: 'Gaisburger Marsch',
   country: 'Germany',
   description: "Gaisburger Marsch is a traditional Swabian beef stew, named after Gaisburg, a district of Stuttgart. The meat, cooked in a strong beef broth, is cut into cubes and served with cooked potatoes and Spätzle. The broth is poured over the dish before topping with golden-brown onions fried in butter.",
-  image_url: 'https://upload.wikimedia.org/wikipedia/commons/c/c8/Gaisburger_Marsch.jpg'
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/c/c8/Gaisburger_Marsch.jpg',
+  spiciness: 1
 }
 dish_13 = {
   name: 'Leberknödel',
   country: 'Germany',
   description: "Leberknödel is a traditional dish of German, Austrian and Czech cuisines. Leberknödel are usually composed of beef liver, though in the German Palatinate region pork is used as an alternative. The meat is ground and mixed with bread, eggs, parsley and various spices, often nutmeg or marjoram.",
-  image_url: 'https://upload.wikimedia.org/wikipedia/commons/8/80/Leberknoedelsuppe.jpg'
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/8/80/Leberknoedelsuppe.jpg',
+  spiciness: 1
 }
 dish_14 = {
   name: 'Eisbein',
   country: 'Germany',
   description: "Eisbein (literally: 'ice leg') is a German culinary dish of pickled ham hock, usually cured and slightly boiled. The word probably comes from high german via the Latin term ischia used in medicine and hunting for the hip joint. In Southern parts of Germany, the common preparation is known as Schweinshaxe, and it is usually roasted.",
-  image_url: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Eisbein-2.jpg'
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Eisbein-2.jpg',
+  spiciness: 1
 }
 dish_15 = {
   name: 'Currywurst',
   country: 'Germany',
   description: "Currywurst is a fast food dish of German origin consisting of steamed, and fried sausage, usually pork (German: Bratwurst) typically cut into bite-sized chunks and seasoned with curry ketchup, a sauce based on spiced ketchup or tomato paste topped with curry powder, or a ready-made ketchup seasoned with curry and other spices. The dish is often served with fries.",
-  image_url: 'https://upload.wikimedia.org/wikipedia/commons/6/61/Currywurst_%26_Pommes_frites.jpg'
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/6/61/Currywurst_%26_Pommes_frites.jpg',
+  spiciness: 3
 }
 
 dish_16 = { 
   name: 'Rinderroulade',
   country: 'Germany',
   description: "Rinderroulade is a dish usually consisting of bacon, onions, mustard and pickles wrapped in thinly sliced beef which is then cooked. The dish is considered traditional also in the Upper Silesia region of Poland where it is known as rolada śląska (Silesian roulade) and in the Czech Republic where it is known as španělský ptáček (spanish bird).",
-  image_url: 'https://upload.wikimedia.org/wikipedia/commons/8/8b/Rinderroulade_gef%C3%BCllt_Anschnitt_01.jpg'
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/8/8b/Rinderroulade_gef%C3%BCllt_Anschnitt_01.jpg',
+  spiciness: 2
 }
 
 dish_array = []
@@ -125,13 +141,13 @@ Restaurant.delete_all
 puts 'Creating Restaurants...'
 
 
-restaurant_1 = { name: 'Harrey Panjabi', address: 'Berlin', }
-restaurant_2 = { name: 'Burger Buster', address: 'Hamburg', }
-restaurant_3 = { name: 'Captain Pizza', address: 'Munich', }
-restaurant_4 = { name: 'Vegan and Meet', address: 'Koln', }
-restaurant_5 = { name: 'Sandras little Dougnut', address: 'Berlin', }
-restaurant_6 = { name: 'Tonys Karaokee', address: 'Munich', }
-restaurant_7 = { name: 'Gina Tavern', address: 'Berlin', }
+restaurant_1 = { name: 'Restaurant Tim Raue', address: 'Berlin', description: ' In the TIM RAUE restaurant we serve Asian-inspired cuisine, which can be characterised as a combination of Japanese product perfection, Thai aromatics and Chinese kitchen philosophy. We therefore avoid side dishes such as bread, noodles and rice, as well as white sugar as far as possible. When it comes to dairy products, the kitchen works exclusively with lactose-free products. We also offer a vegan menu that does not contain any animal products. We are happy to try to take slight allergies and intolerances into consideration, but if these are life-threatening to your health, please understand that we do not bear this responsibility. We will not offer you any meals in this case.' }
+restaurant_2 = { name: 'Barefood Deli', address: 'Hamburg', description: 'Delicious simple - Foods & Goods  Einfach natürlich, einfach bodenständig, einfach gut gemacht – das ist das Barefood Deli. Hier genießt man ehrlich, authentisch und frisch. Und man konzentriert sich ganz auf das Wesentliche: das Hier und Jetzt.' }
+restaurant_3 = { name: 'Pizzeria Alt Hamburg', address: 'Hamburg', description: 'Kenner der vielfältigen Küche kommen in unserem Lokal voll auf ihre Kosten. Wir heißen Sie herzlich willkommen in unserem Restaurant Pizzeria Alt Hamburg. Genießen Sie schmackhafte Speisen und das authentische Ambiente in unserem Haus. Die Sonne spüren können Sie in unserem gemütlichen Außenbereich. Unsere gut klimatisierten Innenräume sorgen für einen angenehmen Aufenthalt. ' }
+restaurant_4 = { name: 'Loving Hat', address: 'Cologne', description: 'Loving Hut was born with the vision that all living things should live in peace, love and harmony with each other and with the earth.The attractive prices and high-quality plant-based ingredients are an invitation to international gourmet cuisine, making it possible for everyone to eat well and make a contribution to the environment.' }
+restaurant_5 = { name: 'Suger Clan', address: 'Berlin',description: 'In our manufactory on Boxhagener Platz in Berlins Friedrichshain, we bake the fluffiest original Berlin pancakes (Berliner, Krapfen, Kreppel...) that you could wish for.Everything about the round gems is our absolute passion, which is why you can also get Italian bomboloni and variants in donut (or donut) style fresh from our confectionery every day. Selected ingredients and sustainability are our top priority, because the best is just good enough for you. You can get our masterpieces on the terrace or to take away - to your closest friends, your favorite colleagues or to show off to family. Wherever you take them: The Kleenen have a habit of outstripping one or the other cake in no time.' }
+restaurant_6 = { name: 'NENI', address: 'Munich', description: 'NENI - that stands for Haya Molchos sons Nuriel, Elior, Nadiv and Ilan. Each of them contributes their part to the unique food concept and makes the NENI a real family business.Family and friends have always been an essential part of life for the Molchos. The motto of the family "Life is beautiful. Be part of it.”, NENI gives an insight into the world of Molchos, which is characterized by bright colors, exotic tastes and beguiling smells. The sympathetic chaos at the large, round tables and the sensual moment of sharing gives you the feeling of being a guest among friends.' }
+restaurant_7 = { name: 'Ratskeller Köpenick', address: 'Berlin', description: 'We devote ourselves entirely to traditional and modern German cuisine: head chef Matthias Starke maintains this tradition with fresh and regional ingredients. Herbs, natural aromas and a variety of spices complement salt and pepper. Trends and internationality are not taboo! He and his team like to surprise you with new and creative ideas!' }
 
 
 puts 'Removing dated DishRestaurants'
@@ -162,6 +178,22 @@ open_fri = { weekday: 5, start_hour: 9, end_hour: 19 }
 open_sat = { weekday: 6, start_hour: 11, end_hour: 19 }
 open_sun = { weekday: 7, start_hour: 25, end_hour: 25 }
 
+open_mon_1 = { weekday: 1, start_hour: 11, end_hour: 21 }
+open_tue_1 = { weekday: 2, start_hour: 11, end_hour: 21 }
+open_wed_1 = { weekday: 3, start_hour: 11, end_hour: 21 }
+open_thu_1 = { weekday: 4, start_hour: 11, end_hour: 21 }
+open_fri_1 = { weekday: 5, start_hour: 11, end_hour: 21 }
+open_sat_1 = { weekday: 6, start_hour: 11, end_hour: 19 }
+open_sun_1 = { weekday: 7, start_hour: 25, end_hour: 25 }
+
+open_mon_2 = { weekday: 1, start_hour: 25, end_hour: 25 }
+open_tue_2 = { weekday: 2, start_hour: 11, end_hour: 22 }
+open_wed_2 = { weekday: 3, start_hour: 11, end_hour: 22 }
+open_thu_2 = { weekday: 4, start_hour: 11, end_hour: 22 }
+open_fri_2 = { weekday: 5, start_hour: 11, end_hour: 22 }
+open_sat_2 = { weekday: 6, start_hour: 12, end_hour: 22 }
+open_sun_2 = { weekday: 7, start_hour: 12, end_hour: 22 }
+
 restaurants = Restaurant.all
 
 [ open_mon, open_tue, open_wed, open_thu, open_fri, open_sat, open_sun ].each do |infusion|
@@ -171,14 +203,14 @@ restaurants = Restaurant.all
   puts "Waaaaaap... Time #{opening.weekday}."
 end
 
-[ open_mon, open_tue, open_wed, open_thu, open_fri, open_sat, open_sun ].each do |infusion|
+[ open_mon_1, open_tue_1, open_wed_1, open_thu_1, open_fri_1, open_sat_1, open_sun_1 ].each do |infusion|
   opening = Opening.new(infusion)
   opening.restaurant = restaurants[1]
   opening.save!
   puts "Waaaaaap... Time #{opening.weekday}."
 end
 
-[ open_mon, open_tue, open_wed, open_thu, open_fri, open_sat, open_sun ].each do |infusion|
+[ open_mon_2, open_tue_2, open_wed_2, open_thu_2, open_fri_2, open_sat_2, open_sun_2 ].each do |infusion|
   opening = Opening.new(infusion)
   opening.restaurant = restaurants[2]
   opening.save!
