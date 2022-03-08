@@ -1,17 +1,13 @@
  <% @review = Review.new() %>
 
   <%= simple_form_for(@review) do |f| %>
-    <p>What dish are you reviewing?</p>
-    <%= f.input :dish, collection: restaurant.dishes %>
+    <%= f.input :dish, collection: restaurant.dishes, label: "What dish are you reviewing?", input_html: { class: "review-form" } %>
 
-    <p>How authentic was the dish. 0 (poor) - 5 (great).</p>
-    <%= f.input :authenticity, label: "Authenticity", min: 0, max: 5, size: 5, autofocus: true %>
+    <%= f.input :authenticity, label: "How authentic was it? 0 - 5", min: 0, max: 5, size: 5, autofocus: true, input_html: { class: "review-form" } %>
 
-    <p>How is the value?. 0 (poor) - 5 (great).</p>
-    <%= f.input :value, label: "Authenticity", min: 0, max: 5, size: 5, autofocus: true %>
+    <%= f.input :value, label: "How valuable was it? 0 - 5", min: 0, max: 5, size: 5, autofocus: true, input_html: { class: "review-form" } %>
 
-    <p>Add a comment.</p>
-    <%= f.input :description, label: "Comment", size: "30x10" %>
+    <%= f.input :description, label: "Add a comment", size: "30x10", input_html: { class: "review-form" } %>
 
       <%= hidden_field_tag 'restaurant', restaurant.id %>
   <%= f.submit %>
