@@ -1,0 +1,145 @@
+=> [[32m#<Dish:0x0000561567592108[0m
+  id: [1;34m87[0m,
+  name: [31m[1;31m"[0m[31mPad Thai[1;31m"[0m[31m[0m,
+  country: [31m[1;31m"[0m[31mThailand[1;31m"[0m[31m[0m,
+  description: [31m[1;31m"[0m[31mPad Thai is a dish typically made with rice noodles, shrimp, peanuts, a scrambled egg, and bean sprouts, among other vegetables.[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.557956000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.557956000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  image_url: [31m[1;31m"[0m[31mhttps://images.unsplash.com/photo-1559314809-0d155014e29e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Dish:0x00005615675ebf50[0m
+  id: [1;34m88[0m,
+  name: [31m[1;31m"[0m[31mSpaghetti Bolognese[1;31m"[0m[31m[0m,
+  country: [31m[1;31m"[0m[31mItaly[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mBolognese sauce is a meat-based sauce in Italian cuisine, typical of the city of Bologna. It is customarily used to dress tagliatelle al ragù and to prepare lasagne alla bolognese.[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.570285000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.570285000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  image_url:
+   [31m[1;31m"[0m[31mhttps://images.unsplash.com/photo-1622973536968-3ead9e780960?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Dish:0x00005615675ebd48[0m
+  id: [1;34m89[0m,
+  name: [31m[1;31m"[0m[31mPoutine[1;31m"[0m[31m[0m,
+  country: [31m[1;31m"[0m[31mCanada[1;31m"[0m[31m[0m,
+  description: [31m[1;31m"[0m[31mPoutine is a dish of french fries and cheese curds topped with a brown gravy.[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.577610000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.577610000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  image_url:
+   [31m[1;31m"[0m[31mhttps://images.unsplash.com/photo-1586805608485-add336722759?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Dish:0x00005615675ebb18[0m
+  id: [1;34m90[0m,
+  name: [31m[1;31m"[0m[31mSchnitzel[1;31m"[0m[31m[0m,
+  country: [31m[1;31m"[0m[31mAustria[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mA schnitzel is a thin slice of meat. The meat is usually thinned by pounding with a meat tenderizer. Most commonly, the meat is breaded before frying. Breaded schnitzel is popular in many countries and is made using veal, pork, chicken, mutton, beef, or turkey.[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.589144000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.589144000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  image_url:
+   [31m[1;31m"[0m[31mhttps://images.unsplash.com/photo-1599921841143-819065a55cc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Dish:0x00005615675eb8c0[0m
+  id: [1;34m91[0m,
+  name: [31m[1;31m"[0m[31mMassaman Curry[1;31m"[0m[31m[0m,
+  country: [31m[1;31m"[0m[31mThailand[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mMassaman Curry is a rich, relatively mild Thai curry. Being a fusion dish, ingredients popular among Muslim traders from Persia, the Indian subcontinent, and the Malay Archipelago (e.g. cardamom, cinnamon, cloves, star anise, cumin, bay leaves, nutmeg, mace, and potato) were brought to Thailand and combined with ingredients more commonly used in native Thai cuisine (e.g. chili peppers, coriander, lemongrass, galangal, white pepper, shrimp paste, shallots, and garlic) to make massaman curry paste.[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.598617000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.598617000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  image_url: [31m[1;31m"[0m[31mhttps://upload.wikimedia.org/wikipedia/commons/b/b5/Kaeng_matsaman_kai.JPG[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Dish:0x00005615675eb690[0m
+  id: [1;34m92[0m,
+  name: [31m[1;31m"[0m[31mPhat kaphrao[1;31m"[0m[31m[0m,
+  country: [31m[1;31m"[0m[31mThailand[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mPhat kaphrao consists of meat such as pork, chicken, beef, and seafood stir fried with Thai holy basil and garlic. It is served with rice and topped up (optional) with fried eggs or khai dao (Thai: ไข่ดาว). The main seasonings are soy sauce, Thai fish sauce, oyster sauce (optional), cane sugar, and bird's eye chili[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.610585000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.610585000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  image_url: [31m[1;31m"[0m[31mhttps://upload.wikimedia.org/wikipedia/commons/a/ae/Basil_fried_crispy_pork_with_rice_-_Chiang_Mai_-_2017-07-11_%28002%29.jpg[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Dish:0x00005615675eb4d8[0m
+  id: [1;34m93[0m,
+  name: [31m[1;31m"[0m[31mKhao kha mu[1;31m"[0m[31m[0m,
+  country: [31m[1;31m"[0m[31mThailand[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mKhao kha mu is an individual dish consisting of stewed pig's trotter in seasoning condensed hot pottage (some recipes are mixed with cocoa powder or boiled peanuts[2] [3]), then it will be cut into thin slices and topped on steamed rice. The dish is served with half spiced corned eggs, small pieces of pickled lettuce and occasionally blanched kale with fresh bird's eye chili peppers and cloves of garlic on the side. Sometimes it is eaten with clear broth soup. The accompanying dipping sauce is most often made of yellow chili peppers, garlics, granulated salt, limeade and vinegar.[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.621425000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.621425000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  image_url: [31m[1;31m"[0m[31mhttps://upload.wikimedia.org/wikipedia/commons/6/68/Khao_kha_mu_02.JPG[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Dish:0x00005615675eb398[0m
+  id: [1;34m94[0m,
+  name: [31m[1;31m"[0m[31mKhao soi[1;31m"[0m[31m[0m,
+  country: [31m[1;31m"[0m[31mThailand[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mThe name means 'cut rice'. Traditionally, the dough for the rice noodles is spread out on a cloth stretched over boiling water. After steaming the large sheet noodle is then rolled and cut with scissors. Lao khao soi is traditionally made with hand sliced rice noodles in clear soup broth and topped with minced pork and tomato sauce.[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.633337000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.633337000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  image_url:
+   [31m[1;31m"[0m[31mhttps://upload.wikimedia.org/wikipedia/commons/c/cf/Khao_Soi_Northern_Thai_food_%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%8B%E0%B8%AD%E0%B8%A2_%E0%B8%9C%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%AD%E0%B8%87.jpg[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Dish:0x00005615675eb190[0m
+  id: [1;34m95[0m,
+  name: [31m[1;31m"[0m[31mYam naem khao thot[1;31m"[0m[31m[0m,
+  country: [31m[1;31m"[0m[31mThailand[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mYam naem khao thot (also known as naem khluk) is a salad made from crushed, deep-fried ball-shaped croquettes made from sticky rice and curry paste as the main ingredient, tossed together with shredded fermented pork sausage, and mixed with peanuts, crushed dried chillies, lime juice, sliced shallots and fresh herbs, and served with a selection of fresh greens and additional herbs on the side.[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.654516000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.654516000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  image_url: [31m[1;31m"[0m[31mhttps://upload.wikimedia.org/wikipedia/commons/4/42/Yam_khamin_khao_kung.jpeg[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Dish:0x00005615675eb050[0m
+  id: [1;34m96[0m,
+  name: [31m[1;31m"[0m[31mFlädle[1;31m"[0m[31m[0m,
+  country: [31m[1;31m"[0m[31mGermany[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mThe Flädle are made as plain crepe-style pancakes (Palatschinken), then tightly rolled up and sliced into coils, and then usually served in a clear soup or beef broth as Flädlessuppe.[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.672882000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.672882000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  image_url: [31m[1;31m"[0m[31mhttps://upload.wikimedia.org/wikipedia/commons/a/a3/Frittatensuppe.jpg[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Dish:0x00005615675eaf38[0m
+  id: [1;34m97[0m,
+  name: [31m[1;31m"[0m[31mSpätzle[1;31m"[0m[31m[0m,
+  country: [31m[1;31m"[0m[31mGermany[1;31m"[0m[31m[0m,
+  description: [31m[1;31m"[0m[31mSpätzle is a type of small noodle or dumpling[1] made with eggs, typically serving as a side for meat dishes with gravy.[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.690443000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.690443000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  image_url: [31m[1;31m"[0m[31mhttps://upload.wikimedia.org/wikipedia/commons/a/a9/Sp%C3%A4tzle.jpg[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Dish:0x00005615675ead58[0m
+  id: [1;34m98[0m,
+  name: [31m[1;31m"[0m[31mGaisburger Marsch[1;31m"[0m[31m[0m,
+  country: [31m[1;31m"[0m[31mGermany[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mGaisburger Marsch is a traditional Swabian beef stew, named after Gaisburg, a district of Stuttgart. The meat, cooked in a strong beef broth, is cut into cubes and served with cooked potatoes and Spätzle. The broth is poured over the dish before topping with golden-brown onions fried in butter.[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.710865000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.710865000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  image_url: [31m[1;31m"[0m[31mhttps://upload.wikimedia.org/wikipedia/commons/c/c8/Gaisburger_Marsch.jpg[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Dish:0x00005615675eac40[0m
+  id: [1;34m99[0m,
+  name: [31m[1;31m"[0m[31mLeberknödel[1;31m"[0m[31m[0m,
+  country: [31m[1;31m"[0m[31mGermany[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mLeberknödel is a traditional dish of German, Austrian and Czech cuisines. Leberknödel are usually composed of beef liver, though in the German Palatinate region pork is used as an alternative. The meat is ground and mixed with bread, eggs, parsley and various spices, often nutmeg or marjoram.[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.748100000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.748100000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  image_url: [31m[1;31m"[0m[31mhttps://upload.wikimedia.org/wikipedia/commons/8/80/Leberknoedelsuppe.jpg[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Dish:0x00005615675eab78[0m
+  id: [1;34m100[0m,
+  name: [31m[1;31m"[0m[31mEisbein[1;31m"[0m[31m[0m,
+  country: [31m[1;31m"[0m[31mGermany[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mEisbein (literally: 'ice leg') is a German culinary dish of pickled ham hock, usually cured and slightly boiled. The word probably comes from high german via the Latin term ischia used in medicine and hunting for the hip joint. In Southern parts of Germany, the common preparation is known as Schweinshaxe, and it is usually roasted.[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.834867000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.834867000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  image_url: [31m[1;31m"[0m[31mhttps://upload.wikimedia.org/wikipedia/commons/0/05/Eisbein-2.jpg[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Dish:0x00005615675eaa38[0m
+  id: [1;34m101[0m,
+  name: [31m[1;31m"[0m[31mCurrywurst[1;31m"[0m[31m[0m,
+  country: [31m[1;31m"[0m[31mGermany[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mCurrywurst is a fast food dish of German origin consisting of steamed, and fried sausage, usually pork (German: Bratwurst) typically cut into bite-sized chunks and seasoned with curry ketchup, a sauce based on spiced ketchup or tomato paste topped with curry powder, or a ready-made ketchup seasoned with curry and other spices. The dish is often served with fries.[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.841789000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.841789000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  image_url: [31m[1;31m"[0m[31mhttps://upload.wikimedia.org/wikipedia/commons/6/61/Currywurst_%26_Pommes_frites.jpg[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Dish:0x00005615675ea920[0m
+  id: [1;34m102[0m,
+  name: [31m[1;31m"[0m[31mRinderroulade[1;31m"[0m[31m[0m,
+  country: [31m[1;31m"[0m[31mGermany[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mRinderroulade is a dish usually consisting of bacon, onions, mustard and pickles wrapped in thinly sliced beef which is then cooked. The dish is considered traditional also in the Upper Silesia region of Poland where it is known as rolada śląska (Silesian roulade) and in the Czech Republic where it is known as španělský ptáček (spanish bird).[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.848246000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mFri[0m, [1;34m04[0m [1;34;4mMar[0m [1;34m2022[0m [1;34m16[0m:[1;34m01[0m:[1;35m43.848246000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  image_url: [31m[1;31m"[0m[31mhttps://upload.wikimedia.org/wikipedia/commons/8/8b/Rinderroulade_gef%C3%BCllt_Anschnitt_01.jpg[1;31m"[0m[31m[0m[32m>[0m]

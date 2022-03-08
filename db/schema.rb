@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_03_150917) do
+ActiveRecord::Schema.define(version: 2022_03_08_100636) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,16 @@ ActiveRecord::Schema.define(version: 2022_03_03_150917) do
     t.string "image_url"
   end
 
+  create_table "openings", force: :cascade do |t|
+    t.integer "weekday"
+    t.integer "start_hour"
+    t.integer "end_hour"
+    t.bigint "restaurant_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["restaurant_id"], name: "index_openings_on_restaurant_id"
+  end
+
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
     t.string "address"
@@ -43,11 +53,15 @@ ActiveRecord::Schema.define(version: 2022_03_03_150917) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.bigint "dish_restaurant_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["dish_restaurant_id"], name: "index_reviews_on_dish_restaurant_id"
+    t.string "description"
+    t.string "dish"
+    t.bigint "restaurant_id"
+    t.integer "authenticity"
+    t.integer "value"
+    t.index ["restaurant_id"], name: "index_reviews_on_restaurant_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
@@ -59,12 +73,16 @@ ActiveRecord::Schema.define(version: 2022_03_03_150917) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "firstname"
+    t.string "lastname"
+    t.string "profile_picture"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "dish_restaurants", "dishes"
   add_foreign_key "dish_restaurants", "restaurants"
-  add_foreign_key "reviews", "dish_restaurants"
+  add_foreign_key "openings", "restaurants"
+  add_foreign_key "reviews", "restaurants"
   add_foreign_key "reviews", "users"
 end

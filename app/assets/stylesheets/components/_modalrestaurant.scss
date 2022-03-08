@@ -1,0 +1,103 @@
+/* 1. HEAD, TAGS REVIEW, BUTTON */
+.restaurant-headline {
+    font-family: 'Red Hat Display', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2em;
+    color: $text-color;
+}
+.restaurant-tags {
+    font-family: 'Red Hat Display', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.8em;
+    color: $text-color;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.restaurant-review {
+    border-radius: 7px;
+    font-family: 'Red Hat Display', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+/* 2. Dashboard = */
+.restaurant-dashboard-container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.restaurant-dashboard-title {
+    font-family: 'Red Hat Display', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.8em;
+    color: $text-color;
+}
+.restaurant-dashboard-content {
+    font-family: 'Red Hat Display', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    color: $text-color;
+}
+.restaurant-dashboard-content-open {
+    color: $green;
+    font-weight: 500;
+}
+.restaurant-dashboard-content-closed {
+    color: $red;
+    font-weight: 500;
+}
+
+.restaurant-map-container {
+    border-radius: 30%;
+}
+.restaurant-map img {
+    border-radius: 30%;
+}
+
+
+.restaurant-button-container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.restaurant-button {
+    border-radius: 7px;
+    font-family: 'Red Hat Display', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.6em;
+
+    align-items: center;
+    text-align: center;
+    color: $text-color;
+}
+.restaurant-button-icon  {
+    width: 20px;
+}
+
+
+.restaurant-hours {
+    background-color: $shadow;
+}
+
+/* REVIEWS */
+.restaurant-review-container {
+
+}
+.restaurant-review-card {
+    border-radius: 15%;
+    background-color: $shadow;
+}
+.restaurant-review-picture {
+    width: 50px;
+    border-radius: 50%;
+}
+.restaurant-review-star {
+    width: 40px;
+}
