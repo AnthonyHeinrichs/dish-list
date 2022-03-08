@@ -1,0 +1,23 @@
+<h1><%= "#{@user.firstname} #{@user.lastname}" %></h1>
+
+<h4 class='mt-4'>Favorite Restaurants</h4>
+<div class='mt-4'>
+  <% @user.favorite_restaurants.each do |favorite| %>
+  <ul>
+    <li><%= favorite.restaurant.name %> (<%= favorite.restaurant.address %>) -- <%= link_to "🗑",
+              restaurant_favorite_path(favorite.restaurant.id, favorite_id: favorite.id),
+              method: :delete %></li>
+  </ul>
+  <% end %>
+</div>
+
+<h4 class='mt-4'>Favorite dishes</h4>
+<div class='mt-4'>
+  <% @user.favorite_dishes.each do |favorite| %>
+  <ul>
+    <li><%= favorite.dish.name %> -- <%= link_to "🗑",
+              dish_favorite_path(favorite.dish.id, favorite_id: favorite.id),
+              method: :delete%></li>
+  </ul>
+  <% end %>
+</div>
