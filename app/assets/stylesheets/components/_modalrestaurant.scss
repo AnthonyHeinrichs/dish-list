@@ -1,4 +1,10 @@
 /* 1. HEAD, TAGS REVIEW, BUTTON */
+.restaurant-modal {
+    border-radius: 6%;
+    background: $pop-background;
+}
+
+/* HEAD*/
 .restaurant-headline {
     font-family: 'Red Hat Display', sans-serif;
     font-style: normal;
@@ -6,54 +12,74 @@
     font-size: 2em;
     color: $text-color;
 }
+
+/* TAGS */
+.restaurant-tag-container {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+}
 .restaurant-tags {
+    border-radius: 7px;
     font-family: 'Red Hat Display', sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 0.8em;
-    color: $text-color;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    font-size: 0.9em;
+    background-color: $yellow;
+    color: $white;
 }
+
+/* REVIEW BUTTON */
 .restaurant-review {
     border-radius: 7px;
     font-family: 'Red Hat Display', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 1em;
+    font-size: 1.3em;
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: center; /* TODO: Text isnt aligning center */
+    color: $white;
 }
 
-/* 2. Dashboard = */
+/* 2. Dashboard = HOURS / RATING / DISTANCE */
 .restaurant-dashboard-container {
     padding-top: 15px;
     padding-bottom: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
 }
 .restaurant-dashboard-title {
     font-family: 'Red Hat Display', sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 0.8em;
+    font-size: 1em;
     color: $text-color;
 }
 .restaurant-dashboard-content {
     font-family: 'Red Hat Display', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 1em;
+    font-size: 1.2em;
     color: $text-color;
 }
 .restaurant-dashboard-content-open {
     color: $green;
     font-weight: 500;
+    font-size: 1.2em;
+    font-family: 'Red Hat Display', sans-serif;
+    font-style: normal;
 }
 .restaurant-dashboard-content-closed {
     color: $red;
     font-weight: 500;
+    font-size: 1.2em;
+    font-family: 'Red Hat Display', sans-serif;
+    font-style: normal;
 }
 
+/* MAP */
 .restaurant-map-container {
     border-radius: 30%;
 }
@@ -61,27 +87,23 @@
     border-radius: 30%;
 }
 
-
+/* Buttons below the map */
 .restaurant-button-container {
     padding-top: 15px;
     padding-bottom: 15px;
+    padding-left: 0;
+    padding-right: 0;
 }
 .restaurant-button {
     border-radius: 7px;
-    font-family: 'Red Hat Display', sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 0.6em;
-
+    background: $light-gray;
     align-items: center;
-    text-align: center;
-    color: $text-color;
 }
 .restaurant-button-icon  {
     width: 20px;
 }
 
-
+/* HOURS */
 .restaurant-hours {
     background-color: $shadow;
 }
