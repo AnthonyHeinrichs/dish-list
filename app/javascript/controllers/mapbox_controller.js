@@ -27,7 +27,7 @@ export default class extends Controller {
       // Create a HTML element for your custom marker
       const customMarker = document.createElement("div")
       customMarker.className = "marker"
-      customMarker.style.backgroundImage = `url('https://cdn-icons.flaticon.com/png/512/2776/premium/2776000.png?token=exp=1646687209~hmac=0318becf3756643b1d11c6faaa74c5a2')`
+      customMarker.style.backgroundImage = `url('https://img.icons8.com/external-nawicon-outline-color-nawicon/452/external-restaurant-location-nawicon-outline-color-nawicon.png')`
       customMarker.style.backgroundSize = "contain"
       customMarker.style.width = "25px"
       customMarker.style.height = "25px"
