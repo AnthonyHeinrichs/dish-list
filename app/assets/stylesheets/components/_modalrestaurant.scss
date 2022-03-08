@@ -18,15 +18,18 @@
     padding-left: 0;
     padding-right: 0;
     padding-top: 15px;
+    overflow: auto;
+    white-space: nowrap;
 }
 .restaurant-tags {
     border-radius: 7px;
     font-family: 'Red Hat Display', sans-serif;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 0.9em;
     background-color: $yellow;
     color: $white;
+    display: inline-block;
 }
 
 /* REVIEW BUTTON */
@@ -89,18 +92,23 @@
 
 /* Buttons below the map */
 .restaurant-button-container {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     padding-left: 0;
     padding-right: 0;
 }
+.restaurant-button-container div {
+    border-left: #000000;
+}
 .restaurant-button {
     border-radius: 7px;
-    background: $light-gray;
+    background: #e7e7e7d7;
     align-items: center;
+    box-shadow: 10px 10px 5px 12px $shadow;
 }
 .restaurant-button-icon  {
-    width: 20px;
+    width: 2rem;
+    height: 2rem;
 }
 
 /* HOURS */

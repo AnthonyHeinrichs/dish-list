@@ -24,12 +24,10 @@
                 <div class="container restaurant-tag-container">
                   
                     <!-- Renders dishes that are made in that restaurant -->
-                    <% restaurant.dishes.each do |dish| %>
-                      <div class="col">
+                    <% restaurant.dishes.each do |dish| %>                      
                       <button class="btn btn-sm restaurant-tags" type="button">
                         <%= dish.name %>
-                      </button>
-                      </div>
+                      </button>                     
                     <% end %>
 
                 </div>
@@ -83,36 +81,32 @@
 
                     <!-- 4. Text / Share-Button-Board -->
                     <div class="row">
-                      <div class="col d-grid gap-2">
+                      
                         <div class="container-fluid restaurant-button-container">
                           <div class="row">
                             <div class="col">
                               <button class="btn restaurant-button" type="submit">
                                 <%= image_tag("icon_telephone.png", class: "restaurant-button-icon") %>
-
                               </button>
                             </div>
                             <div class="col">
                               <button class="btn restaurant-button" type="submit">
                                 <%= image_tag("icon_home.png", class: "restaurant-button-icon") %>
-
                               </button>
                             </div>
                             <div class="col">
                               <button class="btn restaurant-button" type="submit">
                                 <%= image_tag("icon_heart.png", class: "restaurant-button-icon") %>
-
                               </button>
                             </div>
                             <div class="col">
                               <button class="btn restaurant-button" type="submit">
                                 <%= image_tag("icon_upload.png", class: "restaurant-button-icon") %>
-
                               </button>
                             </div>
                           </div>
                         </div>
-                      </div>
+                      
                     </div>
 
                     <!-- . Text / Opening Hours -->
