@@ -118,8 +118,12 @@
                           <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
                               <button class="accordion-button restaurant-hours-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-
-                                <p>11:00 - 22:00</p>
+                                <!-- Validated today opening hours -->
+                                <% restaurant.openings.each do |day| %>
+                                  <% if day.weekday == Time.now.wday %>
+                                  <p><%= day.start_hour %>:00 - <%= day.end_hour %>:00</p>
+                                  <% end %>
+                                <% end %>
                               </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -127,19 +131,19 @@
                                 <% restaurant.openings.each do |day| %>
                                   <% case day.weekday %>
                                     <% when 1 %>
-                                      <% weekname = "MON  " %>
+                                      <% weekname = "MON" %>
                                     <% when 2 %>
-                                      <% weekname = "TUE   " %>
+                                      <% weekname = "TUE" %>
                                     <% when 3 %>
-                                      <% weekname = "WED  " %>
+                                      <% weekname = "WED" %>
                                     <% when 4 %>
-                                      <% weekname = "THU   " %>
+                                      <% weekname = "THU" %>
                                     <% when 5 %>
-                                      <% weekname = "FRI    " %>
+                                      <% weekname = "FRI" %>
                                     <% when 6 %>
-                                      <% weekname = "SAT   " %>
+                                      <% weekname = "SAT" %>
                                     <% when 7 %>
-                                      <% weekname = "SUN  " %>
+                                      <% weekname = "SUN" %>
                                     <% else %>
                                       <% weekname = "ERROR" %>
                                     <% end %>
