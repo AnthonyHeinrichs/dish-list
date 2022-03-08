@@ -65,10 +65,8 @@
             <div class="row">
               <div class="col-6">
                 <%= restaurant.address %>
-                <%= @gituser %>
-                Takumi Nine is the sister restaurant of a ramen shop in Düsseldorf, the German city that boasts the largest community of expat Japanese and hence also the largest number of Japanese restaurants. The man behind Takumi Nine Berlin goes by the name of Yusuke Minamiyama and is also the Ramenmeister behind the tiny cooking section at Takumi Nine. He took over the venue from former Okonomiyaki eatery Hanage who sadly decided to stop treating me with their divine fried chicken karaage.
-
-                Takumi Nine didn’t really change much of the Hanage venue except the equipment of the kitchen. This means around 20 seats in a tiny venue. The menu at Takumi Nine is pretty substantial and offers 16 different bowls of ramen along with a
+                
+                <%= restaurant.description %>
               </div >
 
               <div class="col-6 restaurant-map-container">
@@ -98,7 +96,9 @@
                             </div>
                             <div class="col">
                               <%= link_to restaurant_favorite_path(restaurant) do  %>
+                              <button class="btn restaurant-button" type="submit">
                                 <%= image_tag("icon_heart.png", class: "restaurant-button-icon") %>
+                              </button>
                               <% end %>
                               
                             </div>
