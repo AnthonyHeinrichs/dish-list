@@ -41,7 +41,7 @@
                         <% else %>
                           <div class="restaurant-dashboard-content-closed">Closed</div>
                         <% end %>
-                      
+
                     </div>
                     <div class="col">
                       <div class="restaurant-dashboard-title">RATING</div>
@@ -67,12 +67,16 @@
               </div >
 
               <div class="col-6 restaurant-map-container">
-                <%= image_tag("map_cocolo_460.png", class: "img-fluid restaurant-map") %>
+                <div style="width: 100%; height: 300px;"
+                  data-controller="mapbox"
+                  <% map_address = [lat: restaurant.latitude, lng: restaurant.longitude] %>
+                  data-mapbox-markers-value="<%= map_address.to_json %>"
+                  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
                 <div class="container-fluid">
 
                     <!-- 4. Text / Share-Button-Board -->
                     <div class="row">
-                      <div class="col  d-grid gap-2">
+                      <div class="col d-grid gap-2">
                         <div class="container-fluid restaurant-button-container">
                           <div class="row">
                             <div class="col">
@@ -138,7 +142,7 @@
                                     <% end %>
                                   <p><%= weekname %> <%= day.start_hour %>:00 - <%= day.end_hour %>:00</p>
                                 <% end %>
-                                
+
                               </div>
                             </div>
                           </div>
