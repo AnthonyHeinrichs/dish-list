@@ -33,6 +33,24 @@ ActiveRecord::Schema.define(version: 2022_03_08_115510) do
     t.string "image_url"
   end
 
+  create_table "favorite_dishes", force: :cascade do |t|
+    t.bigint "dish_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["dish_id"], name: "index_favorite_dishes_on_dish_id"
+    t.index ["user_id"], name: "index_favorite_dishes_on_user_id"
+  end
+
+  create_table "favorite_restaurants", force: :cascade do |t|
+    t.bigint "restaurant_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["restaurant_id"], name: "index_favorite_restaurants_on_restaurant_id"
+    t.index ["user_id"], name: "index_favorite_restaurants_on_user_id"
+  end
+
   create_table "openings", force: :cascade do |t|
     t.integer "weekday"
     t.integer "start_hour"
@@ -84,6 +102,10 @@ ActiveRecord::Schema.define(version: 2022_03_08_115510) do
 
   add_foreign_key "dish_restaurants", "dishes"
   add_foreign_key "dish_restaurants", "restaurants"
+  add_foreign_key "favorite_dishes", "dishes"
+  add_foreign_key "favorite_dishes", "users"
+  add_foreign_key "favorite_restaurants", "restaurants"
+  add_foreign_key "favorite_restaurants", "users"
   add_foreign_key "openings", "restaurants"
   add_foreign_key "reviews", "restaurants"
   add_foreign_key "reviews", "users"
