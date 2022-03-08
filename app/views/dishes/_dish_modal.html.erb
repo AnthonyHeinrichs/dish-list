@@ -3,13 +3,19 @@
   <div class="modal-dialog border border-0 border-rounded-3" style="transform: translate(-25%);">
     <div class="modal-content modalfordish">
       <div class="modal-header">
-      <div class="modal-title">
-        <h2 class="font-weight-bold mx-4" id="dishModalLabel"><%= dish.name %></h2>
-        <p><%= dish.country %></p>
+        <div class="modal-title">
+          <h2 class="font-weight-bold mx-4" id="dishModalLabel"><%= dish.name %></h2>
+          <p><%= dish.country %></p>
+           <!-- Doesnt take the myid as 87 -->
+          
+          <% dish.restaurants.each do |restaurant| %>
+            <%= restaurant.name %>
+          <% end %>
+        
       </div>
       </div>
-      <div class="modal-body">
-        <img src=<%= dish.image_url %> alt=<%= dish.name %>>
+      <div class="modal-body-new">
+        <img src=<%= dish.image_url %> alt=<%= dish.name %> class="">
         <div class="description">
           <p> <%= dish.description %> </p>
         </div>
