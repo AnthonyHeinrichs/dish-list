@@ -90,8 +90,6 @@
 }
 
 /* MAP */
-.restaurant-map-container {
-}
 .restaurant-map {
     border-radius: 7%;
 }
@@ -103,7 +101,6 @@
     padding-left: 0;
     padding-right: 0;
 }
-
 .restaurant-button {
     border-radius: 7px;
     background: #e7e7e7d7;
@@ -119,25 +116,66 @@
 .restaurant-hours {
     padding: 0;
     background: #e7e7e7d7;
-    border-radius: 7%;
+    border-radius: 8% 8% 8% 8% / 22% 22% 22% 22%;
 }
 .restaurant-hours-button {
     background-color: #e7e7e7d7;
-    border-radius: 7%;
+    border-radius: 8% 8% 8% 8% / 22% 22% 22% 22%;
+}
+.restaurant-hours-today {
+    font-family: 'Red Hat Display', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    color: $text-color;
 }
 
 /* REVIEWS */
 .restaurant-review-container {
-
+    overflow: auto;
+    white-space: nowrap;
+}
+.restaurant-review-title {
+    font-family: 'Red Hat Display', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9em;
+    color: $text-color;
+}
+.restaurant-review-text {
+    font-family: 'Red Hat Display', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.9em;
+    color: $text-color;
+}
+.restaurant-review-name {
+    font-family: 'Red Hat Display', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.8em;
+    color: $text-color;
+}
+.restaurant-review-value {
+    font-family: 'Red Hat Display', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 0.6em;
+    color: $text-color;
 }
 .restaurant-review-card {
-    border-radius: 15%;
+    border-radius: 8% 8% 8% 8% / 22% 22% 22% 22%;
     background-color: $shadow;
+    display: inline-block;
 }
 .restaurant-review-picture {
-    width: 50px;
+    width: 5em;
     border-radius: 50%;
 }
 .restaurant-review-star {
-    width: 40px;
+    width: 1rem;
+}
+.no-padding {
+    padding-left: 0;
+    padding-right: 0;
 }
