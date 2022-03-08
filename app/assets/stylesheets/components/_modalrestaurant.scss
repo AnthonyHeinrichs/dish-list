@@ -2,6 +2,8 @@
 .restaurant-modal {
     border-radius: 6%;
     background: $pop-background;
+    
+    box-shadow: 0px 0px 50px 15px #cccccc7e;
 }
 
 /* HEAD*/
@@ -47,11 +49,16 @@
 
 /* 2. Dashboard = HOURS / RATING / DISTANCE */
 .restaurant-dashboard-container {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     padding-left: 0;
     padding-right: 0;
     text-align: center;
+}
+.restaurant-dashboard-left {
+    align-content: left;
+    text-align: start;
+    margin-left: 0.8rem;
 }
 .restaurant-dashboard-title {
     font-family: 'Red Hat Display', sans-serif;
@@ -84,36 +91,39 @@
 
 /* MAP */
 .restaurant-map-container {
-    border-radius: 30%;
 }
-.restaurant-map img {
-    border-radius: 30%;
+.restaurant-map {
+    border-radius: 7%;
 }
 
 /* Buttons below the map */
 .restaurant-button-container {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     padding-left: 0;
     padding-right: 0;
 }
-.restaurant-button-container div {
-    border-left: #000000;
-}
+
 .restaurant-button {
     border-radius: 7px;
     background: #e7e7e7d7;
     align-items: center;
-    box-shadow: 10px 10px 5px 12px $shadow;
 }
 .restaurant-button-icon  {
-    width: 2rem;
-    height: 2rem;
+    width: 2.0rem;
+    height: 2.0rem;
+    padding: 0.5rem;
 }
 
 /* HOURS */
 .restaurant-hours {
-    background-color: $shadow;
+    padding: 0;
+    background: #e7e7e7d7;
+    border-radius: 7%;
+}
+.restaurant-hours-button {
+    background-color: #e7e7e7d7;
+    border-radius: 7%;
 }
 
 /* REVIEWS */

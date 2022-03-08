@@ -38,13 +38,13 @@
                 <div class="container-fluid restaurant-dashboard-container">
                   <div class="row"> 
                     <div class="col">
-                      <div class="restaurant-dashboard-title">HOURS</div>
+                      <div class="restaurant-dashboard-title restaurant-dashboard-left">HOURS</div>
                         <!-- Validating if a restaurant is open -->
                         <% week = restaurant.openings %>
                         <% if @timenow >= week[@daynow].start_hour && @timenow <= week[@daynow].end_hour %>
-                          <div class="restaurant-dashboard-content-open">Open</div>
+                          <div class="restaurant-dashboard-content-open restaurant-dashboard-left">Open</div>
                         <% else %>
-                          <div class="restaurant-dashboard-content-closed">Closed</div>
+                          <div class="restaurant-dashboard-content-closed restaurant-dashboard-left">Closed</div>
                         <% end %>
 
                     </div>
@@ -76,7 +76,9 @@
                   data-controller="mapbox"
                   <% map_address = [lat: restaurant.latitude, lng: restaurant.longitude] %>
                   data-mapbox-markers-value="<%= map_address.to_json %>"
-                  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+                  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>" class="restaurant-map">
+                </div>
+                
                 <div class="container-fluid">
 
                     <!-- 4. Text / Share-Button-Board -->
@@ -111,11 +113,11 @@
 
                     <!-- . Text / Opening Hours -->
                     <div class="row">
-                      <div class="col">
-                        <div class="accordion  restaurant-hours" id="accordionExample">
-                          <div class="accordion-item restaurant-hours">
+                      
+                        <div class="accordion restaurant-hours" id="accordionExample">
+                          <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
-                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              <button class="accordion-button restaurant-hours-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 
                                 <p>11:00 - 22:00</p>
                               </button>
@@ -125,19 +127,19 @@
                                 <% restaurant.openings.each do |day| %>
                                   <% case day.weekday %>
                                     <% when 1 %>
-                                      <% weekname = "MON" %>
+                                      <% weekname = "MON  " %>
                                     <% when 2 %>
-                                      <% weekname = "TUE" %>
+                                      <% weekname = "TUE   " %>
                                     <% when 3 %>
-                                      <% weekname = "WED" %>
+                                      <% weekname = "WED  " %>
                                     <% when 4 %>
-                                      <% weekname = "THU" %>
+                                      <% weekname = "THU   " %>
                                     <% when 5 %>
-                                      <% weekname = "FRI" %>
+                                      <% weekname = "FRI    " %>
                                     <% when 6 %>
-                                      <% weekname = "SAT" %>
+                                      <% weekname = "SAT   " %>
                                     <% when 7 %>
-                                      <% weekname = "SUN" %>
+                                      <% weekname = "SUN  " %>
                                     <% else %>
                                       <% weekname = "ERROR" %>
                                     <% end %>
@@ -148,7 +150,7 @@
                             </div>
                           </div>
                         </div>
-                      </div>
+                      
                     </div>
 
                 </div>
