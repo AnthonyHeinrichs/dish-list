@@ -1,0 +1,25 @@
+<h2>Favorite Restaurants</h2>
+<div>
+  <% @user.favorite_restaurants.each do |favorite| %>
+  <ul>
+  <li><%= favorite.restaurant.name %></li>
+  <%= link_to "Delete #{favorite.restaurant.name}",
+            restaurant_favorite_path(favorite.restaurant.id, favorite_id: favorite.id),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+  </ul>
+  <% end %>
+</div>
+
+<h2>Favorite dishes</h2>
+<div>
+  <% @user.favorite_dishes.each do |favorite| %>
+  <ul>
+  <li><%= favorite.dish.name %></li>
+    <%= link_to "Delete #{favorite.dish.name}",
+            dish_favorite_path(favorite.dish.id, favorite_id: favorite.id),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+  </ul>
+  <% end %>
+</div>
