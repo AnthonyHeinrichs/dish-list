@@ -17,12 +17,25 @@
                 <div class="container-fluid dishlist-dashboard-container">
                   <div class="row">
                     <div class="col">
-                      <div class="dishlist-dashboard-title">SPICE</div>
-                      <div class="dishlist-dashboard-content">HOOOT</div>
+                      <div class="dishlist-dashboard-title">SPICINESS</div>
+                      <div class="dishlist-dashboard-content">
+                        <% case dish.spiciness %>
+                          <% when 1 %>
+                            <%= image_tag("icon_chili_1.png", class: "restaurant-review-star") %>
+                          <% when 2 %>
+                            <%= image_tag("icon_chili_2.png", class: "restaurant-review-star") %>
+                          <% when 3 %>
+                            <%= image_tag("icon_chili_3.png", class: "restaurant-review-star") %>
+                          <% when 4 %>
+                            <%= image_tag("icon_chili_4.png", class: "restaurant-review-star") %>
+                          <% when 5 %>
+                            <%= image_tag("icon_chili_5.png", class: "restaurant-review-star") %>
+                          <% end %>
+                      </div>
                     </div>
                     <div class="col">
                       <div class="dishlist-dashboard-title">RATING</div>
-                      <div class="dishlist-dashboard-content">4.5</div>
+                      <div class="dishlist-dashboard-content"><%= rand(1..4) %>.<%= rand(1..9) %></div>
                     </div>
                     <div class="col">
                       <div class="dishlist-dashboard-title">PLACE</div>
