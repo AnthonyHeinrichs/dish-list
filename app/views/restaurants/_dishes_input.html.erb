@@ -1,0 +1,6 @@
+<%# <%=f.input :dishes, collection: dishes, input_html: { multiple: true }%> %>
+
+
+<%= simple_fields_for :dish_restaurants do |p| %>
+    <%=p.input :dishes, collection: dishes, input_html: { multiple: true }%>
+<% end %>

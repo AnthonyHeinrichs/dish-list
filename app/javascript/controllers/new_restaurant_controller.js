@@ -13,7 +13,7 @@ export default class extends Controller {
   }
   fetchCountry(event) {
     const country = this.inputTarget.options[this.inputTarget.selectedIndex].text
-    const url = `/dishes?query=${country}`
+    const url = `/dishes?query=${country}&commit=form`
     fetch(url, { headers: { "Accept": "text/plain" } })
       .then(response => response.text())
       .then((data) => {

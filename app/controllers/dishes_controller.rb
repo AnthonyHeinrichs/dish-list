@@ -9,9 +9,15 @@ class DishesController < ApplicationController
       @dishes = Dish.all.where(country: params[:query])
     end
 
+
     respond_to do |format|
       format.html
-      format.text { render partial: 'dishes/list', locals: { dishes: @dishes }, formats: [:html] }
+      if params[:commit].present?
+        format.text { render partial: 'restaurants/dishes_input', locals: { dishes: @dishes }, formats: [:html] }
+      else
+        format.text { render partial: 'dishes/list', locals: { dishes: @dishes }, formats: [:html] }
+      end
+
     end
 
     @countries = Dish.pluck(:country)
