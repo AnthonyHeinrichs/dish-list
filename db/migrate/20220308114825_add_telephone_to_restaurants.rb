@@ -1,5 +1,5 @@
 class AddTelephoneToRestaurants < ActiveRecord::Migration[6.1]
   def change
-    add_column :restaurants, :telephone, :integer
+    add_column :restaurants, :telephone, :string
   end
 end

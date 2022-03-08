@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2022_03_08_115510) do
     t.datetime "updated_at", precision: 6, null: false
     t.float "latitude"
     t.float "longitude"
-    t.integer "telephone"
+    t.string "telephone"
     t.string "website"
   end
 

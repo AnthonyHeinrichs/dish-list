@@ -23,6 +23,8 @@ gem 'redis', '~> 4.0'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'geocoder'
 gem 'country_select'
+gem 'dotenv-rails', groups: [:development, :test]
+
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
