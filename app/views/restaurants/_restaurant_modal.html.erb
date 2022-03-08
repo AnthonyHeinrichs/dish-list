@@ -97,9 +97,10 @@
                               </button>
                             </div>
                             <div class="col">
-                              <button class="btn restaurant-button" type="submit">
+                              <%= link_to restaurant_favorite_path(restaurant) do  %>
                                 <%= image_tag("icon_heart.png", class: "restaurant-button-icon") %>
-                              </button>
+                              <% end %>
+                              
                             </div>
                             <div class="col">
                               <button class="btn restaurant-button" type="submit">

@@ -25,4 +25,10 @@ class RestaurantsController < ApplicationController
     # user_serialized = URI.open(url).read
     # @gituser = JSON.parse(user_serialized)
   end
+
+  def favorite
+    @restaurant = Restaurant.find params[:restaurant_id]
+    FavoriteRestaurant.create(user: current_user, restaurant: @restaurant)
+    redirect_to restaurants_path, notice: 'Added restaurant to favorites'
+  end
 end
