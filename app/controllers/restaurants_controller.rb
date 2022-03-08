@@ -1,3 +1,6 @@
+require "json"
+require "open-uri"
+
 class RestaurantsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
 
@@ -13,5 +16,11 @@ class RestaurantsController < ApplicationController
     if params[:location].present?
       @restaurants = Restaurant.all.near(params[:location], 20)
     end
+
+    # API Call
+    # search = "ramen"
+    # url = 'https://api.spoonacular.com/food/products/search?query=ramen&apiKey=API-KEY'
+    # user_serialized = URI.open(url).read
+    # @gituser = JSON.parse(user_serialized)
   end
 end

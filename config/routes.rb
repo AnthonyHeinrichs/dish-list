@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get "reviews/new", to: "reviews#new"
   post "reviews", to: "reviews#create"
   patch "reviews/:id", to: "reviews#update"
+  resources :pages, only: [:index]
 end
