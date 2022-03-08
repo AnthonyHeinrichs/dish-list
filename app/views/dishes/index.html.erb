@@ -7,7 +7,7 @@
         <p class="banner-dish">Dish-List</p>
 
         <%= form_with url: root_path, method: :get, html: { autocomplete: "off",  class: 'sebis', data: {search_dishes_target: 'form' } } do |f| %>
-          <%= f.text_field :query, placeholder: 'type a country', value: params[:query], class: 'banner-country', data: { search_dishes_target: 'input', action: 'keyup->search-dishes#update' } %>
+          <%= f.text_field :query, autofocus: 'autofocus', placeholder: 'type a country', value: params[:query], class: 'banner-country', data: { search_dishes_target: 'input', action: 'keyup->search-dishes#update' } %>
         <% end %>
     </div>
 
