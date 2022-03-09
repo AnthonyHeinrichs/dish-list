@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DishListApp</title>
+    <title>Dish-List - local food done right</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= favicon_link_tag %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+
+    <!-- Facebook Open Graph data -->
+    <meta property="og:title" content="Dish-List - local food done right" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= request.original_url %>" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
+    <meta property="og:description" content="Find authentic dishes locally!" />
+    <meta property="og:site_name" content="Dish-List - local food done right" />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">
+    <meta name="twitter:title" content="Dish-List - local food done right">
+    <meta name="twitter:description" content="Find authentic dishes locally!">
+    <meta name="twitter:image:src" content="Logo.png">
   </head>
 
   <body>
     <%= render 'shared/banner' %>
     <%= render 'shared/flashes' %>
-  
+
     <%= yield %>
-  
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= render 'shared/footer' %>
