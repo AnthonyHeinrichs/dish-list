@@ -40,8 +40,8 @@
     border-radius: 7px;
     font-family: 'Red Hat Display', sans-serif;
     font-style: normal;
-    font-weight: 500;
-    font-size: 1.3em;
+    font-weight: 400;
+    font-size: 1.2em;
     display: flex;
     align-items: center;
     text-align: center; /* TODO: Text isnt aligning center */
@@ -59,7 +59,7 @@
 .restaurant-dashboard-left {
     align-content: left;
     text-align: start;
-    margin-left: 0.8rem;
+    margin-left: 0.5rem;
 }
 .restaurant-dashboard-title {
     font-family: 'Red Hat Display', sans-serif;
@@ -103,10 +103,10 @@
     padding-right: 0;
 }
 .restaurant-button {
-    border-radius: 7px;
+    border-radius: 7%;
     background: #e7e7e7d7;
     align-items: center;
-    padding: 35%;
+    padding: 33%;
 }
 .restaurant-button-icon  {
     width: 2.1rem;
@@ -178,8 +178,8 @@
     width: 1rem;
 }
 .no-padding {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 
