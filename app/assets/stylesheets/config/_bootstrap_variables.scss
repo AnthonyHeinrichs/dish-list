@@ -11,21 +11,22 @@ $font-size-base: 1rem;
 
 // Colors
 $body-color: $black;
-$primary:    $blue;
+$primary:    $orange;
 $success:    $green;
 $info:       $yellow;
 $danger:     $red;
-$warning:    $orange;
+$warning:    $blue;
 
 // Buttons & inputs' radius
-$border-radius:    7%;
-$border-radius-lg: 2%;
-$border-radius-sm: 2%;
+$border-radius:    10px;
+$border-radius-lg: 10px;
+$border-radius-sm: 10px;
 
 // Override other variables below!
 $accordion-color: #f0f0f0b7;
 $accordion-bg: #f8f8f8b7;
-$accordion-border-radius: 8% 8% 8% 8% / 22% 22% 22% 22%;
+/* $accordion-border-radius: 8% 8% 8% 8% / 22% 22% 22% 22%; */
+$accordion-border-radius: 10px;
 $accordion-button-color: $purple;
 $accordion-button-active-bg: #f0f0f0b7;
 $accordion-button-active-color: shade-color($primary, 10%);

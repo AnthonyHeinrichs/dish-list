@@ -20,10 +20,14 @@
                       <div class="dishlist-dashboard-content">
                         <!-- Validating if a restaurant is open -->
                         <% week = restaurant.openings %>
-                        <% if @timenow >= week[@daynow].start_hour && @timenow <= week[@daynow].end_hour %>
-                          <div class="restaurant-dashboard-content-open">Open</div>
+                        <% if week.first.nil? %>
+                          <div class="restaurant-dashboard-content-closed">n/a</div>
                         <% else %>
-                          <div class="restaurant-dashboard-content-closed">Closed</div>
+                          <% if @timenow >= week[@daynow].start_hour && @timenow <= week[@daynow].end_hour %>
+                            <div class="restaurant-dashboard-content-open">Open</div>
+                          <% else %>
+                             <div class="restaurant-dashboard-content-closed">Closed</div>
+                          <% end %>
                         <% end %>
                       </div>
                     </div>

@@ -1,6 +1,6 @@
 .modalfordish {
   background-color: $pop-background;
-  border-radius: 5px;
+  border-radius: 10px;
   border-style: none;
   color: $text-color;
   box-shadow: $shadow;
@@ -56,11 +56,17 @@
     max-height: 300px;
     margin-bottom: 15px;
     object-fit: cover;
-    min-width: 720px;
-    border-radius: 5px;
+    min-width: 97%;
+    border-radius: 10px;
   }
   .description {
     max-width: 720px;
   }
 
+}
+
+.modal-favourite {
+  position: absolute;
+  right: 1.8rem;
+  top: 1.4rem;
 }
