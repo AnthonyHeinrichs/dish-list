@@ -97,9 +97,9 @@ ActiveRecord::Schema.define(version: 2022_03_08_194918) do
     t.datetime "updated_at", precision: 6, null: false
     t.float "latitude"
     t.float "longitude"
-    t.text "description"
     t.string "telephone"
     t.string "website"
+    t.text "description"
   end
 
   create_table "reviews", force: :cascade do |t|
