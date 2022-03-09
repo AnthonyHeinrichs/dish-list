@@ -42,17 +42,15 @@
   </div>
   <% else %>
 
-  <div class="container">
-        <div class="d-flex justify-content-between flex-wrap">
+    <div class="index-restaurant-main">
+
             <% @restaurants.each_with_index do | restaurant, index | %>
               <a data-bs-toggle="modal" data-bs-target="#restaurantModal<%= index %>">
                 <%= render 'restaurant_card', restaurant: restaurant, index: index %>
               </a>
-
-        </div>
-                      <%= render 'restaurant_modal', restaurant: restaurant, index: index %>
+              <%= render 'restaurant_modal', restaurant: restaurant, index: index %>
             <% end %>
-  </div>
+    </div>
   <% end %>
 
 </div>

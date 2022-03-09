@@ -1,0 +1,81 @@
+.index-restaurant-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+.resto-card {
+  background-color: $cards-background;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 480px;
+  height: 176px;
+  display: flex;
+  color: $text-color;
+
+
+  .dish-pic-index {
+    width: 153px;
+    height: 153px;
+    border-radius: 10px;
+    object-fit: cover;
+
+  }
+
+  .resto-content {
+    margin-left: 10px;
+    display: flexbox;
+  }
+}
+
+.buttom-content {
+  margin-top: 35px;
+  width: 270px;
+  display: flex;
+  justify-content: space-between;
+
+  .hours-restaurant {
+    height: 30px;
+    text-align: center;
+
+    p {
+      margin-bottom: 0px;
+    }
+
+  }
+
+  .restaurant-rating {
+    height: 30px;
+    text-align: center;
+    p {
+      margin-bottom: 0px;
+    }
+
+
+    // margin-inline: 10px;
+  }
+
+  .card-distance {
+    height: 30px;
+    text-align: center;
+    p {
+      margin-bottom: 0px;
+
+    }
+
+  }
+}
+
+
+.top-content {
+  .restaurant-card-title-name {
+    font-family: 'Red Hat Display', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5em;
+    color: $text-color;
+    padding-top: 3px;
+  }
+}
