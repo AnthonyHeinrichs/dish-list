@@ -7,6 +7,7 @@
     border-radius: 0 0 60% 60% / 0 0 80% 80%;
     padding-top: 0px;
     margin-bottom: 5%;
+    min-width: 100%;
 }
 
 /* NAVIGATION */
@@ -28,9 +29,8 @@
 
 /* HEADLINE with the two text inputs  */
 .banner-head {
-    margin: 0 auto;
+  margin: 0 auto;
 	width: max-content;
-    justify-content: flex-end;
 }
 
 .sebis {
@@ -103,7 +103,7 @@
 }
 
 .restaurant-banner-margin {
-  margin-left: 200px;
+  margin-left: 480px;
 }
 
 #dan_input {
