@@ -5,6 +5,11 @@
       <div class="modal-header">
         <div class="modal-title">
           <h2 class="font-weight-bold mx-4" id="dishModalLabel"><%= dish.name %></h2>
+          <div class="modal-favourite">
+            <%= link_to dish_favorite_path(dish) do  %>
+              <%= image_tag("icon_heart.png", class: "restaurant-button-icon") %>
+            <% end %>
+           </div>
           <p><%= dish.country %></p>
            <!-- Doesnt take the myid as 87 -->
         </div>
@@ -17,9 +22,6 @@
         </div>
       </div>
       <div class="modal-footer">
-        <%= link_to dish_favorite_path(dish) do  %>
-          <%= image_tag("icon_heart.png", class: "restaurant-button-icon") %>
-        <% end %>
         <%= link_to "Find restaurants that make #{dish.name}", restaurants_path(dish: dish.name, dish_picture: dish.image_url), class: "btn btn-link" %>
       </div>
     </div>
