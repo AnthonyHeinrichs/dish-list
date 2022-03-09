@@ -7,18 +7,15 @@
           <h2 class="font-weight-bold mx-4" id="dishModalLabel"><%= dish.name %></h2>
           <p><%= dish.country %></p>
            <!-- Doesnt take the myid as 87 -->
-
-
-      </div>
-
-      </div>
-        <div class="modal-body-new">
-          <img src=<%= dish.image_url %> alt=<%= dish.name %> class="">
-          <div class="description">
-            <p> <%= dish.description %> </p>
-          </div>
-
         </div>
+      </div>
+      <div class="modal-body-new">
+        <img src=<%= dish.image_url %> alt=<%= dish.name %> class="">
+        <div class="description">
+          <p></p>
+          <p> <%= dish.description %> </p>
+        </div>
+      </div>
       <div class="modal-footer">
         <%= link_to dish_favorite_path(dish) do  %>
           <%= image_tag("icon_heart.png", class: "restaurant-button-icon") %>
