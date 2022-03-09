@@ -39,17 +39,15 @@ class RestaurantsController < ApplicationController
     @daynow = @daynow.wday - 1
     @dishes = Dish.all
     @users = User.all
-    # !! THIS LOGIC MUST BE CHANGED ONCE WE HAVE A LINKED RESTAURANTS_DISH FROM THE JOIN TABLE !!
 
-    if params[:location].present?
+    if params[:location].present? && params[:dish].present?
+      @restaurants = Restaurant.near(params[:location], 20)
+      @restaurants = @restaurants.all.select { |restaurant| restaurant.dishes.map(&:name).include?(params[:dish]) }
+    elsif params[:location].present?
       @restaurants = Restaurant.all.near(params[:location], 20)
+    elsif params[:dish].present?
+      @restaurants = Restaurant.all.select { |restaurant| restaurant.dishes.map(&:name).include?(params[:dish]) }
     end
-
-    # API Call
-    # search = "ramen"
-    # url = 'https://api.spoonacular.com/food/products/search?query=ramen&apiKey=API-KEY'
-    # user_serialized = URI.open(url).read
-    # @gituser = JSON.parse(user_serialized)
   end
 
   def favorite

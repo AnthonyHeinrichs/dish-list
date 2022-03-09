@@ -1,25 +1,28 @@
 .dishlist-container {
   width: 480px;
   height: 195px;
+  margin: 1.25rem;
+  margin-top: -5px;
 }
 .dishlist-card {
   width: 480px;
   height: 176px;
-  border-radius: 5px;
+  border-radius: 10px;
   padding-top: 7px;
-  background-color: #468f4663;
+  background-color: $cards-background;
   opacity: 0.9;
   box-shadow: $shadow;
 }
 .dishlist-picture {
-  width: 160px;
-  height: 160px;
-  border-radius: 10%;
+  width: 153px;
+  height: 153px;
+  border-radius: 10px;
   object-fit: cover;
+  padding-top: 9px;
 }
 
 .dishlist-right {
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
 .dishlist-title {
   font-family: 'Red Hat Display', sans-serif;
@@ -27,6 +30,7 @@
   font-weight: 500;
   font-size: 1.5em;
   color: $text-color;
+  padding-top: 3px;
 }
 .dishlist-tags {
   font-family: 'Red Hat Display', sans-serif;

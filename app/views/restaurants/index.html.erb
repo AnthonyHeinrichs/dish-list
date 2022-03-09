@@ -41,7 +41,7 @@
     <%= link_to "There are no restaurants that make #{params[:dish]} nearby, want to add one?", new_restaurant_path, class: "btn btn-link" %>
   </div>
   <% else %>
- 
+
   <div class="container">
         <div class="d-flex justify-content-between flex-wrap">
             <% @restaurants.each_with_index do | restaurant, index | %>
