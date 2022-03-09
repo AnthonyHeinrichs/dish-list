@@ -6,7 +6,10 @@
     <%= f.input :telephone, required: true, hint: "exp. +49 30 0000 000" %>
     <%= f.input :website, required: true, hint: "www.sample.com" %>
     <%= f.input :photos, as: :file, input_html: { multiple: true }%>
-
+    <%= simple_fields_for :openings do |p| %>
+      <%= p.input :start_hour, required: true %>
+      <%= p.input :end_hour, required: true %>
+      <% end %>
     <%= f.submit %>
   <% end %>
 </div>

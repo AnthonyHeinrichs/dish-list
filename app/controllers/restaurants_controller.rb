@@ -9,10 +9,7 @@ class RestaurantsController < ApplicationController
   end
 
   def create
-<<<<<<< HEAD
-=======
-    
->>>>>>> 337e38fce10d8d768bed9fa9299256082479f6f6
+
     @restaurant =  Restaurant.new(restaurant_strong)
     @dishes = params[:dish_restaurants][:dishes].reject(&:empty?)
     @restaurant.save
