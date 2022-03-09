@@ -1,0 +1,63 @@
+<div class="dishlist-container" data-controller="edit-restaurant" data-edit-dish-target="card">
+  <div class="card dishlist-card" >
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-4"><%= image_tag("pizza_400.png", class: "dishlist-picture") %></div>
+        <div class="col-8 dishlist-right">
+          <div class="container-fluid">
+            <div class="row dishlist-title"><%= restaurant.name %></div>
+            <div class="row dishlist-tags"><%= restaurant.address %></div>
+            <div class="row">
+              <div class="container-fluid dishlist-dashboard-container">
+                <div class="row">
+                  <div class="col">
+                  <div class="dishlist-dashboard-title">HOURS</div>
+
+                    <div class="dishlist-dashboard-content">
+                      # Validating if a restaurant is open
+                      <% week = restaurant.openings %>
+                      <% if week.first.nil? %>
+                        <div class="restaurant-dashboard-content-closed">n/a</div>
+                      <% else %>
+                        <% if @timenow >= week[@daynow].start_hour && @timenow <= week[@daynow].end_hour %>
+                          <div class="restaurant-dashboard-content-open">Open</div>
+                        <% else %>
+                          <div class="restaurant-dashboard-content-closed">Closed</div>
+                        <% end %>
+                      <% end %>
+                    </div>
+
+                    <div class="col">
+                      <div class="dishlist-dashboard-title">RATING</div>
+                      <div class="dishlist-dashboard-content"><%= rand(1..4) %>.<%= rand(1..9) %></div>
+                    </div>
+
+                    <div class="col">
+                      <div class="dishlist-dashboard-title">DISTANCE</div>
+                      <div class="dishlist-dashboard-content">
+                        <% case restaurant.address %>
+                          <% when 'Berlin' %>
+                            0 km
+                          <% when 'Hamburg' %>
+                            289 Km
+                          <% when 'Cologne' %>
+                            432 Km
+                          <% when 'Munich' %>
+                            612 Km
+                          <% when 'Paris' %>
+                            1,074 Km
+                        <% end %>
+                      </div>
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
