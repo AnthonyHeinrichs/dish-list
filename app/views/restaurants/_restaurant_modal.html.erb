@@ -14,7 +14,7 @@
             <div class="row">
               <div class="col restaurant-headline"><%= restaurant.name %></div>
 
-              <%= link_to "edit", edit_restaurant_path(restaurant)%>
+              
 
               <div class="col d-grid gap-2 ">
                 <button class="btn btn-primary restaurant-review" type="button">Write a Review</button>
@@ -111,16 +111,18 @@
                             </div>
                             <div class="col">
                               <%= link_to restaurant_favorite_path(restaurant) do  %>
-                              <button class="btn restaurant-button" type="submit">
-                                <%= image_tag("icon_heart.png", class: "restaurant-button-icon") %>
-                              </button>
+                                <button class="btn restaurant-button" type="submit">
+                                  <%= image_tag("icon_heart.png", class: "restaurant-button-icon") %>
+                                </button>
                               <% end %>
 
                             </div>
                             <div class="col">
-                              <button class="btn restaurant-button" type="submit">
-                                <%= image_tag("icon_upload.png", class: "restaurant-button-icon") %>
-                              </button>
+                              <%= link_to edit_restaurant_path(restaurant) do %>
+                                <button class="btn restaurant-button" type="submit">
+                                  <%= image_tag("icon_upload.png", class: "restaurant-button-icon") %>
+                                </button>
+                              <% end %>
                             </div>
                           </div>
                         </div>
