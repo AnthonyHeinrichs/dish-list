@@ -54,11 +54,24 @@
                     </div>
                     <div class="col">
                       <div class="restaurant-dashboard-title">RATING</div>
-                      <div class="restaurant-dashboard-content">4.5</div>
+                      <div class="restaurant-dashboard-content"><%= rand(2..4) %>.<%= rand(1..9) %></div>
                     </div>
                     <div class="col">
                       <div class="restaurant-dashboard-title">DISTANCE</div>
-                      <div class="restaurant-dashboard-content">2.5 km</div>
+                      <div class="restaurant-dashboard-content">
+                        <% case restaurant.address %>
+                          <% when 'Berlin' %>
+                            0 km
+                          <% when 'Hamburg' %>
+                            289 Km
+                          <% when 'Cologne' %>
+                            432 Km
+                          <% when 'Munich' %>
+                            612 Km
+                          <% when 'Paris' %>
+                            1,074 Km
+                          <% end %>
+                        </div>
                     </div>
                   </div>
                 </div>
