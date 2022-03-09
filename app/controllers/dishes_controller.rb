@@ -28,7 +28,7 @@ class DishesController < ApplicationController
   def favorite
     @dish = Dish.find params[:dish_id]
     FavoriteDish.create(user: current_user, dish: @dish)
-    redirect_to dishes_path, notice: 'Added dish to favorites'
+    redirect_to dishes_path, notice: 'Safed to favorites'
   end
 
   def destroy
