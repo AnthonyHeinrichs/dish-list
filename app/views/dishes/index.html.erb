@@ -33,11 +33,7 @@
   <% else %>
     <p class='dish-index-title-h2'>What people crave from around the world </p>
   <% end %>
-  <div class="container">
-    <div class="d-flex flex-wrap justify-content-between index-dish-cards">
-      <%= render 'list', dishes: @dishes %>
-
-    </div>
+  <div class='container'>
+    <%= render 'list', dishes: @dishes %>
   </div>
-
 </div>
