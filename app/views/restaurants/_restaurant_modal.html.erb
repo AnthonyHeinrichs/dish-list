@@ -79,7 +79,7 @@
             <!-- 3. Text / Map -->
             <div class="row">
               <div class="col-6">
-                <%= restaurant.address %>
+                <p><%= restaurant.address %></p>
 
                 <%= restaurant.description %>
               </div >
@@ -98,8 +98,8 @@
                     <div class="row">
 
                         <div class="container-fluid restaurant-button-container">
-                          <div class="row">
-                            <div class="col">
+                          <div class="row " >
+                            <div class="col" style="padding-left:0px;">
                               <button class="btn restaurant-button" type="submit">
                                 <%= image_tag("icon_telephone.png", class: "restaurant-button-icon") %>
                               </button>
@@ -130,7 +130,7 @@
                     </div>
 
                     <!-- . Text / Opening Hours -->
-                    <div class="row">
+                    <div class="row" >
 
                         <div class="accordion restaurant-hours" id="accordionExample">
                           <div class="accordion-item restaurant-hours">

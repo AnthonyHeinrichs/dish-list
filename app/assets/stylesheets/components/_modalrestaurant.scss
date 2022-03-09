@@ -1,6 +1,6 @@
 /* 1. HEAD, TAGS REVIEW, BUTTON */
 .restaurant-modal {
-    border-radius: 6%;
+    border-radius: 5%;
     background: $pop-background;
 
     box-shadow: 0px 0px 50px 15px #cccccc7e;
@@ -106,11 +106,12 @@
     border-radius: 7px;
     background: #e7e7e7d7;
     align-items: center;
+    padding: 35%;
 }
 .restaurant-button-icon  {
-    width: 2.0rem;
-    height: 2.0rem;
-    padding: 0.5rem;
+    width: 2.1rem;
+    height: 2.1rem;
+    padding: 0.0rem;
 }
 
 /* HOURS */
@@ -177,8 +178,8 @@
     width: 1rem;
 }
 .no-padding {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 
