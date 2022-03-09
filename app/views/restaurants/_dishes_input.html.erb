@@ -1,6 +1,6 @@
-<%# <%=f.input :dishes, collection: dishes, input_html: { multiple: true }%> %>
-
-
-<%= simple_fields_for :dish_restaurants do |p| %>
-    <%=p.input :dishes, collection: dishes, input_html: { multiple: true }%>
-<% end %>
+<%# <%=f.input :dishes, collection: dishes, input_html: { multiple: true }%>
+<div data-new-restaurant-target="select">
+  <%= simple_fields_for :dish_restaurants do |n| %>
+      <%= n.input :dishes, collection: dishes, input_html: { multiple: true }, include_blank: false%>
+  <% end %>
+</div>

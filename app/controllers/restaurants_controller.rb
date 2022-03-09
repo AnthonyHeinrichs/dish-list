@@ -9,10 +9,15 @@ class RestaurantsController < ApplicationController
   end
 
   def create
+    raise
     @restaurant =  Restaurant.new(restaurant_strong)
-    @restaurant.user = current_user
+    @dishes = params[:dish_restaurants][:dishes].reject(&:empty?)
     @restaurant.save
-    redirect_to restaurant_path(@restaurant)
+    @dishes.each do |dish_id|
+      dish = Dish.find(dish_id.to_i)
+      DishRestaurant.create(dish: dish, restaurant: @restaurant)
+    end
+    redirect_to restaurants_path
   end
 
   def edit
@@ -21,8 +26,8 @@ class RestaurantsController < ApplicationController
 
   def update
     @restaurant = Restaurant.find(params[:id])
-    @restaurant.update(restaurant_path)
-    redirect_to restaurant_path(@restaurnat)
+    @restaurant.update(restaurant_strong)
+    redirect_to restaurants_path
   end
 
   def index
