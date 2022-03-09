@@ -9,7 +9,7 @@ class RestaurantsController < ApplicationController
   end
 
   def create
-    raise
+    
     @restaurant =  Restaurant.new(restaurant_strong)
     @dishes = params[:dish_restaurants][:dishes].reject(&:empty?)
     @restaurant.save
