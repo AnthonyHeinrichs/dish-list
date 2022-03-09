@@ -14,7 +14,7 @@ Yours,
 
 Tony, Danni & Ammi
 
-P.S. Sorry, we don'r date fans.
+P.S. Sorry, we don't date fans.
 
 ------------
 
