@@ -5,16 +5,17 @@
 .dishlist-card {
   width: 480px;
   height: 176px;
-  border-radius: 8% 8% 8% 8% / 22% 22% 22% 22%;
-  padding-top: 10px;
-  padding-bottom: 30px;
-  background-color: #ebebebb6;
+  border-radius: 5px;
+  padding-top: 7px;
+  background-color: #468f4663;
   opacity: 0.9;
+  box-shadow: $shadow;
 }
 .dishlist-picture {
   width: 160px;
   height: 160px;
   border-radius: 10%;
+  object-fit: cover;
 }
 
 .dishlist-right {
