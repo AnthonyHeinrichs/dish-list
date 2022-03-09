@@ -1,17 +1,20 @@
-<h1>Edit Restaurant</h1>
-<div class="restaurant_form" data-controller="new-restaurant">
-<%= simple_form_for(@restaurant)  do |f| %>
-    <%= f.input :name, required: true %>
-    <%= f.input :address, required: true, hint: "Enter the street and city" %>
-    <%= f.input :telephone, required: true, hint: "exp. +49 30 0000 000" %>
-    <%= f.input :website, required: true, hint: "www.sample.com" %>
-    <%= f.input :photos, as: :file, input_html: { multiple: true }%>
-    <%= simple_fields_for :openings do |p| %>
-      <%= p.input :start_hour, required: true %>
-      <%= p.input :end_hour, required: true %>
-      <% end %>
-    <%= f.submit %>
-  <% end %>
-</div>
+<div class="form-style-general">
+  <h1>Edit Restaurant</h1>
+  <div class="restaurant_form" data-controller="new-restaurant">
+  <%= simple_form_for(@restaurant)  do |f| %>
+      <%= f.input :name, required: true %>
+      <%= f.input :address, required: true, hint: "Enter the street and city" %>
+      <%= f.input :telephone, required: true, hint: "exp. +49 30 0000 000" %>
+      <%= f.input :website, required: true, hint: "www.sample.com" %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true }%>
+      <%= simple_fields_for :openings do |p| %>
+        <%= p.input :start_hour, required: true %>
+        <%= p.input :end_hour, required: true %>
+        <% end %>
+      <%= f.submit %>
+    <% end %>
+  </div>
 
-<%= link_to "Back", restaurants_path(@restaurant)%>
+  <%= link_to "Back", restaurants_path(@restaurant), class:"dan"%>
+
+</div>

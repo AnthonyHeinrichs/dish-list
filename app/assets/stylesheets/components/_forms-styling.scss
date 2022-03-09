@@ -1,0 +1,33 @@
+.form-style-general {
+  width: 500px;
+  margin: 40px auto;
+  display: flexbox;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #468f4663;
+  padding: 20px;
+  box-shadow: $shadow;
+  color: $text-color;
+  // border: 1px solid red;
+
+  .form-actions {
+    display: flexbox;
+    color: $text-color;
+
+
+  }
+}
+.dan {
+  text-decoration: none;
+  color: $text-color;
+}
+
+.form-submit {
+  color: $text-color;
+  margin-left: -12px;
+}
+
+.hours-form {
+  display: flex;
+  justify-content: space-between;
+}
