@@ -43,11 +43,11 @@
                       <div class="restaurant-dashboard-title restaurant-dashboard-left">HOURS</div>
                         <!-- Validating if a restaurant is open -->
                         <% week = restaurant.openings %>
-                        <% if @timenow >= week[@daynow].start_hour && @timenow <= week[@daynow].end_hour %>
+                        <%# if @timenow >= week[@daynow].start_hour && @timenow <= week[@daynow].end_hour %>
                           <div class="restaurant-dashboard-content-open restaurant-dashboard-left">Open</div>
-                        <% else %>
-                          <div class="restaurant-dashboard-content-closed restaurant-dashboard-left">Closed</div>
-                        <% end %>
+                        <%# else %>
+                          <!-- <div class="restaurant-dashboard-content-closed restaurant-dashboard-left">Closed</div> -->
+                        <%# end %>
 
                     </div>
                     <div class="col">
