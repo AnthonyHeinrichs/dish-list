@@ -13,9 +13,13 @@
             <!-- 1. Title / Review Button -->
             <div class="row">
               <div class="col restaurant-headline"><%= restaurant.name %></div>
+
+              <%= link_to "edit", edit_restaurant_path(restaurant)%>
+
               <div class="col d-grid gap-2 ">
                 <button class="btn btn-primary restaurant-review" type="button">Write a Review</button>
               </div>
+
             </div>
 
             <!-- 2. Tags / Dashboard -->

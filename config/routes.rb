@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     get "favorite", to: "dishes#favorite"
     delete "favorite", to: "favorite_dishes#destroy"
   end
-  resources :restaurants, only: [:index, :new] do
+  resources :restaurants, only: [:index, :new, :create, :edit, :update] do
     get "favorite", to: "restaurants#favorite"
     delete "favorite", to: "favorite_restaurants#destroy"
   end

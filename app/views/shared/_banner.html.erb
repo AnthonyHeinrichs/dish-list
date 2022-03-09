@@ -14,6 +14,7 @@
                             <% if user_signed_in? %>
                             <li><%= link_to "Home", "#", class: "dropdown-item" %></li>
                             <li><%= link_to "Profile", current_user, class: "dropdown-item" %></li>
+                            <li><%= link_to "Add a Restaurant", new_restaurant_path, class: "dropdown-item" %></li>
                             <li><%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %></li>
                             <% else %>
                             <li><%= link_to "Login", new_user_session_path, class: "dropdown-item" %></li>

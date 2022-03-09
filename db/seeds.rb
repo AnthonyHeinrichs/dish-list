@@ -116,7 +116,7 @@ dish_15 = {
   spiciness: 3
 }
 
-dish_16 = { 
+dish_16 = {
   name: 'Rinderroulade',
   country: 'Germany',
   description: "Rinderroulade is a dish usually consisting of bacon, onions, mustard and pickles wrapped in thinly sliced beef which is then cooked. The dish is considered traditional also in the Upper Silesia region of Poland where it is known as rolada śląska (Silesian roulade) and in the Czech Republic where it is known as španělský ptáček (spanish bird).",
@@ -156,7 +156,7 @@ DishRestaurant.delete_all
 [ restaurant_1, restaurant_2, restaurant_3, restaurant_4, restaurant_5, restaurant_6, restaurant_7 ].each do |infusion|
   restaurant = Restaurant.create(infusion)
   puts "Sweat and tears build #{restaurant.name}."
-  DishRestaurant.create(restaurant: restaurant, dish: dish_array.sample) 
+  DishRestaurant.create(restaurant: restaurant, dish: dish_array.sample)
 end
 
 puts 'Thank you for taking my seed. May it be germinating inside of you.'
