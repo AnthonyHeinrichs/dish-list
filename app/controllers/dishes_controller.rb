@@ -10,7 +10,6 @@ class DishesController < ApplicationController
       @dishes = Dish.all.where(country: params[:query])
     end
 
-
     respond_to do |format|
       format.html
       if params[:commit].present?
@@ -23,7 +22,7 @@ class DishesController < ApplicationController
 
     @countries = Dish.pluck(:country)
 
-    
+
   end
 
   def favorite

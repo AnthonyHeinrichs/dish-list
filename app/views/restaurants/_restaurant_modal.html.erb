@@ -29,9 +29,7 @@
 
                     <!-- Renders dishes that are made in that restaurant -->
                     <% restaurant.dishes.each do |dish| %>
-                      <button class="btn btn-sm restaurant-tags" type="button">
-                        <%= dish.name %>
-                      </button>
+                        <%= link_to "#{dish.name}", restaurants_path(dish: dish.name, dish_picture: dish.image_url), class: 'btn btn-sm restaurant-tags', style: 'text-decoration: none' %>
                     <% end %>
 
                 </div>
