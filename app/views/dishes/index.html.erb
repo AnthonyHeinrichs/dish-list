@@ -27,10 +27,13 @@
   </div>
 
   <!-- Rendered Dish-List -->
-  <div class="container">
-    <div class="d-flex flex-wrap justify-content-between">
-      <%= render 'list', dishes: @dishes %>
-    </div>
+  <h2 class='dish-index-title-h1'>Traditional Picks</h2>
+  <% if params[:query].present? %>
+    <p class='dish-index-title-h2'>What people crave from <%= params[:query] %></p>
+  <% else %>
+    <p class='dish-index-title-h2'>What people crave from around the world </p>
+  <% end %>
+  <div class='container'>
+    <%= render 'list', dishes: @dishes %>
   </div>
-
 </div>
