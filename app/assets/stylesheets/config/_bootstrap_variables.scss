@@ -18,8 +18,14 @@ $danger:     $red;
 $warning:    $orange;
 
 // Buttons & inputs' radius
-$border-radius:    2px;
-$border-radius-lg: 2px;
-$border-radius-sm: 2px;
+$border-radius:    7%;
+$border-radius-lg: 2%;
+$border-radius-sm: 2%;
 
 // Override other variables below!
+$accordion-color: #f0f0f0b7;
+$accordion-bg: #f8f8f8b7;
+$accordion-border-radius: 8% 8% 8% 8% / 22% 22% 22% 22%;
+$accordion-button-color: $purple;
+$accordion-button-active-bg: #f0f0f0b7;
+$accordion-button-active-color: shade-color($primary, 10%);

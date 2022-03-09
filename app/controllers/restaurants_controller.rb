@@ -37,6 +37,8 @@ class RestaurantsController < ApplicationController
     @timenow = @timenow.hour
     @daynow = Time.now
     @daynow = @daynow.wday - 1
+    @dishes = Dish.all
+    @users = User.all
     # !! THIS LOGIC MUST BE CHANGED ONCE WE HAVE A LINKED RESTAURANTS_DISH FROM THE JOIN TABLE !!
 
     if params[:location].present?

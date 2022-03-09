@@ -1,14 +1,12 @@
 
-<div class="container" data-search-dishes-target="list">
-  <div class="row">
+<div class="d-flex flex-wrap justify-content-around" data-search-dishes-target="list">
     <% dishes.each_with_index do |dish, index| %>
         
           <a data-bs-toggle="modal" data-bs-target="#dishModal<%= index %>">
             <%= render 'dish_infos', dish: dish %>
           </a>
-        
+        </div>
       <%= render 'dish_modal', dish: dish, index: index %>
     <% end %>
-  </div>
-</div>
+
 
