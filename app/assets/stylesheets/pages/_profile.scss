@@ -1,0 +1,25 @@
+.profile {
+  color: $text-color;
+  margin: 30px;
+  text-align: center;
+
+}
+
+.favs {
+  text-align: left;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-around;
+  max-width: 1000px;
+}
+.favi {
+  padding: 20px;
+  background-color: $cards-background;
+  border-radius: 10px;
+
+  ul {
+    margin-left: -30px;
+    list-style-type: none;
+
+  }
+}
