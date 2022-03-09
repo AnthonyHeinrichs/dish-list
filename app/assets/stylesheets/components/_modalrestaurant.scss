@@ -37,7 +37,7 @@
 
 /* REVIEW BUTTON */
 .restaurant-review {
-    border-radius: 7px;
+    border-radius: 10px;
     font-family: 'Red Hat Display', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -103,7 +103,7 @@
     padding-right: 0;
 }
 .restaurant-button {
-    border-radius: 7%;
+    border-radius: 10px;
     background: #e7e7e7d7;
     align-items: center;
     padding: 33%;
@@ -118,11 +118,11 @@
 .restaurant-hours {
     padding: 0;
     background: #e7e7e7d7;
-    border-radius: 8% 8% 8% 8% / 22% 22% 22% 22%;
+    border-radius: 10px;
 }
 .restaurant-hours-button {
     background-color: #e7e7e7d7;
-    border-radius: 8% 8% 8% 8% / 22% 22% 22% 22%;
+    border-radius: 10px;
 }
 .restaurant-hours-today {
     font-family: 'Red Hat Display', sans-serif;
@@ -166,7 +166,7 @@
     color: $text-color;
 }
 .restaurant-review-card {
-    border-radius: 8% 8% 8% 8% / 22% 22% 22% 22%;
+    border-radius: 10px;
     background-color: $shadow;
     display: inline-block;
 }
