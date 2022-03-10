@@ -39,7 +39,7 @@
         <p>DISTANCE</p>
         <% case restaurant.address %>
           <% when 'Berlin' %>
-            0 km
+            2 km
           <% when 'Hamburg' %>
             289 Km
           <% when 'Cologne' %>
@@ -48,6 +48,8 @@
             612 Km
           <% when 'Paris' %>
             1,074 Km
+          <% else %>
+            n/a Km
         <% end %>
       </div>
     </div>
