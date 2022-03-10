@@ -1,9 +1,10 @@
-
-
-
 <div class="resto-card">
 
-  <%= image_tag("pizza_400.png", class: "dish-pic-index")%>
+  <% if restaurant.photos.attached? %>
+    <%= cl_image_tag restaurant.photos.first.key, class: "dishlist-picture" %>
+  <% else %>
+    <%= image_tag("restaurant_missing.jpg", class: "dishlist-picture") %>
+  <% end %>
 
   <div class="resto-content">
     <div class="top-content">

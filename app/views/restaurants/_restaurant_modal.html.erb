@@ -14,7 +14,7 @@
             <div class="row">
               <div class="col restaurant-headline"><%= restaurant.name %></div>
 
-              
+
 
               <div class="col d-grid gap-2 ">
                 <button class="btn btn-primary restaurant-review" type="button">Write a Review</button>
@@ -25,6 +25,7 @@
             <!-- 2. Tags / Dashboard -->
             <div class="row">
               <div class="col">
+                <p class="restaurant-dashboard-title"><%= restaurant.address %></p>
                 <div class="container restaurant-tag-container">
 
                     <!-- Renders dishes that are made in that restaurant -->
@@ -83,7 +84,7 @@
             <!-- 3. Text / Map -->
             <div class="row">
               <div class="col-6">
-                <p class="restaurant-dashboard-title"><%= restaurant.address %></p>
+
 
                 <%= restaurant.description %>
               </div >
@@ -241,7 +242,7 @@
                             <div class="col"><%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %></div>
                           <% end %>
                         </div>
-                          <div class="row">
+                        <div class="row">
                           <% if restaurant.reviews.first.value == 5 %>
 
                             <div class="col"><%= image_tag("icon_dimond.png", class: "img-fluid restaurant-review-star") %></div>
@@ -345,7 +346,7 @@
                             <div class="col"><%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %></div>
                           <% end %>
                         </div>
-                          <div class="row">
+                        <div class="row">
                           <% if restaurant.reviews.second.value == 5 %>
 
                             <div class="col"><%= image_tag("icon_dimond.png", class: "img-fluid restaurant-review-star") %></div>
