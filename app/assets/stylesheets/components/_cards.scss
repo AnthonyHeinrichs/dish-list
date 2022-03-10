@@ -16,7 +16,7 @@
   border: 1px solid rgba(0, 0, 0, 0.125);
 }
 .dishlist-picture {
-  width: 153px;
+  width: 170px;
   height: 100%;
   border-radius: 10px;
   object-fit: cover;
@@ -34,6 +34,7 @@
   font-weight: 500;
   font-size: 1.5em;
   color: $text-color;
+  margin-left: -3px;
 }
 .dishlist-tags {
   font-family: 'Red Hat Display', sans-serif;
@@ -41,6 +42,7 @@
   font-weight: 300;
   font-size: 1em;
   color: $text-color;
+  margin-left: -3px;
 }
 
 /* Dashboard */
