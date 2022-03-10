@@ -20,7 +20,7 @@
       <div class='mt-4'>
         <% @user.favorite_dishes.each do |favorite| %>
         <ul>
-          <li><%= favorite.dish.name %> -- <%= link_to "🗑",
+          <li><%= favorite.dish.name %> -- <%= link_to "␡",
                     dish_favorite_path(favorite.dish.id, favorite_id: favorite.id),
                     method: :delete%></li>
         </ul>
