@@ -1,6 +1,6 @@
 <!-- Modal -->
   <div class="modal animate__animated animate__fadeIn animate__faster" id="restaurantModal<%= index %>" tabindex="-1" aria-labelledby="restaurantModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable " style="transform: translate(-25%);">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable center-modal">
       <div class="modal-content restaurant-modal">
 
         <div class="modal-header">
@@ -66,7 +66,7 @@
                       <div class="restaurant-dashboard-content">
                         <% case restaurant.address %>
                           <% when 'Berlin' %>
-                            0 km
+                            1 km
                           <% when 'Hamburg' %>
                             289 Km
                           <% when 'Cologne' %>
@@ -76,7 +76,7 @@
                           <% when 'Paris' %>
                             1,074
                           <% else %>
-                            n/a Km
+                            2 Km
                           <% end %>
                         </div>
                     </div>

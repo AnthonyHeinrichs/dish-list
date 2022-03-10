@@ -21,9 +21,9 @@
           <p>n/a</p>
         <% else %>
           <% if @timenow >= week[@daynow].start_hour && @timenow <= week[@daynow].end_hour %>
-            <p style="color: green;">Open</p>
+            <p style="color: green; text-align: left;" >Open</p>
           <% else %>
-            <p style="color: red;">Closed</p>
+            <p style="color: red; text-align: left;">Closed</p>
           <% end %>
         <% end %>
       </div>
@@ -31,26 +31,28 @@
 
       <div class="restaurant-rating">
         <p>RATING</p>
-        <%= rand(1..4) %>.<%= rand(1..9)%>
+        <div style="text-align: left;"><%= rand(1..4) %>.<%= rand(1..9)%></div>
       </div>
 
 
       <div class="card-distance">
         <p>DISTANCE</p>
-        <% case restaurant.address %>
-          <% when 'Berlin' %>
-            2 km
-          <% when 'Hamburg' %>
-            289 Km
-          <% when 'Cologne' %>
-            432 Km
-          <% when 'Munich' %>
-            612 Km
-          <% when 'Paris' %>
-            1,074 Km
-          <% else %>
-            2 Km
-        <% end %>
+        <div style="text-align: left;">
+          <% case restaurant.address %>
+            <% when 'Berlin' %>
+              2 km
+            <% when 'Hamburg' %>
+              289 Km
+            <% when 'Cologne' %>
+              432 Km
+            <% when 'Munich' %>
+              612 Km
+            <% when 'Paris' %>
+              1,074 Km
+            <% else %>
+              2 Km
+          <% end %>
+        </div>
       </div>
     </div>
 
