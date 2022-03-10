@@ -204,12 +204,60 @@ dish_27 = {
   image_url: 'https://upload.wikimedia.org/wikipedia/commons/7/7e/Hamburger_Speck.ajb.jpg',
   spiciness: 1
 }
-
+dish_28 = {
+  name: 'Massaman curry',
+  country: 'Thailand',
+  description: "Massaman curry (Thai: แกงมัสมั่น, RTGS: kaeng matsaman, pronounced [más.ta.màn] (audio speaker iconlisten)) is a rich, relatively mild Thai curry.[1] Being a fusion dish, ingredients popular among Muslim traders from Persia, the Indian subcontinent, and the Malay Archipelago (e.g. cardamom, cinnamon, cloves, star anise, cumin, bay leaves, nutmeg, mace, and potato) were brought to Thailand and combined with ingredients more commonly used in native Thai cuisine (e.g. chili peppers, coriander, lemongrass, galangal, white pepper, shrimp paste, shallots, and garlic) to make massaman curry paste. In 2011, CNNGo ranked massaman curry as the number one most delicious food in an article titled World's 50 most delicious foods.[2] In the survey later that year, subtitled Readers picks, it was ranked number ten. It remained at number one in the updated 2018 version.",
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/b/b5/Kaeng_matsaman_kai.JPG',
+  spiciness: 1
+}
+dish_29 = {
+  name: 'Escudella',
+  country: 'Spain',
+  description: "Escudella i carn d'olla, or shorter escudella, (Eastern Catalan: [əskuðeʎə]; lit. bowl) is a traditional Catalan meat and vegetable stew and soup. Francesc Eiximenis wrote in the 14th century that it was eaten every day by Catalan people. It is characterized by the use of a pilota, a very big meatball spiced with garlic and parsley; it also contains vegetables as celery, cabbage, carrots, etc.[3] depending on the season. Additionally, bones, sausages called botifarra, and other types of meat, can be used. In historical times a type called escudella de pagès, which had pasta and rice, was traditionally made on Thursdays and Sundays.",
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/0/03/Escudella_Catalana_-_Barcelona_%282011%29.JPG',
+  spiciness: 2
+}
+dish_30 = {
+  name: 'Spanish tortilla',
+  country: 'Spain',
+  description: "Spanish omelette or Spanish tortilla is a traditional dish from Spain. Celebrated as national dish by Spaniards, it is an essential part of the Spanish cuisine. It is an omelette made with eggs and potatoes, optionally including onion. It is often served at room temperature as a tapa. It is commonly known in Spanish-speaking countries as tortilla de patatas, tortilla de papas, tortilla española. ",
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/4/49/Tortilla_de_patata_-_San_Sebasti%C3%A1n.jpg',
+  spiciness: 2
+}
+dish_31 = {
+  name: 'Tarta de Santiago',
+  country: 'Spain',
+  description: "Torta de Santiago (in Galician) or Tarta de Santiago (in Spanish), literally meaning cake of St. James, is an almond cake or pie from Galicia with origin in the Middle Ages. The Galician for cake is Torta whilst it is often referred to Tarta, which is the Spanish word for it. The filling principally consists of ground almonds, eggs, and sugar, with additional flavouring of lemon zest, sweet wine, brandy, or grape marc, depending on the recipe used.[1] It is a round shape and can be made with or without a base which can be either puff pastry or shortcrust pastry. The top of the pie is decorated with powdered sugar, masked by an imprint of the Cross of Saint James (cruz de Santiago) which gives the pastry its name. In May 2010, the EU gave Tarta de Santiago PGI status within Europe. To qualify, the cake must be made in the Autonomous Community of Galicia and contain at least 33% almonds, excluding the base. It was the sweet chosen to represent Spain in the Café Europe initiative of the Austrian presidency of the European Union on Europe Day 2006. ",
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/c/ce/Tarta_de_Santiago-2009.jpg',
+  spiciness: 1
+}
+dish_32 = {
+  name: 'Jamón',
+  country: 'Spain',
+  description: "Jamón (Spanish pronunciation: [xamon], pl. jamones) is a kind of dry-cured ham produced in Spain. It is one of the most globally recognized food items of Spanish cuisine. It is also regularly a component of tapas. Most jamón is commonly called jamón serrano in Spain. Jamón is the Spanish word for ham.  As such, other ham products produced or consumed in Spanish-speaking countries may also be called by this name. ",
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/0/0f/Pa_amb_oli_con_jam%C3%B3n_y_queso.jpg',
+  spiciness: 1
+}
+dish_33 = {
+  name: 'Esqueixada',
+  country: 'Spain',
+  description: "Esqueixada (Catalan pronunciation: [əskəʃaðə]) is a traditional Catalan dish, a salad of shredded salt cod, tomatoes, onions, olive oil and vinegar, salt, and sometimes a garnish of olives or hard-boiled eggs. Specific recipes vary, with some including ingredients such as eggplant and bell peppers. Esqueixada is particularly popular in warm weather and is sometimes considered a summertime dish. It is often served as a tapas dish. Esqueixada is sometimes described as the Catalan ceviche because it is made with raw fish (although the cod is salt-cured and dried) in a marinade.[1] The name of the dish comes from the Catalan verb esqueixar, to tear or shred. The salt cod in the dish is always shredded with the fingers, never sliced or chopped, to achieve the correct texture.",
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/9/96/Esqueixada_01.jpg',
+  spiciness: 2
+}
+dish_34 = {
+  name: 'Fabada asturiana',
+  country: 'Spain',
+  description: "Fabada asturiana, often simply known as fabada, is a rich Spanish bean stew, originally from and most commonly found in the autonomous community of Principality of Asturias, but widely available throughout the whole of Spain and in Spanish restaurants worldwide. Canned fabada is sold in most supermarkets across the country. Fabada is a hot and heavy dish and for that reason is most commonly eaten during winter and as the largest meal of the day, lunch. It is usually served as a starter, but may also be the main course of the meal. It is typically served with Asturian cider or a red wine.",
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/7/77/Fabada_en_cazuela_de_barro.jpg',
+  spiciness: 3
+}
 
 
 dish_array = []
 
-[ dish_1, dish_2, dish_3, dish_4, dish_5, dish_6, dish_7, dish_8, dish_9, dish_10, dish_11, dish_12, dish_13, dish_14, dish_15, dish_16, dish_17, dish_18, dish_19, dish_20, dish_21, dish_22, dish_23, dish_24, dish_25, dish_26, dish_27 ].each do |infusion|
+[ dish_1, dish_2, dish_3, dish_4, dish_5, dish_6, dish_7, dish_8, dish_9, dish_10, dish_11, dish_12, dish_13, dish_14, dish_15, dish_16, dish_17, dish_18, dish_19, dish_20, dish_21, dish_22, dish_23, dish_24, dish_25, dish_26, dish_27, dish_28, dish_29, dish_30, dish_31, dish_32, dish_33, dish_34 ].each do |infusion|
   dish = Dish.create(infusion)
   dish_array << dish
   puts "Cuting onions, frying garlic and stiring the broth... e voila #{dish.name} was created."
