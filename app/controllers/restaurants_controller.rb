@@ -53,7 +53,7 @@ class RestaurantsController < ApplicationController
   def favorite
     @restaurant = Restaurant.find params[:restaurant_id]
     FavoriteRestaurant.create(user: current_user, restaurant: @restaurant)
-    redirect_to restaurants_path, notice: 'Added restaurant to favorites'
+    redirect_to current_user, notice: 'Added restaurant to favorites'
   end
 
   private
