@@ -103,9 +103,11 @@
                         <div class="container-fluid restaurant-button-container">
                           <div class="row " >
                             <div class="col" style="padding-left:0px;">
+                              <a href='tel:<% restaurant.telephone %>'>
                               <button class="btn restaurant-button" type="submit">
                                 <%= image_tag("icon_telephone.png", class: "restaurant-button-icon") %>
                               </button>
+                              </a>
                             </div>
                             <div class="col">
                               <button class="btn restaurant-button" type="submit">
@@ -390,10 +392,11 @@
             <% end %>
           </div>
 
+        <!-- 6. Write a Review -->
           <div class="accordion accordion-flush mt-3 restaurant-hours" id="accordionFlushExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  <button id="write-review" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                     Add a review
                   </button>
                 </h2>
