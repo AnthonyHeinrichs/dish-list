@@ -17,9 +17,15 @@
 
   }
 }
+.links-on-form {
+  margin-top: 10px;
+  margin-left: 2px;
+}
+
 .dan {
   text-decoration: none;
-  color: $text-color;
+  color: $text-color !important;
+
 }
 
 .form-submit {
@@ -27,7 +33,39 @@
   margin-left: -12px;
 }
 
+.hour-input {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 2px;
+
+  input {
+    width: 50%;
+  }
+}
+
 .hours-form {
   display: flex;
   justify-content: space-between;
+}
+
+.input-cover-hours {
+  display: flexbox;
+}
+
+.days {
+  margin-top: 40px;
+  margin-left: 5px;
+  margin-right: 30px;
+
+  p {
+    margin-bottom: 30px;
+  }
+}
+
+.links-signup {
+  display: block;
+}
+
+.special-shit {
+  display: block;
 }

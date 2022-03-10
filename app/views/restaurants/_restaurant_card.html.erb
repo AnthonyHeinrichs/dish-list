@@ -21,9 +21,9 @@
           <p>n/a</p>
         <% else %>
           <% if @timenow >= week[@daynow].start_hour && @timenow <= week[@daynow].end_hour %>
-            <p>Open</p>
+            <p style="color: green;">Open</p>
           <% else %>
-            <p>Closed</p>
+            <p style="color: red;">Closed</p>
           <% end %>
         <% end %>
       </div>
