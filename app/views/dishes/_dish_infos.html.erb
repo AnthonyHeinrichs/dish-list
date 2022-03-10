@@ -1,50 +1,46 @@
 <div class="dishlist-container" data-controller="edit-dish" data-edit-dish-target="card">
-  
-    <div class="card dishlist-card" >
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-4">
-            <img class="dishlist-picture" src=<%= dish.image_url %> alt=<%= dish.name %>>
+
+    <div class="dishlist-card" >
+      <div class="dishlist-left">
+        <img class="dishlist-picture" src=<%= dish.image_url %> alt=<%= dish.name %>>
+      </div>
+      <div class="dishlist-right">
+        <div class="container-fluid">
+          <div class="row dishlist-title"><%= dish.name %></div>
+          <div class="row dishlist-tags">
+            <%= dish.country %>
+            <% dish.restaurants.name %> <!-- Link to doesnt work -->
           </div>
-          <div class="col-8 dishlist-right">
-            <div class="container-fluid">
-              <div class="row dishlist-title"><%= dish.name %></div>
-              <div class="row dishlist-tags">
-                <%= dish.country %>
-                <% dish.restaurants.name %> <!-- Link to doesnt work -->
-              </div>
+          <div class="row">
+            <div class="container-fluid dishlist-dashboard-container">
               <div class="row">
-                <div class="container-fluid dishlist-dashboard-container">
-                  <div class="row">
-                    <div class="col">
-                      <div class="dishlist-dashboard-title">SPICINESS</div>
-                      <div class="dishlist-dashboard-content">
-                        <% case dish.spiciness %>
-                          <% when 1 %>
-                            <%= image_tag("icon_chili_1.png", class: "restaurant-review-star") %>
-                          <% when 2 %>
-                            <%= image_tag("icon_chili_2.png", class: "restaurant-review-star") %>
-                          <% when 3 %>
-                            <%= image_tag("icon_chili_3.png", class: "restaurant-review-star") %>
-                          <% when 4 %>
-                            <%= image_tag("icon_chili_4.png", class: "restaurant-review-star") %>
-                          <% when 5 %>
-                            <%= image_tag("icon_chili_5.png", class: "restaurant-review-star") %>
-                          <% end %>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="dishlist-dashboard-title">RATING</div>
-                      <div class="dishlist-dashboard-content"><%= rand(1..4) %>.<%= rand(1..9) %></div>
-                    </div>
-                    <div class="col">
-                      <div class="dishlist-dashboard-title"></div>
-                      <div class="dishlist-dashboard-content"></div>
-                    </div>
+                <div class="col">
+                  <div class="dishlist-dashboard-title">SPICINESS</div>
+                  <div class="dishlist-dashboard-content">
+                    <% case dish.spiciness %>
+                      <% when 1 %>
+                        <%= image_tag("icon_chili_1.png", class: "restaurant-review-star") %>
+                      <% when 2 %>
+                        <%= image_tag("icon_chili_2.png", class: "restaurant-review-star") %>
+                      <% when 3 %>
+                        <%= image_tag("icon_chili_3.png", class: "restaurant-review-star") %>
+                      <% when 4 %>
+                        <%= image_tag("icon_chili_4.png", class: "restaurant-review-star") %>
+                      <% when 5 %>
+                        <%= image_tag("icon_chili_5.png", class: "restaurant-review-star") %>
+                      <% end %>
                   </div>
                 </div>
+                <div class="col">
+                  <div class="dishlist-dashboard-title">RATING</div>
+                  <div class="dishlist-dashboard-content"><%= rand(1..4) %>.<%= rand(1..9) %></div>
+                </div>
+                <div class="col">
+                  <div class="dishlist-dashboard-title"></div>
+                  <div class="dishlist-dashboard-content"></div>
+                </div>
+              </div>
             </div>
-          </div>
         </div>
       </div>
     </div>
