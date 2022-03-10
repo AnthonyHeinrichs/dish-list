@@ -2,9 +2,12 @@
   <div class="banner-container restaurants-banner">
     <!-- RESTAURANT -->
       <!--  HEADLINE with the two text inputs -->
-      <div class="banner-head restaurant-banner-margin d-flex">
+      <div class="new-alignment-resto-index justify-content-center">
 
+        <div class="hate-that-input-field">
           <input type="text" autocomplete="off" class="banner-dish sebis" id="tonys" value="<%= params[:dish].present? ? "#{params[:dish]}" : 'Dish' %>">
+        </div>
+        <div class="edward">
           <form action="/restaurants" autocomplete="off">
             <% if params[:location].present? %>
               <input id="dan_input" name="location" type="text" value="<%= "#{params[:location]}" %>">
@@ -15,7 +18,7 @@
             <%= hidden_field_tag :dish_picture, params[:dish_picture] %>
             <button hidden type="submit">Search</button>
           </form>
-
+        </div>
       </div>
 
       <!-- SUB-HEADLINE the text below the entry fields -->

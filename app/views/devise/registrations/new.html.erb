@@ -30,8 +30,10 @@
       </div>
 
       <div class="form-actions">
-        <%= render "devise/shared/links" %>
-        <%= f.button :submit, "Sign up", class: "form-submit" %>
+        <div class="links-signup">
+          <%= f.button :submit, "Sign up", class: "form-submit special-shit" %>
+          <%= link_to "Back", "/", class: "dan"%>
+        </div>
       </div>
     <% end %>
 
