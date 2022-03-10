@@ -81,10 +81,6 @@
 }
 
 
-.new-alignment-resto-index {
-  display: flex;
-  margin: auto;
-}
 // -------------------------------------
 
 #dan_input {
@@ -101,8 +97,8 @@
 
 }
 .hate-that-input-field {
-  text-align: right;
-  width: 100%;
+
+  flex-shrink: 0;
 
 }
 .edward {
