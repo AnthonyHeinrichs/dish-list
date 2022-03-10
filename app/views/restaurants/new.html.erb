@@ -7,64 +7,7 @@
       <%= f.input :telephone, required: true, hint: "exp. +49 30 0000 000" %>
       <%= f.input :website, required: true, hint: "www.sample.com" %>
       <%= f.input :photos, as: :file, input_html: { multiple: true }%>
-
-      <div class="hours-form">
-        <div class="days">
-          <p>MON</p>
-          <p>TUE</p>
-          <p>WEN</p>
-          <p>THU</p>
-          <p>FRY</p>
-          <p>SAT</p>
-          <p>SUN</p>
-        </div>
-        <div class="input-cover-hours">
-          <div class="hour-input">
-            <%= simple_fields_for :monday do |p| %>
-              <%= p.input :start_hour, required: true %>
-              <%= p.input :end_hour, required: true %>
-            <% end %>
-          </div>
-          <div class="hour-input">
-            <%= simple_fields_for :tuesday do |p| %>
-              <%= p.input :start_hour, required: true, label: false %>
-              <%= p.input :end_hour, required: true, label: false %>
-            <% end %>
-          </div>
-          <div class="hour-input">
-            <%= simple_fields_for :wendsday do |p| %>
-              <%= p.input :start_hour, required: true, label: false %>
-              <%= p.input :end_hour, required: true, label: false %>
-            <% end %>
-          </div>
-          <div class="hour-input">
-            <%= simple_fields_for :thursday do |p| %>
-              <%= p.input :start_hour, required: true, label: false %>
-              <%= p.input :end_hour, required: true, label: false %>
-            <% end %>
-          </div>
-          <div class="hour-input">
-            <%= simple_fields_for :friday do |p| %>
-              <%= p.input :start_hour, required: true, label: false %>
-              <%= p.input :end_hour, required: true, label: false %>
-            <% end %>
-          </div>
-          <div class="hour-input">
-            <%= simple_fields_for :saturday do |p| %>
-              <%= p.input :start_hour, required: true, label: false %>
-              <%= p.input :end_hour, required: true, label: false %>
-            <% end %>
-          </div>
-          <div class="hour-input">
-            <%= simple_fields_for :sunday do |p| %>
-              <%= p.input :start_hour, required: true, label: false %>
-              <%= p.input :end_hour, required: true, label: false %>
-            <% end %>
-          </div>
-        </div>
-
-      </div>
-    <%= f.input :description, required: "true" %>
+      <%= f.input :description, required: "true" %>
         <%= simple_fields_for :other do |o| %>
         <%= o.input :country, as: :country, label: 'Where are your dishes from?', input_html: {data:{new_restaurant_target: 'input', action: 'change->new-restaurant#fetchCountry'}} %>
         <% end %>

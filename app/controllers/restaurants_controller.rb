@@ -12,6 +12,7 @@ class RestaurantsController < ApplicationController
 
     @restaurant =  Restaurant.new(restaurant_strong)
     @dishes = params[:dish_restaurants][:dishes].reject(&:empty?)
+    raise
     @restaurant.save
     @dishes.each do |dish_id|
       dish = Dish.find(dish_id.to_i)
@@ -26,7 +27,12 @@ class RestaurantsController < ApplicationController
 
   def update
     @restaurant = Restaurant.find(params[:id])
+    @dishes = params[:dish_restaurants][:dishes].reject(&:empty?)
     @restaurant.update(restaurant_strong)
+    @dishes.each do |dish_id|
+      dish = Dish.find(dish_id.to_i)
+      DishRestaurant.create(dish: dish, restaurant: @restaurant)
+    end
     redirect_to restaurants_path
   end
 
