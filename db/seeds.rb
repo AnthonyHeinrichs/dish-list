@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts 'Cleaning the plates...'
-Dish.delete_all
+Dish.destroy_all
 puts 'Preparing new dishes to be made...'
 
 dish_1 = {
@@ -220,7 +220,7 @@ puts 'Tim Raue tasted each dish and is delighted to announce: They have all been
 # -------------------------------------------------------------------------------
 
 puts 'Removing dated restaurants'
-Restaurant.delete_all
+Restaurant.destroy_all
 puts 'Creating Restaurants...'
 
 

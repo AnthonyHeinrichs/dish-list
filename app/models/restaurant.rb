@@ -1,7 +1,7 @@
 class Restaurant < ApplicationRecord
   has_many :dish_restaurants, dependent: :destroy
   has_many :dishes, through: :dish_restaurants, dependent: :destroy
-  has_many :openings
+  has_many :openings, dependent: :destroy
   has_many :reviews
   has_many_attached :photos
   geocoded_by :address

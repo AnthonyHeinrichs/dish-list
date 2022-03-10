@@ -28,14 +28,15 @@
 
 /* HEADLINE with the two text inputs  */
 .banner-head {
-    margin: 0 auto;
-	width: max-content;
-    justify-content: flex-end;
+  margin: 0 auto;
+	width: 50%;
+  justify-content: center;
+
+  form {
+    width: 33%
+  }
 }
 
-.sebis {
-    width: 100%;
-}
 
 #tonys {
   margin-right: -70px;
@@ -45,6 +46,7 @@
     border: none;
     color: $purple;
     background-color: $nav-background;
+    flex-shrink: 0;
     outline: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: normal;
@@ -52,8 +54,6 @@
     font-size: 40px;
     line-height: 55px;
     text-align: right;
-    margin-right: 5px;
-    transform: translate(-10%, 0%);
 }
 .banner-country {
     border: none;
@@ -65,7 +65,7 @@
     font-weight: 600;
     font-size: 40px;
     line-height: 30px;
-    margin-left: 5px;
+    margin-left: 16px
 }
 
 /* SUB-HEADLINE the text below the entry fields */
