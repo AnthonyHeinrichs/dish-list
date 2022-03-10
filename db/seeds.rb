@@ -285,12 +285,19 @@ restaurant_10 = { name: 'Babikyu', address: 'Bergmannstraße 1, 10961 Berlin', t
 restaurant_11 = { name: 'Chikogi', address: 'Oranienstraße 31, 10999 Berlin', telephone: '0162 5207505', website: 'https://www.facebook.com/Chikogi-1766420593626884/', description: 'Mit Bulgogi Feuerfleisch, BiBimBab, Kimchi, einer stilvoller Einrichtung und urbanem Flair verführen wir das Publikum in der Oranienstr., Berlin-Kreuzberg' }
 restaurant_12 = { name: 'Korean Food Stories', address: 'Prenzlauer Allee 217, 10405 Berlin', telephone: '030 54630766', website: 'https://www.koreanfoodstories.com/', description: 'Korean Food Stories is a small Korean restaurant in the heart of Prenzlauer Berg. We serve fresh and healthy Korean food for every day. Our specialty is bibimbap served in the traditional stone pot (dolsot). Looking for some damn good kimchi? Congratulations the search is over. We produce excellent kimchi in small batches to ensure 100% flavor! Also check out your selection of homemade sauces and chili oils.' }
 restaurant_13 = { name: 'Wawa Berlin', address: 'Grunewaldstraße 10, 10823 Berlin', telephone: '030 65774230', website: 'https://www.wawaberlin.com/', description: 'WaWa is a Korean restaurant in Berlin that serves authentic Korean cuisine.WaWa’s biggest pride comes from being able to feed everyone with joy, and to provide everyone an equally great food journey to Korea.' }
-
+restaurant_14 = { name: 'Barcelona Tapas Bar', address: 'Friedrichstraße 211, 10969 Berlin', telephone: '030 70228336', website: 'https://barcelona-mitte.de/', description: 'Enjoy Spanish flair in Mitte. At Barcelona — Tapasbar & Restaurant you can experience original Spanish food! Just a few steps from Kochstraße train station, you can escape the big city and immerse yourself in the small Spanish world of Barcelona. We are happy to take over catering in the Berlin area on request.' }
+restaurant_15 = { name: 'YOSOY TAPAS', address: 'Rosenthaler Str. 37, 10178 Berlin', telephone: 'Rosenthaler Str. 37, 10178 Berlin', website: 'yosoy.de', description: 'Easygoing establishment serving Spanish tapas & main dishes amid retro-chic surrounds.' }
+restaurant_16 = { name: 'Mundo - Tapas', address: 'Zimmerstraße 19, 10969 Berlin', telephone: '030 25294284', website: 'https://mundo.berlin/zimmerstrasse/speisen/', description: 'Tapas in the heart of Berlin.' }
+restaurant_17 = { name: 'El Borriquito', address: 'Wielandstraße 6, 10625 Berlin', telephone: 'Wielandstraße 6, 10625 Berlin', website: 'https://el-borriquito-berlin.de/7465/', description: 'Tapas & paellas, plus wines, in a Spanish restaurant with live guitar music, plus a covered terrace.' }
+restaurant_18 = { name: 'On Egin', address: 'Wildenbruchstr. 88, 12045 Berlin', telephone: '030 84113918', website: 'oneginberlin.de', description: 'Tapas in the heart of Berlin.' }
+restaurant_19 = { name: 'No Hablo Español', address: 'Gabriel-Max-Straße 3, 10245 Berlin', telephone: '030 29369463', website: 'https://wolt.com/en/deu/berlin/restaurant/no-hablo-espaol?utm_source=googlemapreserved&utm_campaign=no-hablo-espaol', description: 'Tapas and burritos in the heart of Berlin.' }
+restaurant_20 = { name: 'Super Iberico', address: 'Markgrafenstraße 68, 10969 Berlin', telephone: '030 35123931', website: 'www.super-iberico.com', description: 'We offer more than just Spanish groceries at Super Iberico. Come in and enjoy Spanish flair in Mitte. At Super Iberico you can experience original Spanish food! Just a few steps from Checkpoint Charlie, you can escape the big city and immerse yourself in the small Spanish world of Super Iberico. We are happy to take over catering in the Berlin area on request.' }
+restaurant_21 = { name: 'Picoteo Restaurant', address: 'Erkelenzdamm 47, 10999 Berlin', telephone: '030 60407400', website: 'http://www.picoteo.de/Reservierung/', description: 'Authentic Spanish-Portuguese cuisine, home-made tapas, a fresh fish and meat offer and desserts typical of the country. Rounded off by a selection of Spanish and Portuguese wines and spirits.' }
 
 puts 'Removing dated DishRestaurants'
 DishRestaurant.delete_all
 
-[ restaurant_1, restaurant_2, restaurant_3, restaurant_4, restaurant_5, restaurant_6, restaurant_7, restaurant_8, restaurant_9, restaurant_10, restaurant_11, restaurant_12, restaurant_13 ].each do |infusion|
+[restaurant_1, restaurant_2, restaurant_3, restaurant_4, restaurant_5, restaurant_6, restaurant_7, restaurant_8, restaurant_9, restaurant_10, restaurant_11, restaurant_12, restaurant_13, restaurant_14, restaurant_15, restaurant_16, restaurant_17, restaurant_18, restaurant_19, restaurant_20, restaurant_21].each do |infusion|
   restaurant = Restaurant.create(infusion)
   puts "Sweat and tears build #{restaurant.name}."
 end
@@ -423,6 +430,62 @@ end
 [ open_mon, open_tue, open_wed, open_thu, open_fri, open_sat, open_sun ].each do |infusion|
   opening = Opening.new(infusion)
   opening.restaurant = restaurants[12]
+  opening.save!
+  puts "I just ate #{opening.weekday} cooky."
+end
+
+[ open_mon, open_tue, open_wed, open_thu, open_fri, open_sat, open_sun ].each do |infusion|
+  opening = Opening.new(infusion)
+  opening.restaurant = restaurants[13]
+  opening.save!
+  puts "I just ate #{opening.weekday} cooky."
+end
+
+[ open_mon, open_tue, open_wed, open_thu, open_fri, open_sat, open_sun ].each do |infusion|
+  opening = Opening.new(infusion)
+  opening.restaurant = restaurants[14]
+  opening.save!
+  puts "I just ate #{opening.weekday} cooky."
+end
+
+[ open_mon, open_tue, open_wed, open_thu, open_fri, open_sat, open_sun ].each do |infusion|
+  opening = Opening.new(infusion)
+  opening.restaurant = restaurants[15]
+  opening.save!
+  puts "I just ate #{opening.weekday} cooky."
+end
+
+[ open_mon, open_tue, open_wed, open_thu, open_fri, open_sat, open_sun ].each do |infusion|
+  opening = Opening.new(infusion)
+  opening.restaurant = restaurants[16]
+  opening.save!
+  puts "I just ate #{opening.weekday} cooky."
+end
+
+[ open_mon, open_tue, open_wed, open_thu, open_fri, open_sat, open_sun ].each do |infusion|
+  opening = Opening.new(infusion)
+  opening.restaurant = restaurants[17]
+  opening.save!
+  puts "I just ate #{opening.weekday} cooky."
+end
+
+[ open_mon, open_tue, open_wed, open_thu, open_fri, open_sat, open_sun ].each do |infusion|
+  opening = Opening.new(infusion)
+  opening.restaurant = restaurants[18]
+  opening.save!
+  puts "I just ate #{opening.weekday} cooky."
+end
+
+[ open_mon, open_tue, open_wed, open_thu, open_fri, open_sat, open_sun ].each do |infusion|
+  opening = Opening.new(infusion)
+  opening.restaurant = restaurants[19]
+  opening.save!
+  puts "I just ate #{opening.weekday} cooky."
+end
+
+[ open_mon, open_tue, open_wed, open_thu, open_fri, open_sat, open_sun ].each do |infusion|
+  opening = Opening.new(infusion)
+  opening.restaurant = restaurants[20]
   opening.save!
   puts "Mother told me this will happen #{opening.weekday} times."
 end
