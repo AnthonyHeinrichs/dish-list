@@ -7,7 +7,7 @@ class DishesController < ApplicationController
     @dishrestaurants = DishRestaurant.all
 
     if params[:query].present?
-      @dishes = Dish.all.where(country: params[:query])
+      @dishes = Dish.all.where("country ILIKE ?", "#{params[:query]}%")
     end
 
     respond_to do |format|
