@@ -46,7 +46,6 @@
   <% else %>
 
     <div class="index-restaurant-main">
-
             <% @restaurants.each_with_index do | restaurant, index | %>
               <a data-bs-toggle="modal" data-bs-target="#restaurantModal<%= index %>">
                 <%= render 'restaurant_card', restaurant: restaurant, index: index %>
