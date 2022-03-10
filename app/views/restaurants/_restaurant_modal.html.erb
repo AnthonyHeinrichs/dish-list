@@ -82,11 +82,9 @@
             </div>
 
             <!-- 3. Text / Map -->
-            <div class="row">
-              <div class="col-6">
-
-
-                <%= restaurant.description %>
+            <div class="row ">
+              <div class="col restaurant-description">
+              <%= restaurant.description %>
               </div >
 
               <div class="col-6 restaurant-map-container">
@@ -105,14 +103,20 @@
                         <div class="container-fluid restaurant-button-container">
                           <div class="row " >
                             <div class="col" style="padding-left:0px;">
-                              <button class="btn restaurant-button" type="submit">
-                                <%= image_tag("icon_telephone.png", class: "restaurant-button-icon") %>
-                              </button>
+                              <a href='tel:<%= restaurant.telephone %>'>
+                                <button class="btn restaurant-button" type="submit">
+                                  <%= image_tag("icon_telephone.png", class: "restaurant-button-icon") %>
+                                </button>
+                              </a>
                             </div>
                             <div class="col">
-                              <button class="btn restaurant-button" type="submit">
-                                <%= image_tag("icon_home.png", class: "restaurant-button-icon") %>
-                              </button>
+                              
+                                <button class="btn restaurant-button" type="submit">
+                                <a href='<%= restaurant.website %>'>
+                                  <%= image_tag("icon_home.png", class: "restaurant-button-icon") %>
+                                  </a>
+                                </button>
+                              
                             </div>
                             <div class="col">
                               <%= link_to restaurant_favorite_path(restaurant) do  %>
@@ -189,13 +193,13 @@
               <div class="card restaurant-review-card" style="width: 24rem;">
                 <div class="card-body">
                   <div class="restaurant-review-title"><%= @dishes.find_by_id(restaurant.reviews.first.dish).name %></div>
-                  <div class="restaurant-review-text"><%= restaurant.reviews.first.description %></div>
+                  <div class="restaurant-review-text">
+                    <p><%= restaurant.reviews.first.description %></p>
+                  </div>
                 </div>
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col-2">
-                      <%= image_tag("tony_400.jpg", class: "img-fluid restaurant-review-picture") %> <!-- TODO: make profile picture -->
-                    </div>
+                    
                     <div class="col-10">
                     <!-- User Info -->
                       <div class="container">
@@ -203,10 +207,10 @@
                           <div class="restaurant-review-name"><%= @users.find_by_id(restaurant.reviews.first.user_id).firstname %> <%= @users.find_by_id(restaurant.reviews.first.user_id).lastname %></div>
                         </div>
 
-                        <div class="row no-paading">
+                        <div class="row no-paading" style="width: 75%;">
                           <% if restaurant.reviews.first.authenticity == 5 %>
 
-                            <div class="col"><%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %></div>
+                            <div class="col-sm"><%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %></div>
                             <div class="col"><%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %></div>
                             <div class="col"><%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %></div>
                             <div class="col"><%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %></div>
@@ -242,7 +246,7 @@
                             <div class="col"><%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %></div>
                           <% end %>
                         </div>
-                        <div class="row">
+                        <div class="row" style="width: 75%; padding-bottom: 0.8rem;">
                           <% if restaurant.reviews.first.value == 5 %>
 
                             <div class="col"><%= image_tag("icon_dimond.png", class: "img-fluid restaurant-review-star") %></div>
@@ -297,9 +301,7 @@
                 </div>
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col-2 no-padding">
-                      <%= image_tag("tony_400.jpg", class: "img-fluid restaurant-review-picture") %> <!-- TODO: make profile picture -->
-                    </div>
+                    
                     <div class="col-10">
                     <!-- User Info -->
                       <div class="container">
@@ -307,7 +309,7 @@
                           <div class="restaurant-review-name"><%= @users.find_by_id(restaurant.reviews.second.user_id).firstname %> <%= @users.find_by_id(restaurant.reviews.second.user_id).lastname %></div>
                         </div>
 
-                        <div class="row no-paading">
+                        <div class="row no-paading" style="width: 75%;">
                           <% if restaurant.reviews.second.authenticity == 5 %>
 
                             <div class="col"><%= image_tag("icon_star.png", class: "img-fluid restaurant-review-star") %></div>
@@ -346,7 +348,7 @@
                             <div class="col"><%= image_tag("icon_star_negative.png", class: "img-fluid restaurant-review-star") %></div>
                           <% end %>
                         </div>
-                        <div class="row">
+                        <div class="row" style="width: 75%; padding-bottom: 0.8rem;">
                           <% if restaurant.reviews.second.value == 5 %>
 
                             <div class="col"><%= image_tag("icon_dimond.png", class: "img-fluid restaurant-review-star") %></div>
@@ -394,10 +396,11 @@
             <% end %>
           </div>
 
+        <!-- 6. Write a Review -->
           <div class="accordion accordion-flush mt-3 restaurant-hours" id="accordionFlushExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  <button id="write-review" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                     Add a review
                   </button>
                 </h2>

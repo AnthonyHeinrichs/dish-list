@@ -90,6 +90,14 @@
     font-style: normal;
 }
 
+.restaurant-description {
+    font-family: 'Red Hat Display', sans-serif;
+    font-style: normal;
+    color: $text-color;
+    font-weight: 400;
+    font-size: 1.0em;
+}
+
 /* MAP */
 .restaurant-map {
     border-radius: 10px;
@@ -136,7 +144,7 @@
 /* REVIEWS */
 .restaurant-review-container {
     overflow: auto;
-    white-space: nowrap;
+    
 }
 .restaurant-review-title {
     font-family: 'Red Hat Display', sans-serif;
@@ -144,6 +152,7 @@
     font-weight: 500;
     font-size: 0.9em;
     color: $text-color;
+    padding-bottom: 0.8rem;
 }
 .restaurant-review-text {
     font-family: 'Red Hat Display', sans-serif;
@@ -170,10 +179,6 @@
     border-radius: 10px;
     background-color: $shadow;
     display: inline-block;
-}
-.restaurant-review-picture {
-    width: 100px;
-    border-radius: 50%;
 }
 .restaurant-review-star {
     width: 1rem;
