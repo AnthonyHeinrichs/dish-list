@@ -40,6 +40,12 @@
               <div class="col">
                 <div class="container-fluid restaurant-dashboard-container">
                   <div class="row">
+
+                   <div class="col">
+                      <div class="restaurant-dashboard-title">RATING</div>
+                      <div class="restaurant-dashboard-content">4.<%= rand(1..9) %></div>
+                    </div>
+
                     <div class="col">
                       <div class="restaurant-dashboard-title restaurant-dashboard-left">HOURS</div>
                         <!-- Validating if a restaurant is open -->
@@ -53,12 +59,8 @@
                              <div class="restaurant-dashboard-content-closed restaurant-dashboard-left">Closed</div>
                           <% end %>
                         <% end %>
+                    </div>
 
-                    </div>
-                    <div class="col">
-                      <div class="restaurant-dashboard-title">RATING</div>
-                      <div class="restaurant-dashboard-content"><%= rand(2..4) %>.<%= rand(1..9) %></div>
-                    </div>
                     <div class="col">
                       <div class="restaurant-dashboard-title">DISTANCE</div>
                       <div class="restaurant-dashboard-content">
@@ -72,7 +74,9 @@
                           <% when 'Munich' %>
                             612 Km
                           <% when 'Paris' %>
-                            1,074 Km
+                            1,074
+                          <% else %>
+                            n/a Km
                           <% end %>
                         </div>
                     </div>
@@ -110,13 +114,13 @@
                               </a>
                             </div>
                             <div class="col">
-                              
+
                                 <button class="btn restaurant-button" type="submit">
                                 <a href='<%= restaurant.website %>'>
                                   <%= image_tag("icon_home.png", class: "restaurant-button-icon") %>
                                   </a>
                                 </button>
-                              
+
                             </div>
                             <div class="col">
                               <%= link_to restaurant_favorite_path(restaurant) do  %>
@@ -140,7 +144,7 @@
 
                     <!-- . Text / Opening Hours -->
                     <div class="row" >
-
+                      <% if restaurant.openings.present? %>
                         <div class="accordion restaurant-hours" id="accordionExample">
                           <div class="accordion-item restaurant-hours">
                             <h2 class="accordion-header" id="headingOne">
@@ -180,6 +184,7 @@
                             </div>
                           </div>
                         </div>
+                      <% end %>
                     </div>
                 </div>
               </div>
@@ -199,7 +204,7 @@
                 </div>
                 <div class="container-fluid">
                   <div class="row">
-                    
+
                     <div class="col-10">
                     <!-- User Info -->
                       <div class="container">
@@ -301,7 +306,7 @@
                 </div>
                 <div class="container-fluid">
                   <div class="row">
-                    
+
                     <div class="col-10">
                     <!-- User Info -->
                       <div class="container">
