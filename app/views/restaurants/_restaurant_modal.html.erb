@@ -103,16 +103,20 @@
                         <div class="container-fluid restaurant-button-container">
                           <div class="row " >
                             <div class="col" style="padding-left:0px;">
-                              <a href='tel:<% restaurant.telephone %>'>
-                              <button class="btn restaurant-button" type="submit">
-                                <%= image_tag("icon_telephone.png", class: "restaurant-button-icon") %>
-                              </button>
+                              <a href='tel:<%= restaurant.telephone %>'>
+                                <button class="btn restaurant-button" type="submit">
+                                  <%= image_tag("icon_telephone.png", class: "restaurant-button-icon") %>
+                                </button>
                               </a>
                             </div>
                             <div class="col">
-                              <button class="btn restaurant-button" type="submit">
-                                <%= image_tag("icon_home.png", class: "restaurant-button-icon") %>
-                              </button>
+                              
+                                <button class="btn restaurant-button" type="submit">
+                                <a href='<%= restaurant.website %>'>
+                                  <%= image_tag("icon_home.png", class: "restaurant-button-icon") %>
+                                  </a>
+                                </button>
+                              
                             </div>
                             <div class="col">
                               <%= link_to restaurant_favorite_path(restaurant) do  %>
