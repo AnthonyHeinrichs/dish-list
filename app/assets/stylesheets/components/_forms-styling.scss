@@ -24,7 +24,7 @@
 
 .dan {
   text-decoration: none;
-  color: $text-color;
+  color: $text-color !important;
 
 }
 
@@ -60,4 +60,12 @@
   p {
     margin-bottom: 30px;
   }
+}
+
+.links-signup {
+  display: block;
+}
+
+.special-shit {
+  display: block;
 }
