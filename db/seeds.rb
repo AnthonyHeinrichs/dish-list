@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts 'Cleaning the plates...'
-Dish.delete_all
+Dish.destroy_all
 puts 'Preparing new dishes to be made...'
 
 dish_1 = {
@@ -143,14 +143,73 @@ dish_18 = {
 dish_19 = {
   name: 'Bibimbap',
   country: 'South Korea',
-  description: "Bibimbap[1] (/ˈbiːbɪmbæp/ BEE-bim-bap,[2] from Korean 비빔밥 [pi.bim.p͈ap̚], literally mixed rice), sometimes romanized as bi bim bap or bi bim bop, is a Korean rice dish. The term bibim means mixing rice (burned rice at the bottom of the dish and cooked rice), while the bap noun refers to rice. Bibimbap is served as a bowl of warm white rice topped with namul (sautéed and seasoned vegetables) or kimchi (traditional fermented vegetables) and gochujang (chili pepper paste), soy sauce, or doenjang (a fermented soybean paste). A raw or fried egg and sliced meat (usually beef) are common additions. The hot dish is stirred together thoroughly just before eating.",
+  description: "Bibimbap[1] (/bibmbæp/ BEE-bim-bap,[2] from Korean 비빔밥 [pi.bim.p͈ap̚], literally mixed rice), sometimes romanized as bi bim bap or bi bim bop, is a Korean rice dish. The term bibim means mixing rice (burned rice at the bottom of the dish and cooked rice), while the bap noun refers to rice. Bibimbap is served as a bowl of warm white rice topped with namul (sautéed and seasoned vegetables) or kimchi (traditional fermented vegetables) and gochujang (chili pepper paste), soy sauce, or doenjang (a fermented soybean paste). A raw or fried egg and sliced meat (usually beef) are common additions. The hot dish is stirred together thoroughly just before eating.",
   image_url: 'https://upload.wikimedia.org/wikipedia/commons/b/bc/North_Korean_Bibimbap_%EB%B9%84%EB%B9%94%EB%B0%A5_%2812330376074%29.jpg',
   spiciness: 2
 }
 
+dish_20 = {
+  name: 'Dak-galbi',
+  country: 'South Korea',
+  description: "Dak-galbi (닭갈비), or spicy stir-fried chicken, is a popular Korean dish made by stir-frying marinated diced chicken in a gochujang-based sauce with sweet potatoes, cabbage, perilla leaves, scallions, tteok (rice cake), and other ingredients.[2] In Korean, galbi means rib. But Dak-galbi is not actually chicken's rib. Many dak-galbi restaurants have round hot plates that are built into the tables. Lettuce and perilla leaves are served as ssam (wrap) vegetables",
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/3/32/Korean_cuisine-Dakgalbi-01.jpg',
+  spiciness: 3
+}
+dish_21 = {
+  name: 'Samgyeopsal',
+  country: 'South Korea',
+  description: "Directly translated from Korean, samgyeop-sal (삼겹살) means three layer flesh, referring to striations of lean meat and fat in the pork belly that appear as three layers when cut. It is the part of the abdomen under the loin from the 5th rib or 6th rib to the hind limb.[3] In Korea, the word samgyeop-sal, meaning pork belly, often refers to samgyeop-sal-gui (grilled pork belly), in the same way that the word galbi, meaning ribs, often refers to galbi-gui (grilled beef ribs). Gui refers to roasted, baked, or grilled dishes. One can also find ogyeopsal (오겹살), with an o meaning five and gyeop meaning a layer. Ogyeop-sal includes the skin part of the pork belly, unlike samgyeop-sal where the skin is removed.",
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/7/77/Samgyeopsal-gui.jpg',
+  spiciness: 1
+}
+dish_22 = {
+  name: 'Makchang',
+  country: 'South Korea',
+  description: "Makchang (막창; last viscus) or so-makchang (소막창; beef last viscus is a Korean dish of either the abomasum (the fourth and final stomach compartment in ruminants) of cattle or the gui (grilled dish) made of beef abomasum.[1] The latter is also called makchang-gui (막창구이; grilled last viscus) or so-makchang-gui (소막창구이; grilled beef last viscus). Dwaeji-makchang (돼지막창; pork last viscus) means either the rectum of pig or the gui made of pork rectum, and the grilled dish is also referred to as dwaeji-makchang-gui (돼지막창구이; grilled pork last viscus). They are often served with a light doenjang sauce and chopped scallions. High calcium content and high catabolism for alcohol makes it a favorite anju (side dish for drinking).[",
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Makchang_2.jpg',
+  spiciness: 2
+}
+dish_23 = {
+  name: 'Yukhoe',
+  country: 'South Korea',
+  description: "Yukhoe (Korean: 육회 [jukʰø]) is a raw meat dish in Korean cuisine. It is most commonly made of beef but it can come in various kinds and cuts of meat. Yukhoe literally means 'raw (hoe, 膾) meat (yuk, 肉)'. Therefore, in the strictest context, the term designates any dish of raw meat cut up for consumption without the marinade. But colloquially yukhoe means a dish of marinated raw beef slices as shown in the photo. Though relatively rare to find these days, yukhoe can come in all kinds of meat. Yukhoe made of other meats will mention the source of the meat, for instance, a kkwong-yukhoe is made of pheasant, and a mal-yukhoe is made of horse meat. Yukhoe is most commonly made of lean cuts such as an eye of round, but more tender cuts of a beef can also be used. The beef is cut into thin strips while removing the fat, then it is seasoned with salt, sugar, sesame oil, pepper, and garlic. Korean pear, raw egg yolk, and pine nuts are commonly used as garnishes. It is similar to a Western tartare or a Levantine kibbeh nayeh. Yukhoe is also made with other cuts of beef, such as liver, kidney, heart, cheonyeop, or yang, in which case the dish is called gaphoe (Hangul: 갑회, hanja: 甲膾). The ingredients are thoroughly cleaned and salted, then rinsed and dried to remove unpleasant odors. Gaphoe is usually seasoned with sesame oil, salt and pepper, and is served with a spicy mustard sauce.",
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/0/0f/1001_yukhoe.jpg',
+  spiciness: 2
+}
+dish_24 = {
+  name: 'Naengmyeon',
+  country: 'South Korea',
+  description: "Naengmyeon[2] (냉면; 冷麵, in South Korea) or raengmyŏn (랭면, in North Korea) is a Korean noodle dish of long and thin handmade noodles made from the flour and starch of various ingredients, including buckwheat (메밀, memil), potatoes, sweet potatoes, arrowroot starch (darker color and chewier than buckwheat noodles), and kudzu (칡, chik). Buckwheat predominates (despite the name, it is not a wheat but rather is more closely related to sorrel). Other varieties of naengmyeon are made from ingredients such as seaweed and green tea. In modern times, the mul naengmyeon (물 냉면) variant is commonly associated with and popularly consumed during the summer, however, it was historically a dish enjoyed during winter.",
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/5/58/Naengmyeon_%28cold_noodles%29.jpg',
+  spiciness: 2
+}
+dish_25 = {
+  name: 'Japchae',
+  country: 'South Korea',
+  description: "apchae (잡채; 雜菜) is a savory and slightly sweet dish of stir-fried glass noodles and vegetables that is popular in Korean cuisine.[2] Japchae is typically prepared with dangmyeon (당면, 唐麵), a type of cellophane noodles made from sweet potato starch; the noodles are mixed with assorted vegetables, meat, mushrooms, and seasoned with soy sauce and sesame oil. Once a royal dish, japchae is now one of the most popular traditional celebration dishes, often served on special occasions, such as weddings, birthdays (especially dol, the first birthday, and hwangap, the sixtieth), and holidays.[7][6][8] It is also popular at banquets, parties, and potlucks, due to the ease of bulk preparation and flexible serving: japchae can be served warm, at room temperature, or cold from the refrigerator, and can be eaten freshly made or the day after. Japchae is commonly served as a banchan (side dish), though it may also be eaten as a main dish. It is sometimes served on a bed of rice: with rice, it is known as japchae-bap (잡채밥).",
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/c/c8/Polish_Korean_Cuisine_and_Culture_Exchanges_Gradmother%E2%80%99s_Recipes_05.jpg',
+  spiciness: 1
+}
+dish_26 = {
+  name: 'Mett Porcupine',
+  country: 'Germany',
+  description: "Mett is a preparation of minced raw pork that is popular in Germany, Poland and in Belgium; a similar preparation is made from beef. It is normally served with salt and black pepper, and sometimes with garlic, caraway or chopped onion, and eaten raw, usually on a bread roll. At a buffet it is sometimes served as a Mettigel (mett hedgehog). It is also sold in the form of mettwurst, a spicy, raw sausage, often smoked. In Germany, laws require that no more than 35% of the mett be constituted by fat. At buffets, Mett is occasionally served as a Mettigel (Mett hedgehog, also Hackepeterigel or Hackepeterschwein). This form of serving Mett has been popular since the 2000s. To serve it, a large amount of Mett is shaped as a hedgehog, quartered onion rings or pretzel sticks are used as spikes, olives as eyes and nose.",
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/0/0a/Mettigel_1.jpg',
+  spiciness: 1
+}
+dish_27 = {
+  name: 'Hamburger Speck (Bacon)',
+  country: 'German',
+  description: "Hamburger Speck is a type of candy made out of foamed sugar with various coatings. The candy's colors are often the same as the colors of Hamburg's flag (red and white), with a white central square and two red outer squares. The name refers to the candy's similarity in appearance with bacon (or speck). The version Helgoländer Speck or Helgoländer Schnitten uses the colors of Heligoland and is red, white and green.",
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/7/7e/Hamburger_Speck.ajb.jpg',
+  spiciness: 1
+}
+
+
+
 dish_array = []
 
-[ dish_1, dish_2, dish_3, dish_4, dish_5, dish_6, dish_7, dish_8, dish_9, dish_10, dish_11, dish_12, dish_13, dish_14, dish_15, dish_16, dish_17, dish_18, dish_19 ].each do |infusion|
+[ dish_1, dish_2, dish_3, dish_4, dish_5, dish_6, dish_7, dish_8, dish_9, dish_10, dish_11, dish_12, dish_13, dish_14, dish_15, dish_16, dish_17, dish_18, dish_19, dish_20, dish_21, dish_22, dish_23, dish_24, dish_25, dish_26, dish_27 ].each do |infusion|
   dish = Dish.create(infusion)
   dish_array << dish
   puts "Cuting onions, frying garlic and stiring the broth... e voila #{dish.name} was created."
@@ -161,7 +220,7 @@ puts 'Tim Raue tasted each dish and is delighted to announce: They have all been
 # -------------------------------------------------------------------------------
 
 puts 'Removing dated restaurants'
-Restaurant.delete_all
+Restaurant.destroy_all
 puts 'Creating Restaurants...'
 
 

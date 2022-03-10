@@ -3,7 +3,7 @@
     <!-- DISHES -->
 
     <!--  HEADLINE with the two text inputs -->
-    <div class="banner-head d-flex">
+    <div class="container banner-head d-flex">
         <p class="banner-dish">Dish-List</p>
 
         <%= form_with url: root_path, method: :get, html: { autocomplete: "off",  class: 'sebis', data: {search_dishes_target: 'form' } } do |f| %>
