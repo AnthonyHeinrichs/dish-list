@@ -141,13 +141,19 @@ Restaurant.delete_all
 puts 'Creating Restaurants...'
 
 
-restaurant_1 = { name: 'Restaurant Tim Raue', address: 'Berlin', description: ' In the TIM RAUE restaurant we serve Asian-inspired cuisine, which can be characterised as a combination of Japanese product perfection, Thai aromatics and Chinese kitchen philosophy. We therefore avoid side dishes such as bread, noodles and rice, as well as white sugar as far as possible. When it comes to dairy products, the kitchen works exclusively with lactose-free products. We also offer a vegan menu that does not contain any animal products. We are happy to try to take slight allergies and intolerances into consideration, but if these are life-threatening to your health, please understand that we do not bear this responsibility. We will not offer you any meals in this case.' }
-restaurant_2 = { name: 'Barefood Deli', address: 'Hamburg', description: 'Delicious simple - Foods & Goods  Einfach natürlich, einfach bodenständig, einfach gut gemacht – das ist das Barefood Deli. Hier genießt man ehrlich, authentisch und frisch. Und man konzentriert sich ganz auf das Wesentliche: das Hier und Jetzt.' }
-restaurant_3 = { name: 'Pizzeria Alt Hamburg', address: 'Hamburg', description: 'Kenner der vielfältigen Küche kommen in unserem Lokal voll auf ihre Kosten. Wir heißen Sie herzlich willkommen in unserem Restaurant Pizzeria Alt Hamburg. Genießen Sie schmackhafte Speisen und das authentische Ambiente in unserem Haus. Die Sonne spüren können Sie in unserem gemütlichen Außenbereich. Unsere gut klimatisierten Innenräume sorgen für einen angenehmen Aufenthalt. ' }
-restaurant_4 = { name: 'Loving Hat', address: 'Cologne', description: 'Loving Hut was born with the vision that all living things should live in peace, love and harmony with each other and with the earth.The attractive prices and high-quality plant-based ingredients are an invitation to international gourmet cuisine, making it possible for everyone to eat well and make a contribution to the environment.' }
-restaurant_5 = { name: 'Suger Clan', address: 'Berlin',description: 'In our manufactory on Boxhagener Platz in Berlins Friedrichshain, we bake the fluffiest original Berlin pancakes (Berliner, Krapfen, Kreppel...) that you could wish for.Everything about the round gems is our absolute passion, which is why you can also get Italian bomboloni and variants in donut (or donut) style fresh from our confectionery every day. Selected ingredients and sustainability are our top priority, because the best is just good enough for you. You can get our masterpieces on the terrace or to take away - to your closest friends, your favorite colleagues or to show off to family. Wherever you take them: The Kleenen have a habit of outstripping one or the other cake in no time.' }
-restaurant_6 = { name: 'NENI', address: 'Munich', description: 'NENI - that stands for Haya Molchos sons Nuriel, Elior, Nadiv and Ilan. Each of them contributes their part to the unique food concept and makes the NENI a real family business.Family and friends have always been an essential part of life for the Molchos. The motto of the family "Life is beautiful. Be part of it.”, NENI gives an insight into the world of Molchos, which is characterized by bright colors, exotic tastes and beguiling smells. The sympathetic chaos at the large, round tables and the sensual moment of sharing gives you the feeling of being a guest among friends.' }
-restaurant_7 = { name: 'Ratskeller Köpenick', address: 'Berlin', description: 'We devote ourselves entirely to traditional and modern German cuisine: head chef Matthias Starke maintains this tradition with fresh and regional ingredients. Herbs, natural aromas and a variety of spices complement salt and pepper. Trends and internationality are not taboo! He and his team like to surprise you with new and creative ideas!' }
+restaurant_1 = { name: 'Restaurant Tim Raue', address: 'Berlin', telephon: '+49 30 259 379 30', website: 'https://tim-raue.com', description: ' In the TIM RAUE restaurant we serve Asian-inspired cuisine, which can be characterised as a combination of Japanese product perfection, Thai aromatics and Chinese kitchen philosophy. We therefore avoid side dishes such as bread, noodles and rice, as well as white sugar as far as possible. When it comes to dairy products, the kitchen works exclusively with lactose-free products. We also offer a vegan menu that does not contain any animal products. We are happy to try to take slight allergies and intolerances into consideration, but if these are life-threatening to your health, please understand that we do not bear this responsibility. We will not offer you any meals in this case.' }
+restaurant_2 = { name: 'Barefood Deli', address: 'Hamburg', telephon: '+49 40 369 305 40', website: 'www.barefooddeli.de', description: 'Delicious simple - Foods & Goods  Einfach natürlich, einfach bodenständig, einfach gut gemacht – das ist das Barefood Deli. Hier genießt man ehrlich, authentisch und frisch. Und man konzentriert sich ganz auf das Wesentliche: das Hier und Jetzt.' }
+restaurant_3 = { name: 'Pizzeria Alt Hamburg', address: 'Hamburg', telephon: '+49 40 317 964 70', website: 'https://pizzeriaalthamburg.eatbu.com', description: 'Kenner der vielfältigen Küche kommen in unserem Lokal voll auf ihre Kosten. Wir heißen Sie herzlich willkommen in unserem Restaurant Pizzeria Alt Hamburg. Genießen Sie schmackhafte Speisen und das authentische Ambiente in unserem Haus. Die Sonne spüren können Sie in unserem gemütlichen Außenbereich. Unsere gut klimatisierten Innenräume sorgen für einen angenehmen Aufenthalt. ' }
+restaurant_4 = { name: 'Loving Hut', address: 'Cologne', telephon: '+49 40 607 809 93', website: 'http://www.lovinghut.de', description: 'Loving Hut was born with the vision that all living things should live in peace, love and harmony with each other and with the earth.The attractive prices and high-quality plant-based ingredients are an invitation to international gourmet cuisine, making it possible for everyone to eat well and make a contribution to the environment.' }
+restaurant_5 = { name: 'Suger Clan', address: 'Berlin', telephon: '+49 30 275 977 99', website: 'https://sugarclan.de', description: 'In our manufactory on Boxhagener Platz in Berlins Friedrichshain, we bake the fluffiest original Berlin pancakes (Berliner, Krapfen, Kreppel...) that you could wish for.Everything about the round gems is our absolute passion, which is why you can also get Italian bomboloni and variants in donut (or donut) style fresh from our confectionery every day. Selected ingredients and sustainability are our top priority, because the best is just good enough for you. You can get our masterpieces on the terrace or to take away - to your closest friends, your favorite colleagues or to show off to family. Wherever you take them: The Kleenen have a habit of outstripping one or the other cake in no time.' }
+restaurant_6 = { name: 'NENI', address: 'Munich', telephon: '+49 89 904 00 15 61', website: 'www.nenimuenchen.de', description: 'NENI - that stands for Haya Molchos sons Nuriel, Elior, Nadiv and Ilan. Each of them contributes their part to the unique food concept and makes the NENI a real family business.Family and friends have always been an essential part of life for the Molchos. The motto of the family "Life is beautiful. Be part of it.”, NENI gives an insight into the world of Molchos, which is characterized by bright colors, exotic tastes and beguiling smells. The sympathetic chaos at the large, round tables and the sensual moment of sharing gives you the feeling of being a guest among friends.' }
+restaurant_7 = { name: 'Ratskeller Köpenick', telephon: '+49 30 6 55 51 78', website: 'www.ratskeller-koepenick.de', address: 'Berlin', description: 'We devote ourselves entirely to traditional and modern German cuisine: head chef Matthias Starke maintains this tradition with fresh and regional ingredients. Herbs, natural aromas and a variety of spices complement salt and pepper. Trends and internationality are not taboo! He and his team like to surprise you with new and creative ideas!' }
+restaurant_8 = { name: 'Schwabylon', address: 'Berlin', telephon: '+49 1590 551 2299', website: 'http://schwabylon-berlin.de', description: 'Lieber vom Fressa an Ranza als vom Schaffa an Buckel! Im Berliner Spätzle-Exil gibt es schwäbische Küche mitten in Neukölln. Bei uns ist alles selbstgemacht und unsere Spätzle machen wir ausschließlich mit Bio-Eiern. Außer drei süddeutschen Klassikern gibt es unsere Spätzle auch süß und eine wöchentlich wechselnde Köstlichkeit (aktuelle Infos findet ihr immer auf unserer Facebook-Seite) Zum Trinka gibt es im Schwabylon leckere Seezüngle aus dem Allgäu und aus dem gleichen Haus das gute Härle Bier. Also kommat und langat no fescht zu  ihr werdats braucha für da Winter!' }
+# restaurant_9 = { name: '', address: '', telephon: '', website: '', description: '' }
+# restaurant_10 = { name: '', address: '', telephon: '', website: '', description: '' }
+# restaurant_11 = { name: '', address: '', telephon: '', website: '', description: '' }
+# restaurant_12 = { name: '', address: '', telephon: '', website: '', description: '' }
+# restaurant_13 = { name: '', address: '', telephon: '', website: '', description: '' }
 
 
 puts 'Removing dated DishRestaurants'
@@ -170,6 +176,7 @@ puts 'Injecting new time...'
 # weekday takes 1-7 where 1=Monday and 7=Sunday
 # 25 = CLOSED
 
+# 1. Opening Hours - Day/week Restaurant like
 open_mon = { weekday: 1, start_hour: 9, end_hour: 17 }
 open_tue = { weekday: 2, start_hour: 9, end_hour: 17 }
 open_wed = { weekday: 3, start_hour: 9, end_hour: 17 }
@@ -178,6 +185,7 @@ open_fri = { weekday: 5, start_hour: 9, end_hour: 19 }
 open_sat = { weekday: 6, start_hour: 11, end_hour: 19 }
 open_sun = { weekday: 7, start_hour: 25, end_hour: 25 }
 
+# 2. Opening Hours - late Week Restaurant
 open_mon_1 = { weekday: 1, start_hour: 11, end_hour: 21 }
 open_tue_1 = { weekday: 2, start_hour: 11, end_hour: 21 }
 open_wed_1 = { weekday: 3, start_hour: 11, end_hour: 21 }
@@ -186,6 +194,7 @@ open_fri_1 = { weekday: 5, start_hour: 11, end_hour: 21 }
 open_sat_1 = { weekday: 6, start_hour: 11, end_hour: 19 }
 open_sun_1 = { weekday: 7, start_hour: 25, end_hour: 25 }
 
+# 3. Opening Hours - Late Restaurant
 open_mon_2 = { weekday: 1, start_hour: 25, end_hour: 25 }
 open_tue_2 = { weekday: 2, start_hour: 11, end_hour: 22 }
 open_wed_2 = { weekday: 3, start_hour: 11, end_hour: 22 }
@@ -196,6 +205,7 @@ open_sun_2 = { weekday: 7, start_hour: 12, end_hour: 22 }
 
 restaurants = Restaurant.all
 
+# Injecting Opening Hours to Restaurant
 [ open_mon, open_tue, open_wed, open_thu, open_fri, open_sat, open_sun ].each do |infusion|
   opening = Opening.new(infusion)
   opening.restaurant = restaurants[0]
