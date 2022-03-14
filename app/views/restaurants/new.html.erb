@@ -7,7 +7,7 @@
       <%= f.input :telephone, required: true, hint: "exp. +49 30 0000 000" %>
       <%= f.input :website, required: true, hint: "www.sample.com" %>
       <%= f.input :photos, as: :file, input_html: { multiple: true }%>
-      <%= f.input :description, required: "true" %>
+      <%= f.input :description, required: "true", input_html: { maxlength: 550 } %>
         <%= simple_fields_for :other do |o| %>
         <%= o.input :country, as: :country, label: 'Where are your dishes from?', input_html: {data:{new_restaurant_target: 'input', action: 'change->new-restaurant#fetchCountry'}} %>
         <% end %>

@@ -17,11 +17,10 @@
 
 /* TAGS */
 .restaurant-tag-container {
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 15px;
-    overflow: auto;
-    white-space: nowrap;
+    margin-top: 15px;
+    padding-left: 0px;
+    margin-bottom: 8px;
+
 }
 .restaurant-tags {
     border-radius: 7px;
@@ -33,6 +32,7 @@
     color: $white;
     display: inline-block;
     text-decoration: none;
+    margin: 4px;
 }
 
 /* REVIEW BUTTON */
@@ -67,6 +67,14 @@
     font-weight: 300;
     font-size: 1em;
     color: $text-color;
+}
+.restaurant-dashboard-title-address {
+  font-family: 'Red Hat Display', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1em;
+  color: $text-color;
+  margin-bottom: 0px;
 }
 .restaurant-dashboard-content {
     font-family: 'Red Hat Display', sans-serif;
@@ -117,10 +125,19 @@
     align-items: center;
     padding: 27%;
 }
-.restaurant-button-icon  {
+
+.restaurant-button-icon {
     width: 2.1rem;
     height: 2.1rem;
     padding: 0.0rem;
+}
+
+.link-buttons {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  width: 47% !important;
 }
 
 /* HOURS */
@@ -179,6 +196,7 @@
     border-radius: 10px;
     background-color: $shadow;
     display: inline-block;
+    width: 23rem;
 }
 .restaurant-review-star {
     width: 1rem;
