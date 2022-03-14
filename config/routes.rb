@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'dishes#index'
 
-  resources :dishes, only: [:index] do
+  resources :dishes, only: [:index, :new, :create] do
     get "favorite", to: "dishes#favorite"
     delete "favorite", to: "favorite_dishes#destroy"
   end
