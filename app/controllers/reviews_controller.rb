@@ -3,8 +3,12 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.user = current_user
     @review.restaurant_id = params[:restaurant]
-    @review.save
-    # Need to add logic so the review saves for a specific restaurant's dish.
+    if @review.save
+      redirect_to restaurants_path
+    else
+      flash[:alert] = "Something went wrong."
+      render :new
+    end
   end
 
   def update

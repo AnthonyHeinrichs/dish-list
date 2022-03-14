@@ -11,7 +11,5 @@ Rails.application.routes.draw do
     delete "favorite", to: "favorite_restaurants#destroy"
   end
   resources :users, only: [:show]
-  get "reviews/new", to: "reviews#new"
-  post "reviews", to: "reviews#create"
-  patch "reviews/:id", to: "reviews#update"
+  resources :reviews, only: [:new, :create]
 end
