@@ -7,14 +7,11 @@
         <p class="banner-dish">Dish-List</p>
 
         <%= form_with url: root_path, method: :get, html: { autocomplete: "off",  class: 'sebis', data: {search_dishes_target: 'form' } } do |f| %>
-          <%= f.text_field :query, autofocus: 'autofocus', placeholder: 'type a country', value: params[:query], class: 'banner-country', data: { search_dishes_target: 'input', action: 'keyup->search-dishes#update' } %>
+          <%= f.text_field :query, autofocus: 'autofocus', placeholder: 'Add country', value: params[:query], class: 'banner-country', data: { search_dishes_target: 'input', action: 'keyup->search-dishes#update' } %>
         <% end %>
     </div>
 
     <!-- SUB-HEADLINE the text below the entry fields -->
-    <div class="banner-text">
-      Did you know, that in most citys, there might be someone who makes your favourite dish, just the way you love it?
-    </div>
 
     <!-- PICTURE centred, floating -->
     <div class="banner-picture">
@@ -35,5 +32,10 @@
   <% end %>
   <div class='container'>
     <%= render 'list', dishes: @dishes %>
+  </div>
+
+   <div class='d-flex justify-content-center mt-2 mb-3'>
+    <!-- We need to change the link to a new restaurant form once we create restaurant#new. -->
+    <%= link_to "Are we missing a dish? If so, why not add it?", new_dish_path, class: "btn btn-link" %>
   </div>
 </div>

@@ -1,0 +1,16 @@
+<div class="form-style-general">
+  <h1>Add a Dish</h1>
+  <div class="restaurant_form" data-controller="new-restaurant">
+  <%= simple_form_for(@dish)  do |f| %>
+      <%= f.input :name, required: true %>
+      <%= f.input :country, required: true, hint: "What country is this dish from?" %>
+      <%= f.input :spiciness, hint: "How spicy is this dish? (1-5)"  %>
+      <%= f.input :photo, as: :file %>
+      <%= f.input :description, required: "true", input_html: { maxlength: 550 } %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+  <div class="links-on-form">
+    <%= link_to "Back", dishes_path, class: "dan"%>
+  </div>
+</div>

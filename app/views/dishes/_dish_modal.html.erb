@@ -15,7 +15,10 @@
         </div>
       </div>
       <div class="modal-body-new">
-        <img src=<%= dish.image_url %> alt=<%= dish.name %> class="">
+      <!-- Picture for card, works well. -->
+        <% if dish.photo.present? %>
+          <div><%= cl_image_tag dish.photo.key %></div>
+        <% end %>
         <div class="description">
           <p></p>
           <p> <%= dish.description %> </p>

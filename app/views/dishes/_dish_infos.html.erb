@@ -2,7 +2,9 @@
 
     <div class="dishlist-card" >
       <div class="dishlist-left">
-        <img class="dishlist-picture" src=<%= dish.image_url %> alt=<%= dish.name %>>
+        <% if dish.photo.present? %>
+        <div><%= cl_image_tag dish.photo.key, class:'dishlist-picture' %></div>
+        <% end %>
       </div>
       <div class="dishlist-right">
         <div class="container-fluid">
