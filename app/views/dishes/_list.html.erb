@@ -1,6 +1,6 @@
 
 <div class="d-flex flex-wrap justify-content-center" data-search-dishes-target="list">
-    <% dishes.each_with_index do |dish, index| %>
+    <% dishes.sample(20).each_with_index do |dish, index| %>
 
           <a data-bs-toggle="modal" data-bs-target="#dishModal<%= index %>">
             <%= render 'dish_infos', dish: dish %>
