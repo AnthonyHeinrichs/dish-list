@@ -1,7 +1,7 @@
 require "test_helper"
 
 class DishTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  setup do
+    sign_in users(:regular)
+  end
 end
