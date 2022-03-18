@@ -12,7 +12,7 @@
             <% if params[:location].present? %>
               <input id="dan_input" name="location" type="text" value="<%= "#{params[:location]}" %>">
             <% else %>
-              <input id="dan_input" name="location" type="text" placeholder='Add your location' autofocus>
+              <input id="dan_input" name="location" type="text" placeholder='Where are you located?' autofocus>
             <% end %>
             <%= hidden_field_tag :dish, params[:dish] %>
             <%= hidden_field_tag :dish_picture, params[:dish_picture] %>
