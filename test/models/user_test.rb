@@ -8,5 +8,6 @@ class UserTest < ActiveSupport::TestCase
       lastname: 'Heinrichs',
       encrypted_password: '123456'
     }
+    assert_not User.new(account_params).valid?
   end
 end
