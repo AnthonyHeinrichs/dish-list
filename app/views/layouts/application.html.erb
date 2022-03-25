@@ -8,8 +8,8 @@
     <%= favicon_link_tag %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true, rel: :preload %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload', defer: true %>
 
     <!-- Facebook Open Graph data -->
     <meta property="og:title" content="Dish-List - local food done right" />
@@ -33,7 +33,7 @@
     <%= yield %>
 
     <p class="notice"><%= notice %></p>
-    
+
     <%= render 'shared/footer' %>
   </body>
 </html>

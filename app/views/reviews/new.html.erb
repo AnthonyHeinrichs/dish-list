@@ -1,0 +1,15 @@
+<div class="form-style-general">
+  <h1>Add a Review</h1>
+  <div class="restaurant_form">
+    <%= simple_form_for(@review) do |f| %>
+      <% if @restaurant.dishes.present? %>
+        <%= f.input :dish, collection: @restaurant.dishes, label: "What dish are you reviewing?", input_html: { class: "review-form-drop", required: true } %>
+      <% end %>
+      <%= f.input :authenticity, collection: 1..5, label: "How authentic was it?", style: 'display:none' %>
+      <%= f.input :value, collection: 1..5, label: "How valuable was it?" %>
+      <%= f.input :description, label: "Add a comment", size: "30x10", class: "review-form-description", as: :text %>
+        <%= hidden_field_tag 'restaurant', params[:restaurant] %>
+      <%= f.submit input_html: { class: "btn review-form-button" } %>
+    <% end %>
+  </div>
+</div>
