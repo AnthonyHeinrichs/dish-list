@@ -8,7 +8,7 @@
           <!-- 1. Title / Review Button -->
           <div class="row">
             <div class="col restaurant-headline"><%= restaurant.name %></div>
-            <button class="btn btn-primary restaurant-review col d-grid gap-2" type="button">Write a Review</button>
+            <%= link_to "Write a Review", new_review_path(restaurant: restaurant), class: "btn btn-primary restaurant-review col d-grid gap-2" %>
           </div>
 
           <!-- 2. Tags / Dashboard -->
@@ -149,7 +149,9 @@
             <div class="col-6 mt-2 mb-2">
               <div class="card restaurant-review-card" style="width: 23rem;">
                 <div class="card-body">
-                  <div class="restaurant-review-title"><%= restaurant.reviews.first.dish.present? ? restaurant.reviews.first.dish : 'No dish' %></div>
+                  <div class="restaurant-review-title"><%= restaurant.reviews.first.dish.present? ? @dishes.find_by_id(restaurant.reviews.first.dish).name : 'No dish' %></div>
+                  <p class="restaurant-review-text mb-1">Authenticity: <%= restaurant.reviews.first.authenticity %></p>
+                  <p class="restaurant-review-text mt-1">Value: <%= restaurant.reviews.first.value %></p>
                   <p class="restaurant-review-text"><%= restaurant.reviews.first.description %></p>
                   <div class="restaurant-review-name"><%= @users.find_by_id(restaurant.reviews.first.user_id).firstname %> <%= @users.find_by_id(restaurant.reviews.first.user_id).lastname %></div>
                 </div>
@@ -160,29 +162,15 @@
             <div class="col-6 mt-2 mb-2">
               <div class="card restaurant-review-card" style="width: 23rem;">
                 <div class="card-body">
-                  <div class="restaurant-review-title"><%= restaurant.reviews.first.dish.present? ? restaurant.reviews.first.dish : 'No dish' %></div>
-                  <p class="restaurant-review-text"><%= restaurant.reviews.first.description %></p>
-                  <div class="restaurant-review-name"><%= @users.find_by_id(restaurant.reviews.first.user_id).firstname %> <%= @users.find_by_id(restaurant.reviews.first.user_id).lastname %></div>
+                  <div class="restaurant-review-title"><%= restaurant.reviews.second.dish.present? ? @dishes.find_by_id(restaurant.reviews.second.dish).name : 'No dish' %></div>
+                  <p class="restaurant-review-text mb-1">Authenticity: <%= restaurant.reviews.second.authenticity %></p>
+                  <p class="restaurant-review-text mt-1">Value: <%= restaurant.reviews.second.value %></p>
+                  <p class="restaurant-review-text"><%= restaurant.reviews.second.description %></p>
+                  <div class="restaurant-review-name"><%= @users.find_by_id(restaurant.reviews.second.user_id).firstname %> <%= @users.find_by_id(restaurant.reviews.second.user_id).lastname %></div>
                 </div>
               </div>
             </div>
             <% end %>
-          </div>
-        </div>
-
-          <!-- 6. Write a Review divs ok! -->
-        <div class="accordion accordion-flush mt-3 restaurant-hours" id="accordionFlushExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne">
-              <button id="write-review" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                Add a review
-              </button>
-            </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
-                <%= render 'review_form', restaurant: restaurant %>
-              </div>
-            </div>
           </div>
         </div>
       </div>

@@ -15,6 +15,11 @@ class ReviewsController < ApplicationController
     @review = Review.find
   end
 
+  def new
+    @review = Review.new
+    @restaurant = Restaurant.find(params[:restaurant])
+  end
+
   private
 
   def review_params
