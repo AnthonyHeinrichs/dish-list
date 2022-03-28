@@ -31,7 +31,17 @@
 
       <div class="restaurant-rating">
         <p>RATING</p>
-        <div style="text-align: left;">4.<%= rand(1..9)%></div>
+        <% reviews = @reviews.where(restaurant_id: restaurant) %>
+        <% if reviews.present? %>
+          <% rating_total = 0 %>
+          <% reviews.each do |review| %>
+            <% review_rating = (review.authenticity.to_f + review.value.to_f) / 2 %>
+            <% rating_total += review_rating %>
+          <% end %>
+          <div style="text-align: left;"><%= (rating_total / reviews.count).round(1) %></div>
+          <% else %>
+          <div style="text-align: left;">No Reviews</div>
+        <% end %>
       </div>
 
 
