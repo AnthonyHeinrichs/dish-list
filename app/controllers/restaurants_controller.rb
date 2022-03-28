@@ -37,6 +37,7 @@ class RestaurantsController < ApplicationController
   def index
     @restaurants = Restaurant.all
     @dishrestaurants = DishRestaurant.all
+    @reviews = Review.all
     @timenow = Time.now
     @timenow = @timenow.hour
     @daynow = Time.now
